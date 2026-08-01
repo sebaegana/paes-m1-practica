@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>PAES M1 - Panel de práctica</title>
+<style>
+  :root { color-scheme: light; }
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px;
+         margin: 0 auto; padding: 24px 16px 48px; color: #1d1d1f; background: #fafafa; }
+  h1 { font-size: 1.4em; margin-bottom: 4px; }
+  h2 { font-size: 1.1em; margin-top: 36px; }
+  .actualizado { font-size: 0.8em; color: #999; margin-bottom: 18px; }
+  .saludo { color: #444; margin-bottom: 24px; }
+  .pregunta { background: #fff; border: 1px solid #e2e2e2; border-radius: 10px;
+               padding: 18px 20px; margin-bottom: 18px; }
+  .meta { font-size: 0.78em; color: #888; text-transform: uppercase; letter-spacing: 0.02em;
+           margin-bottom: 6px; }
+  .enunciado { font-size: 1.02em; line-height: 1.5; margin-bottom: 14px; }
+  .alternativas { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+  .alt-btn { text-align: left; padding: 10px 14px; border-radius: 8px; border: 1px solid #d0d0d5;
+              background: #fff; cursor: pointer; font-size: 0.96em; color: #1d1d1f; }
+  .alt-btn:hover { background: #f2f2f7; }
+  .alt-btn.seleccionada { border-color: #6b6bd6; background: #eeeeff; font-weight: 600; }
+  .alt-btn.correcta { border-color: #2e7d32; background: #e8f5e9; font-weight: 600; }
+  .alt-btn.incorrecta { border-color: #c62828; background: #fdecea; }
+  .alt-btn[disabled] { cursor: default; }
+  .botones-revelar { display: flex; gap: 10px; }
+  .ver-respuesta, .ver-explicacion { padding: 9px 16px; border-radius: 8px; border: none;
+                     cursor: pointer; font-size: 0.92em; }
+  .ver-respuesta { background: #1d1d1f; color: #fff; }
+  .ver-respuesta:hover { background: #3a3a3c; }
+  .ver-explicacion { background: #eeeeff; color: #1d1d1f; border: 1px solid #d0d0f0 !important; }
+  .ver-explicacion:hover { background: #e2e2fb; }
+  .respuesta { margin-top: 14px; padding: 8px 14px; background: #f5f5f7; border-radius: 999px;
+                font-size: 0.9em; display: inline-flex; align-items: center; gap: 8px; }
+  .respuesta-icono::before { content: "•"; color: #888; }
+  .respuesta.ok .respuesta-icono::before { content: "✓"; color: #2e7d32; font-weight: 700; }
+  .respuesta.mal .respuesta-icono::before { content: "✗"; color: #c62828; font-weight: 700; }
+  .solucion { margin-top: 12px; padding: 14px 16px; background: #f7f7fb; border: 1px solid #e6e6f2;
+               border-radius: 8px; font-size: 0.94em; line-height: 1.55; }
+  .solucion .concepto { margin: 0 0 10px 0; color: #33334d; }
+  .solucion .pasos-titulo { margin: 0 0 6px 0; }
+  .solucion .pasos { margin: 0; padding-left: 20px; }
+  .solucion .pasos li { margin-bottom: 6px; }
+  .oculto { display: none; }
+  .cobertura { font-size: 0.85em; color: #666; border-top: 1px solid #e2e2e2; padding-top: 14px;
+                margin-top: 20px; }
+  table.historial { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px;
+                      overflow: hidden; border: 1px solid #e2e2e2; }
+  table.historial th, table.historial td { text-align: left; padding: 10px 12px; font-size: 0.9em; }
+  table.historial th { background: #f5f5f7; font-weight: 600; color: #444; }
+  table.historial tr + tr td { border-top: 1px solid #eee; }
+  .col-check { white-space: nowrap; }
+  .check-label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+  .col-fecha-hecho { color: #888; font-size: 0.85em; }
+</style>
+</head>
+<body>
+  <h1>PAES M1 &mdash; Panel de práctica</h1>
+  <p class="actualizado">Última generación: 2026-08-01 &middot; Eje de esta semana: Números</p>
+
+  <h2>Esta semana</h2>
+  <p class="saludo">Esta semana toca Números, con foco en porcentaje y en el conjunto de los números enteros y racionales. Intenta responder antes de ver la respuesta de cada pregunta.</p>
+
+  
+  <section class="pregunta" id="preg-M1-NUM-2026-08-01-01">
+    <div class="meta">Números &middot; Porcentaje &middot; Resolver problemas &middot; Dificultad: Básico</div>
+    <h3>Pregunta 1</h3>
+    <p class="enunciado">Una polera cuesta $15.000. La tienda ofrece un descuento del 20% por pago en efectivo. ¿Cuánto se paga por la polera si se cancela en efectivo?</p>
+    <div class="alternativas" data-correcta="B">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-01', this)">A) $11.000</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-01', this)">B) $12.000</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-01', this)">C) $13.000</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-01', this)">D) $3.000</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-01')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-01')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-01">
+      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-01"></span>
+      <span>Alternativa correcta: <strong>B</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-01">
+      <p class="concepto"><strong>Concepto clave:</strong> Un descuento de un x% sobre un precio equivale a pagar (100-x)% del precio original. Conviene pensar en el porcentaje que SÍ se paga, no solo en el que se descuenta.</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Si el descuento es 20%, lo que se paga corresponde al 100% - 20% = 80% del precio original.</li>
+      <li>Se calcula el 80% de $15.000: 15.000 × 0,8 = 12.000.</li>
+      <li>Por lo tanto, se paga $12.000 en efectivo.</li>
+      <li>La alternativa D ($3.000) es un distractor: corresponde solo al monto del descuento, no al precio final a pagar.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="pregunta" id="preg-M1-NUM-2026-08-01-02">
+    <div class="meta">Números &middot; Conjunto de los números enteros y racionales &middot; Representar &middot; Dificultad: Básico</div>
+    <h3>Pregunta 2</h3>
+    <p class="enunciado">Se tienen los números -5/2, -1, 0,6 y 3/2. ¿Cuál alternativa los ordena correctamente de menor a mayor?</p>
+    <div class="alternativas" data-correcta="A">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-02', this)">A) -5/2 &lt; -1 &lt; 0,6 &lt; 3/2</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-02', this)">B) -1 &lt; -5/2 &lt; 0,6 &lt; 3/2</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-02', this)">C) -5/2 &lt; 0,6 &lt; -1 &lt; 3/2</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-02', this)">D) 3/2 &lt; 0,6 &lt; -1 &lt; -5/2</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-02')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-02')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-02">
+      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-02"></span>
+      <span>Alternativa correcta: <strong>A</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-02">
+      <p class="concepto"><strong>Concepto clave:</strong> Para comparar números racionales en distintas notaciones (fracciones y decimales) conviene llevarlos todos a una misma representación, por ejemplo decimal, y ubicarlos en la recta numérica.</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Se convierten las fracciones a decimal: -5/2 = -2,5 y 3/2 = 1,5.</li>
+      <li>Los cuatro números quedan: -2,5 ; -1 ; 0,6 ; 1,5.</li>
+      <li>En la recta numérica, mientras más a la izquierda está un número, más pequeño es. Los negativos siempre son menores que los positivos.</li>
+      <li>Ordenando de izquierda a derecha (menor a mayor): -2,5 &lt; -1 &lt; 0,6 &lt; 1,5, es decir, -5/2 &lt; -1 &lt; 0,6 &lt; 3/2.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="pregunta" id="preg-M1-NUM-2026-08-01-03">
+    <div class="meta">Números &middot; Porcentaje &middot; Modelar &middot; Dificultad: Intermedio</div>
+    <h3>Pregunta 3</h3>
+    <p class="enunciado">Un televisor cuesta $200.000. Por liquidación, primero sube el precio un 30% y luego, sobre ese nuevo precio, aplica un descuento del 30%. ¿En qué porcentaje cambió el precio final respecto al original?</p>
+    <div class="alternativas" data-correcta="B">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-03', this)">A) Aumentó un 9%</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-03', this)">B) Disminuyó un 9%</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-03', this)">C) No cambió</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-03', this)">D) Disminuyó un 30%</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-03')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-03')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-03">
+      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-03"></span>
+      <span>Alternativa correcta: <strong>B</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-03">
+      <p class="concepto"><strong>Concepto clave:</strong> Cuando se aplican dos variaciones porcentuales sucesivas, no se pueden sumar ni restar directamente los porcentajes: hay que multiplicar los factores de cambio en el orden en que ocurren, porque el segundo cambio se aplica sobre una base distinta a la original.</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Subir un 30% equivale a multiplicar por el factor 1,30.</li>
+      <li>Bajar un 30% (sobre el nuevo precio) equivale a multiplicar por el factor 0,70.</li>
+      <li>Precio final = 200.000 × 1,30 × 0,70 = 200.000 × 0,91 = 182.000.</li>
+      <li>Comparado con el original ($200.000), el precio final es el 91%, es decir, disminuyó un 9%.</li>
+      <li>El error común es pensar que +30% y -30% se cancelan: no ocurre porque el descuento se calcula sobre un precio ya subido, una base mayor a la original.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="pregunta" id="preg-M1-NUM-2026-08-01-04">
+    <div class="meta">Números &middot; Conjunto de los números enteros y racionales &middot; Resolver problemas &middot; Dificultad: Intermedio</div>
+    <h3>Pregunta 4</h3>
+    <p class="enunciado">En Punta Arenas, la temperatura a las 7:00 AM fue de -4°C. Subió 9°C hasta el mediodía y luego bajó 6°C hacia la noche. ¿Cuál fue la temperatura durante la noche?</p>
+    <div class="alternativas" data-correcta="A">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-04', this)">A) -1°C</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-04', this)">B) 1°C</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-04', this)">C) -10°C</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-04', this)">D) 11°C</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-04')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-04')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-04">
+      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-04"></span>
+      <span>Alternativa correcta: <strong>A</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-04">
+      <p class="concepto"><strong>Concepto clave:</strong> Un aumento de temperatura se representa sumando, y una baja se representa restando, trabajando con números enteros (incluyendo negativos).</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Temperatura inicial: -4°C.</li>
+      <li>Sube 9°C hasta el mediodía: -4 + 9 = 5°C.</li>
+      <li>Baja 6°C hacia la noche: 5 - 6 = -1°C.</li>
+      <li>La temperatura durante la noche fue -1°C.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="pregunta" id="preg-M1-NUM-2026-08-01-05">
+    <div class="meta">Números &middot; Porcentaje &middot; Argumentar &middot; Dificultad: Avanzado</div>
+    <h3>Pregunta 5</h3>
+    <p class="enunciado">Un estudiante afirma: &#x27;Si un valor aumenta un 50% y luego disminuye un 50%, vuelve a su valor original&#x27;. Evaluando con un valor inicial de $100.000, ¿es válido este razonamiento?</p>
+    <div class="alternativas" data-correcta="B">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-05', this)">A) Sí, siempre se vuelve al valor original</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-05', this)">B) No: el valor final es menor que el original</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-05', this)">C) No: el valor final es mayor que el original</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-05', this)">D) Es válido solo si el valor inicial es par</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-05')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-05')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-05">
+      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-05"></span>
+      <span>Alternativa correcta: <strong>B</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-05">
+      <p class="concepto"><strong>Concepto clave:</strong> Para evaluar si un argumento general es válido, basta con probarlo con un caso concreto (contraejemplo). Si el caso concreto lo contradice, el argumento general es falso.</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Se toma el valor inicial propuesto: $100.000.</li>
+      <li>Aumento de 50%: 100.000 × 1,5 = 150.000.</li>
+      <li>Disminución de 50% sobre el nuevo valor: 150.000 × 0,5 = 75.000.</li>
+      <li>El resultado (75.000) es distinto y menor al original (100.000), por lo que el argumento del estudiante es falso.</li>
+      <li>La razón del error: el segundo porcentaje no se aplica sobre el valor original, sino sobre el valor ya aumentado (una base mayor), lo que produce una pérdida neta. Esto no depende de si el valor inicial es par o impar.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <div class="cobertura">
+    <strong>Cobertura de este set:</strong> Números<br>
+    Unidades cubiertas: Porcentaje, Conjunto de los números enteros y racionales<br>
+    Habilidades cubiertas: Resolver problemas, Representar, Modelar, Argumentar<br>
+    Próxima semana: Álgebra y funciones
+  </div>
+
+  <h2>Progreso</h2>
+  <table class="historial">
+    <thead>
+      <tr><th>Ronda</th><th>Fecha</th><th>Eje</th><th>Estado</th><th></th></tr>
+    </thead>
+    <tbody>
+      
+      <tr data-ronda-id="2026-08-01-Numeros">
+        <td>1</td>
+        <td>2026-08-01</td>
+        <td>Numeros</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('2026-08-01-Numeros', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-2026-08-01-Numeros"></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+<script>
+function seleccionar(qid, btn) {
+  const cont = btn.closest('.alternativas');
+  cont.querySelectorAll('.alt-btn').forEach(b => b.classList.remove('seleccionada'));
+  btn.classList.add('seleccionada');
+  cont.dataset.elegida = btn.dataset.letra;
+}
+
+function mostrarRespuesta(qid) {
+  const cont = document.querySelector('#preg-' + qid + ' .alternativas');
+  const respBox = document.getElementById('resp-' + qid);
+  const yaVisible = !respBox.classList.contains('oculto');
+
+  if (yaVisible) {
+    respBox.classList.add('oculto');
+    respBox.classList.remove('ok', 'mal');
+    cont.querySelectorAll('.alt-btn').forEach(b => {
+      b.disabled = false;
+      b.classList.remove('correcta', 'incorrecta');
+    });
+    return;
+  }
+
+  const correcta = cont.dataset.correcta;
+  const elegida = cont.dataset.elegida;
+  cont.querySelectorAll('.alt-btn').forEach(b => {
+    b.disabled = true;
+    if (b.dataset.letra === correcta) {
+      b.classList.add('correcta');
+    } else if (b.dataset.letra === elegida) {
+      b.classList.add('incorrecta');
+    }
+  });
+  respBox.classList.remove('oculto');
+  if (elegida) {
+    respBox.classList.add(elegida === correcta ? 'ok' : 'mal');
+  }
+}
+
+function mostrarExplicacion(qid) {
+  document.getElementById('sol-' + qid).classList.toggle('oculto');
+}
+
+// --- Progreso: persistido en localStorage, sobrevive a que este HTML se regenere ---
+const PREFIJO_STORAGE = 'paes_m1_progreso_';
+
+function pintarFilaHistorial(fila) {
+  const rondaId = fila.dataset.rondaId;
+  const raw = localStorage.getItem(PREFIJO_STORAGE + rondaId);
+  const checkbox = fila.querySelector('.check-hecho');
+  const fechaCelda = document.getElementById('fecha-hecho-' + rondaId);
+  if (raw) {
+    const info = JSON.parse(raw);
+    checkbox.checked = true;
+    fechaCelda.textContent = 'Completado el ' + info.fecha_hecho;
+  } else {
+    checkbox.checked = false;
+    fechaCelda.textContent = '';
+  }
+}
+
+function marcarHecho(rondaId, checkbox) {
+  const key = PREFIJO_STORAGE + rondaId;
+  if (checkbox.checked) {
+    const ahora = new Date().toLocaleDateString('es-CL', { year: 'numeric', month: 'short', day: 'numeric' });
+    localStorage.setItem(key, JSON.stringify({ fecha_hecho: ahora }));
+  } else {
+    localStorage.removeItem(key);
+  }
+  const fila = checkbox.closest('tr');
+  pintarFilaHistorial(fila);
+}
+
+document.querySelectorAll('table.historial tbody tr').forEach(pintarFilaHistorial);
+</script>
+</body>
+</html>

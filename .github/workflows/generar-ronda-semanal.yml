@@ -1,0 +1,63 @@
+name: Generar ronda semanal PAES M1
+
+on:
+  schedule:
+    # Sábado 22:00 UTC = viernes 19:00 en invierno (UTC-3) o viernes 18:00 en verano (UTC-4)
+    # Ajustar según el cambio de horario en Chile
+    # Para más info: https://crontab.guru/
+    - cron: '0 22 * * 6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install anthropic
+
+      - name: Generate round
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python skill/scripts/generar_ronda.py
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: 'chore: generar nueva ronda PAES M1'
+          title: 'Nueva ronda de práctica PAES M1'
+          body: |
+            ## Ronda generada automáticamente
+
+            Se ha generado una nueva ronda de 5 preguntas para la práctica PAES M1.
+
+            **Cambios:**
+            - Nueva ronda de preguntas en `data/rondas/`
+            - Actualización de `docs/index.html` con quiz + historial
+            - Rotación de eje completada
+
+            **Verificar:**
+            - [ ] Las 5 preguntas están bien formuladas
+            - [ ] Los cálculos son correctos
+            - [ ] Las alternativas tienen sentido
+            - [ ] El eje rotó correctamente
+            - [ ] El sitio visualiza bien
+
+            Para mergear: aprieta el botón verde "Merge" cuando todo esté ok.
+          branch: ronda-${{ github.run_id }}
+          delete-branch: true
