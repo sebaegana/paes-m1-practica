@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """
-Agrega un registro a la bitacora de generaciones (registro_generaciones.json).
-Esto es lo que permite trackear "que se genero, cuando, y de que eje" a lo largo del
-tiempo, independiente de si el usuario marco o no la ronda como hecha en el panel.
+Agrega un registro a la bitácora de generaciones (registro_generaciones.json).
+Permite trackear qué se generó, cuándo, de qué materia/eje, a lo largo del tiempo.
 
 Uso:
-    python registrar_generacion.py <registro.json> <eje> <archivo_json> <archivo_html> [borrador_gmail_id]
+    python registrar_generacion.py <registro.json> <materia> <eje> <archivo_json> <archivo_html> [borrador_gmail_id]
 
-Si <registro.json> no existe todavia, se crea. El numero de ronda se calcula solo
-(len(registro) + 1).
+Si <registro.json> no existe, se crea. El número de ronda se calcula por materia
+(len([r for r in registro if r["materia"] == materia]) + 1).
 """
 import json
 import sys
@@ -17,19 +16,20 @@ from datetime import date
 
 
 def main():
-    if len(sys.argv) not in (5, 6):
+    if len(sys.argv) not in (6, 7):
         print(
-            "Uso: python registrar_generacion.py <registro.json> <eje> <archivo_json> "
+            "Uso: python registrar_generacion.py <registro.json> <materia> <eje> <archivo_json> "
             "<archivo_html> [borrador_gmail_id]",
             file=sys.stderr,
         )
         sys.exit(1)
 
     registro_path = sys.argv[1]
-    eje = sys.argv[2]
-    archivo_json = sys.argv[3]
-    archivo_html = sys.argv[4]
-    borrador_gmail_id = sys.argv[5] if len(sys.argv) == 6 else None
+    materia = sys.argv[2].lower()
+    eje = sys.argv[3]
+    archivo_json = sys.argv[4]
+    archivo_html = sys.argv[5]
+    borrador_gmail_id = sys.argv[6] if len(sys.argv) == 7 else None
 
     if os.path.exists(registro_path):
         with open(registro_path, "r", encoding="utf-8") as f:
@@ -37,9 +37,13 @@ def main():
     else:
         registro = []
 
+    # Calcular número de ronda por materia
+    ronda_num = len([r for r in registro if r.get("materia") == materia]) + 1
+
     nueva_ronda = {
-        "ronda": len(registro) + 1,
+        "ronda": ronda_num,
         "fecha": date.today().isoformat(),
+        "materia": materia,
         "eje": eje,
         "archivo_json": os.path.basename(archivo_json),
         "archivo_html": os.path.basename(archivo_html),

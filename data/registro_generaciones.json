@@ -2,6 +2,7 @@
   {
     "ronda": 1,
     "fecha": "2026-08-01",
+    "materia": "matematica",
     "eje": "Numeros",
     "archivo_json": "paes-m1-2026-08-01.json",
     "archivo_html": "paes-m1-2026-08-01.html",
@@ -10,6 +11,7 @@
   {
     "ronda": 2,
     "fecha": "2026-08-08",
+    "materia": "matematica",
     "eje": "Algebra y funciones",
     "archivo_json": "2026-08-08.json",
     "archivo_html": "paes-m1-2026-08-08.html",
@@ -17,10 +19,20 @@
   },
   {
     "ronda": 3,
-    "fecha": "2026-08-01",
+    "fecha": "2026-08-15",
+    "materia": "matematica",
     "eje": "Geometria",
     "archivo_json": "2026-08-15.json",
     "archivo_html": "paes-m1-2026-08-15.html",
+    "borrador_gmail_id": null
+  },
+  {
+    "ronda": 1,
+    "fecha": "2026-08-22",
+    "materia": "biologia",
+    "eje": "Celula",
+    "archivo_json": "2026-08-22.json",
+    "archivo_html": "paes-biologia-2026-08-22.html",
     "borrador_gmail_id": null
   }
 ]

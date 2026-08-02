@@ -32,8 +32,9 @@ Pasos:
 (Este "Explicación" con concepto + pasos es lo que luego se traduce 1:1 al campo
 `explicacion` del JSON que consume `scripts/build_quiz_html.py` — ver más abajo.)
 
-Abreviaturas de eje para el ID: NUM (Números), ALG (Álgebra y funciones), GEO (Geometría),
-PRO (Probabilidad y estadística).
+Abreviaturas de eje para el ID (depende de la materia):
+**Matemática:** NUM (Números), ALG (Álgebra y funciones), GEO (Geometría), PRO (Probabilidad y estadística)
+**Biología:** CEL (Célula), GEN (Herencia genética), EVO (Evolución), ECO (Ecología), SAL (Cuerpo y salud)
 
 ## Distribución de dificultad sugerida por set de 5 preguntas
 

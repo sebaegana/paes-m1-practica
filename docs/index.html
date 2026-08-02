@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>PAES M1 - Panel de práctica</title>
+<title>PAES - Panel de práctica multi-materia</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root { color-scheme: light; }
@@ -11,12 +11,21 @@
          color: #1d1d1f; background: #fafafa; display: flex; min-height: 100vh; }
   .container { display: flex; width: 100%; }
   .sidebar { width: 280px; background: #fff; border-right: 1px solid #e2e2e2; overflow-y: auto;
-              padding: 20px 0; position: relative; }
-  .sidebar-header { padding: 0 16px 20px; border-bottom: 1px solid #e2e2e2; margin-bottom: 16px; }
-  .sidebar-title { font-size: 0.9em; font-weight: 600; color: #666; text-transform: uppercase;
-                    letter-spacing: 0.05em; margin-bottom: 4px; }
+              padding: 0; position: relative; display: flex; flex-direction: column; }
+  .materia-tabs { display: flex; gap: 0; padding: 12px 0 0 0; border-bottom: 1px solid #e2e2e2;
+                   position: sticky; top: 0; background: #fff; }
+  .materia-tab { flex: 1; padding: 8px 12px; text-align: center; cursor: pointer; border: none;
+                  background: #f5f5f7; color: #666; font-weight: 500; font-size: 0.85em;
+                  transition: all 0.2s; border-bottom: 2px solid transparent; }
+  .materia-tab:hover { background: #eee; }
+  .materia-tab.active { background: #fff; color: #6b6bd6; border-bottom-color: #6b6bd6; }
+  .sidebar-items-container { flex: 1; overflow-y: auto; padding: 12px 0; }
+  .sidebar-header { padding: 0 16px 8px; margin-bottom: 8px; }
+  .sidebar-title { font-size: 0.75em; font-weight: 600; color: #999; text-transform: uppercase;
+                    letter-spacing: 0.05em; margin: 0; }
   .sidebar-item { padding: 12px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;
-                   transition: all 0.2s; border-left: 3px solid transparent; }
+                   transition: all 0.2s; border-left: 3px solid transparent; display: none; }
+  .sidebar-item.visible { display: block; }
   .sidebar-item:hover { background: #f2f2f7; }
   .sidebar-item.active { background: #eeeeff; border-left-color: #6b6bd6; }
   .sidebar-ronda { font-weight: 600; font-size: 0.95em; margin-bottom: 4px; }
@@ -73,7 +82,8 @@
   .col-fecha-hecho { color: #888; font-size: 0.85em; }
   @media (max-width: 768px) {
     .container { flex-direction: column; }
-    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e2e2; max-height: 120px; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e2e2; max-height: auto; }
+    .materia-tabs { padding: 8px 0; }
     .main { padding: 16px; }
   }
 </style>
@@ -81,570 +91,110 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <div class="sidebar-header">
-        <div class="sidebar-title">Rondas de práctica</div>
+      <div class="materia-tabs">
+        <button class="materia-tab active" onclick="cambiarMateria('matematica')">Matemática</button>
+        <button class="materia-tab" onclick="cambiarMateria('biologia')">Biología</button>
       </div>
-      <div class="sidebar-item " onclick="mostrarRonda(1)" data-ronda="1">
+      <div class="sidebar-items-container">
+        <div class="sidebar-header">
+          <p class="sidebar-title" id="titulo-materia">Rondas Matemática</p>
+        </div>
+      <div class="sidebar-item active" onclick="mostrarRonda('ronda-biologia-1')" data-ronda="ronda-biologia-1" data-materia="biologia">
+        <div class="sidebar-ronda">Round 1</div>
+        <div class="sidebar-eje">Celula</div>
+        <div class="sidebar-fecha">2026-08-22</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-1')" data-ronda="ronda-matematica-1" data-materia="matematica">
         <div class="sidebar-ronda">Round 1</div>
         <div class="sidebar-eje">Numeros</div>
         <div class="sidebar-fecha">2026-08-01</div>
       </div>
-      <div class="sidebar-item " onclick="mostrarRonda(2)" data-ronda="2">
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-2')" data-ronda="ronda-matematica-2" data-materia="matematica">
         <div class="sidebar-ronda">Round 2</div>
         <div class="sidebar-eje">Algebra y funciones</div>
         <div class="sidebar-fecha">2026-08-08</div>
       </div>
-      <div class="sidebar-item active" onclick="mostrarRonda(3)" data-ronda="3">
+      <div class="sidebar-item active" onclick="mostrarRonda('ronda-matematica-3')" data-ronda="ronda-matematica-3" data-materia="matematica">
         <div class="sidebar-ronda">Round 3</div>
         <div class="sidebar-eje">Geometria</div>
-        <div class="sidebar-fecha">2026-08-01</div>
+        <div class="sidebar-fecha">2026-08-15</div>
+      </div>
       </div>
     </div>
     <div class="main">
       <div class="header">
-        <h1>PAES M1 &mdash; Panel de práctica</h1>
-        <p class="actualizado">Última generación: 2026-08-15 &middot; Eje de esta semana: Geometria</p>
+        <h1>PAES &mdash; Panel de práctica</h1>
+        <p class="actualizado">Última generación: 2026-08-15 · Eje (Matematica): Geometria</p>
       </div>
-    <div class="ronda-content" id="ronda-1">
-      <p class="saludo">Esta semana toca Números, con foco en porcentaje y en el conjunto de los números enteros y racionales. Intenta responder antes de ver la respuesta de cada pregunta.</p>
-
-  <section class="pregunta" id="preg-M1-NUM-2026-08-01-01">
-    <div class="meta">Números &middot; Porcentaje &middot; Resolver problemas &middot; Dificultad: Básico</div>
-    <h3>Pregunta 1</h3>
-    <p class="enunciado">Una polera cuesta $15.000. La tienda ofrece un descuento del 20% por pago en efectivo. ¿Cuánto se paga por la polera si se cancela en efectivo?</p>
-    <div class="alternativas" data-correcta="B">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-01', this)">A) $11.000</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-01', this)">B) $12.000</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-01', this)">C) $13.000</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-01', this)">D) $3.000</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-01')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-01')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-01">
-      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-01"></span>
-      <span>Alternativa correcta: <strong>B</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-01">
-      <p class="concepto"><strong>Concepto clave:</strong> Un descuento de un x% sobre un precio equivale a pagar (100-x)% del precio original. Conviene pensar en el porcentaje que SÍ se paga, no solo en el que se descuenta.</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Si el descuento es 20%, lo que se paga corresponde al 100% - 20% = 80% del precio original.</li>
-      <li>Se calcula el 80% de $15.000: 15.000 × 0,8 = 12.000.</li>
-      <li>Por lo tanto, se paga $12.000 en efectivo.</li>
-      <li>La alternativa D ($3.000) es un distractor: corresponde solo al monto del descuento, no al precio final a pagar.</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-NUM-2026-08-01-02">
-    <div class="meta">Números &middot; Conjunto de los números enteros y racionales &middot; Representar &middot; Dificultad: Básico</div>
-    <h3>Pregunta 2</h3>
-    <p class="enunciado">Se tienen los números -5/2, -1, 0,6 y 3/2. ¿Cuál alternativa los ordena correctamente de menor a mayor?</p>
-    <div class="alternativas" data-correcta="A">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-02', this)">A) -5/2 &lt; -1 &lt; 0,6 &lt; 3/2</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-02', this)">B) -1 &lt; -5/2 &lt; 0,6 &lt; 3/2</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-02', this)">C) -5/2 &lt; 0,6 &lt; -1 &lt; 3/2</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-02', this)">D) 3/2 &lt; 0,6 &lt; -1 &lt; -5/2</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-02')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-02')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-02">
-      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-02"></span>
-      <span>Alternativa correcta: <strong>A</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-02">
-      <p class="concepto"><strong>Concepto clave:</strong> Para comparar números racionales en distintas notaciones (fracciones y decimales) conviene llevarlos todos a una misma representación, por ejemplo decimal, y ubicarlos en la recta numérica.</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Se convierten las fracciones a decimal: -5/2 = -2,5 y 3/2 = 1,5.</li>
-      <li>Los cuatro números quedan: -2,5 ; -1 ; 0,6 ; 1,5.</li>
-      <li>En la recta numérica, mientras más a la izquierda está un número, más pequeño es. Los negativos siempre son menores que los positivos.</li>
-      <li>Ordenando de izquierda a derecha (menor a mayor): -2,5 &lt; -1 &lt; 0,6 &lt; 1,5, es decir, -5/2 &lt; -1 &lt; 0,6 &lt; 3/2.</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-NUM-2026-08-01-03">
-    <div class="meta">Números &middot; Porcentaje &middot; Modelar &middot; Dificultad: Intermedio</div>
-    <h3>Pregunta 3</h3>
-    <p class="enunciado">Un televisor cuesta $200.000. Por liquidación, primero sube el precio un 30% y luego, sobre ese nuevo precio, aplica un descuento del 30%. ¿En qué porcentaje cambió el precio final respecto al original?</p>
-    <div class="alternativas" data-correcta="B">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-03', this)">A) Aumentó un 9%</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-03', this)">B) Disminuyó un 9%</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-03', this)">C) No cambió</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-03', this)">D) Disminuyó un 30%</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-03')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-03')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-03">
-      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-03"></span>
-      <span>Alternativa correcta: <strong>B</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-03">
-      <p class="concepto"><strong>Concepto clave:</strong> Cuando se aplican dos variaciones porcentuales sucesivas, no se pueden sumar ni restar directamente los porcentajes: hay que multiplicar los factores de cambio en el orden en que ocurren, porque el segundo cambio se aplica sobre una base distinta a la original.</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Subir un 30% equivale a multiplicar por el factor 1,30.</li>
-      <li>Bajar un 30% (sobre el nuevo precio) equivale a multiplicar por el factor 0,70.</li>
-      <li>Precio final = 200.000 × 1,30 × 0,70 = 200.000 × 0,91 = 182.000.</li>
-      <li>Comparado con el original ($200.000), el precio final es el 91%, es decir, disminuyó un 9%.</li>
-      <li>El error común es pensar que +30% y -30% se cancelan: no ocurre porque el descuento se calcula sobre un precio ya subido, una base mayor a la original.</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-NUM-2026-08-01-04">
-    <div class="meta">Números &middot; Conjunto de los números enteros y racionales &middot; Resolver problemas &middot; Dificultad: Intermedio</div>
-    <h3>Pregunta 4</h3>
-    <p class="enunciado">En Punta Arenas, la temperatura a las 7:00 AM fue de -4°C. Subió 9°C hasta el mediodía y luego bajó 6°C hacia la noche. ¿Cuál fue la temperatura durante la noche?</p>
-    <div class="alternativas" data-correcta="A">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-04', this)">A) -1°C</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-04', this)">B) 1°C</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-04', this)">C) -10°C</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-04', this)">D) 11°C</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-04')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-04')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-04">
-      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-04"></span>
-      <span>Alternativa correcta: <strong>A</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-04">
-      <p class="concepto"><strong>Concepto clave:</strong> Un aumento de temperatura se representa sumando, y una baja se representa restando, trabajando con números enteros (incluyendo negativos).</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Temperatura inicial: -4°C.</li>
-      <li>Sube 9°C hasta el mediodía: -4 + 9 = 5°C.</li>
-      <li>Baja 6°C hacia la noche: 5 - 6 = -1°C.</li>
-      <li>La temperatura durante la noche fue -1°C.</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-NUM-2026-08-01-05">
-    <div class="meta">Números &middot; Porcentaje &middot; Argumentar &middot; Dificultad: Avanzado</div>
-    <h3>Pregunta 5</h3>
-    <p class="enunciado">Un estudiante afirma: &#x27;Si un valor aumenta un 50% y luego disminuye un 50%, vuelve a su valor original&#x27;. Evaluando con un valor inicial de $100.000, ¿es válido este razonamiento?</p>
-    <div class="alternativas" data-correcta="B">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-NUM-2026-08-01-05', this)">A) Sí, siempre se vuelve al valor original</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-NUM-2026-08-01-05', this)">B) No: el valor final es menor que el original</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-NUM-2026-08-01-05', this)">C) No: el valor final es mayor que el original</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-NUM-2026-08-01-05', this)">D) Es válido solo si el valor inicial es par</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-NUM-2026-08-01-05')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-NUM-2026-08-01-05')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-NUM-2026-08-01-05">
-      <span class="respuesta-icono" id="resp-icono-M1-NUM-2026-08-01-05"></span>
-      <span>Alternativa correcta: <strong>B</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-NUM-2026-08-01-05">
-      <p class="concepto"><strong>Concepto clave:</strong> Para evaluar si un argumento general es válido, basta con probarlo con un caso concreto (contraejemplo). Si el caso concreto lo contradice, el argumento general es falso.</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Se toma el valor inicial propuesto: $100.000.</li>
-      <li>Aumento de 50%: 100.000 × 1,5 = 150.000.</li>
-      <li>Disminución de 50% sobre el nuevo valor: 150.000 × 0,5 = 75.000.</li>
-      <li>El resultado (75.000) es distinto y menor al original (100.000), por lo que el argumento del estudiante es falso.</li>
-      <li>La razón del error: el segundo porcentaje no se aplica sobre el valor original, sino sobre el valor ya aumentado (una base mayor), lo que produce una pérdida neta. Esto no depende de si el valor inicial es par o impar.</li>
-      </ol>
-    </div>
-  </section>
-
-    </div>
-    <div class="ronda-content" id="ronda-2">
-      <p class="saludo">Esta semana: Álgebra y funciones. Expresiones algebraicas, ecuaciones, sistemas lineales y funciones.</p>
-
-  <section class="pregunta" id="preg-M1-ALG-2026-08-08-01">
-    <div class="meta">Algebra y funciones &middot; Expresiones algebraicas &middot; Resolver problemas &middot; Dificultad: Básico</div>
-    <h3>Pregunta 1</h3>
-    <p class="enunciado">¿Cuál es el valor de (3x + 2)² cuando x = 1?</p>
-    <div class="alternativas" data-correcta="A">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-ALG-2026-08-08-01', this)">A) 25</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-ALG-2026-08-08-01', this)">B) 36</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-ALG-2026-08-08-01', this)">C) 49</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-ALG-2026-08-08-01', this)">D) 64</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-ALG-2026-08-08-01')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-ALG-2026-08-08-01')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-ALG-2026-08-08-01">
-      <span class="respuesta-icono" id="resp-icono-M1-ALG-2026-08-08-01"></span>
-      <span>Alternativa correcta: <strong>A</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-ALG-2026-08-08-01">
-      <p class="concepto"><strong>Concepto clave:</strong> Dominio del cuadrado de binomio: (a + b)² = a² + 2ab + b²</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: Sustituir x = 1 en (3x + 2)²: (3(1) + 2)² = (3 + 2)² = 5²</li>
-      <li>Paso 2: Calcular: 5² = 25</li>
-      <li>Paso final: La respuesta es 25 (alternativa A)</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-ALG-2026-08-08-02">
-    <div class="meta">Algebra y funciones &middot; Ecuaciones de primer grado &middot; Resolver problemas &middot; Dificultad: Básico</div>
-    <h3>Pregunta 2</h3>
-    <p class="enunciado">Un boleto de cine cuesta $8.000. Si tienes $40.000, ¿cuántos boletos puedes comprar?</p>
-    <div class="alternativas" data-correcta="B">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-ALG-2026-08-08-02', this)">A) 4</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-ALG-2026-08-08-02', this)">B) 5</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-ALG-2026-08-08-02', this)">C) 6</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-ALG-2026-08-08-02', this)">D) 7</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-ALG-2026-08-08-02')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-ALG-2026-08-08-02')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-ALG-2026-08-08-02">
-      <span class="respuesta-icono" id="resp-icono-M1-ALG-2026-08-08-02"></span>
-      <span>Alternativa correcta: <strong>B</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-ALG-2026-08-08-02">
-      <p class="concepto"><strong>Concepto clave:</strong> Resolver una ecuación simple: dinero disponible / precio unitario</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: Dinero disponible = $40.000</li>
-      <li>Paso 2: Precio por boleto = $8.000</li>
-      <li>Paso final: 40.000 ÷ 8.000 = 5 boletos (alternativa B)</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-ALG-2026-08-08-03">
-    <div class="meta">Algebra y funciones &middot; Sistemas de ecuaciones lineales &middot; Modelar &middot; Dificultad: Intermedio</div>
-    <h3>Pregunta 3</h3>
-    <p class="enunciado">En una tienda venden 2 libros y 3 cuadernos por $25.000, o 1 libro y 4 cuadernos por $20.000. ¿Cuál es el precio de un libro?</p>
-    <div class="alternativas" data-correcta="C">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-ALG-2026-08-08-03', this)">A) $5.000</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-ALG-2026-08-08-03', this)">B) $7.000</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-ALG-2026-08-08-03', this)">C) $10.000</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-ALG-2026-08-08-03', this)">D) $15.000</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-ALG-2026-08-08-03')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-ALG-2026-08-08-03')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-ALG-2026-08-08-03">
-      <span class="respuesta-icono" id="resp-icono-M1-ALG-2026-08-08-03"></span>
-      <span>Alternativa correcta: <strong>C</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-ALG-2026-08-08-03">
-      <p class="concepto"><strong>Concepto clave:</strong> Plantear y resolver un sistema 2x2: 2L + 3C = 25.000 y L + 4C = 20.000</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: De la segunda ecuación: L = 20.000 - 4C</li>
-      <li>Paso 2: Sustituir en la primera: 2(20.000 - 4C) + 3C = 25.000</li>
-      <li>Paso 3: 40.000 - 8C + 3C = 25.000, entonces -5C = -15.000, C = 3.000</li>
-      <li>Paso final: L = 20.000 - 4(3.000) = $8.000 (pero verificando: precio de un libro es $10.000)</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-ALG-2026-08-08-04">
-    <div class="meta">Algebra y funciones &middot; Función lineal &middot; Representar &middot; Dificultad: Intermedio</div>
-    <h3>Pregunta 4</h3>
-    <p class="enunciado">La función f(x) = 2x - 3 representa una recta. ¿Cuál es el valor de f(5)?</p>
-    <div class="alternativas" data-correcta="A">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-ALG-2026-08-08-04', this)">A) 7</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-ALG-2026-08-08-04', this)">B) 10</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-ALG-2026-08-08-04', this)">C) 13</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-ALG-2026-08-08-04', this)">D) 15</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-ALG-2026-08-08-04')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-ALG-2026-08-08-04')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-ALG-2026-08-08-04">
-      <span class="respuesta-icono" id="resp-icono-M1-ALG-2026-08-08-04"></span>
-      <span>Alternativa correcta: <strong>A</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-ALG-2026-08-08-04">
-      <p class="concepto"><strong>Concepto clave:</strong> Evaluación de función: reemplazar x por el valor dado</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: f(x) = 2x - 3</li>
-      <li>Paso 2: f(5) = 2(5) - 3 = 10 - 3 = 7</li>
-      <li>Paso final: La respuesta es 7 (alternativa A)</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-ALG-2026-08-08-05">
-    <div class="meta">Algebra y funciones &middot; Función cuadrática &middot; Argumentar &middot; Dificultad: Avanzado</div>
-    <h3>Pregunta 5</h3>
-    <p class="enunciado">¿Cuántas soluciones reales tiene la ecuación x² + 2x + 5 = 0?</p>
-    <div class="alternativas" data-correcta="A">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-ALG-2026-08-08-05', this)">A) 0</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-ALG-2026-08-08-05', this)">B) 1</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-ALG-2026-08-08-05', this)">C) 2</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-ALG-2026-08-08-05', this)">D) Infinitas</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-ALG-2026-08-08-05')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-ALG-2026-08-08-05')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-ALG-2026-08-08-05">
-      <span class="respuesta-icono" id="resp-icono-M1-ALG-2026-08-08-05"></span>
-      <span>Alternativa correcta: <strong>A</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-ALG-2026-08-08-05">
-      <p class="concepto"><strong>Concepto clave:</strong> Análisis del discriminante en una ecuación cuadrática: Δ = b² - 4ac</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: En x² + 2x + 5 = 0, tenemos a = 1, b = 2, c = 5</li>
-      <li>Paso 2: Δ = 2² - 4(1)(5) = 4 - 20 = -16</li>
-      <li>Paso final: Como Δ &lt; 0, no hay soluciones reales (alternativa A)</li>
-      </ol>
-    </div>
-  </section>
-
-    </div>
-    <div class="ronda-content active" id="ronda-3">
-      <p class="saludo">Esta semana: Geometría. Figuras geométricas, Teorema de Pitágoras, perímetro, área y transformaciones isométricas.</p>
-
-  <section class="pregunta" id="preg-M1-GEO-2026-08-15-01">
-    <div class="meta">Geometria &middot; Figuras geometricas (Teorema de Pitagoras) &middot; Resolver problemas &middot; Dificultad: Básico</div>
-    <h3>Pregunta 1</h3>
-    <p class="enunciado">Un terreno rectangular tiene dimensiones de 12 metros de largo y 9 metros de ancho. ¿Cuál es la longitud de la diagonal del terreno?</p>
-    <div class="alternativas" data-correcta="A">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-01', this)">A) 15 m</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-01', this)">B) 21 m</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-01', this)">C) 10.5 m</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-01', this)">D) 225 m</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-01')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-01')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-01">
-      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-01"></span>
-      <span>Alternativa correcta: <strong>A</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-01">
-      <p class="concepto"><strong>Concepto clave:</strong> El Teorema de Pitágoras establece que en un triángulo rectángulo, la hipotenusa² = cateto1² + cateto2². La diagonal de un rectángulo forma la hipotenusa.</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: Identificar los catetos: largo = 12 m, ancho = 9 m</li>
-      <li>Paso 2: Aplicar Pitágoras: d² = 12² + 9² = 144 + 81 = 225</li>
-      <li>Paso 3: Calcular la diagonal: d = √225 = 15 m</li>
-      <li>Paso final: La diagonal mide 15 metros</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-GEO-2026-08-15-02">
-    <div class="meta">Geometria &middot; Figuras geometricas (Perímetro y área) &middot; Resolver problemas &middot; Dificultad: Básico</div>
-    <h3>Pregunta 2</h3>
-    <p class="enunciado">Un círculo tiene radio 7 cm. ¿Cuál es su área? (Usa π ≈ 3,14)</p>
-    <div class="alternativas" data-correcta="C">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-02', this)">A) 21.98 cm²</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-02', this)">B) 43.96 cm²</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-02', this)">C) 153.86 cm²</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-02', this)">D) 49 cm²</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-02')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-02')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-02">
-      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-02"></span>
-      <span>Alternativa correcta: <strong>C</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-02">
-      <p class="concepto"><strong>Concepto clave:</strong> El área de un círculo se calcula con la fórmula A = π × r², donde r es el radio.</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: Datos: radio = 7 cm</li>
-      <li>Paso 2: Aplicar fórmula: A = π × r² = 3,14 × 7²</li>
-      <li>Paso 3: Calcular: A = 3,14 × 49 = 153.86 cm²</li>
-      <li>Paso final: El área es 153.86 cm²</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-GEO-2026-08-15-03">
-    <div class="meta">Geometria &middot; Cuerpos geometricos (Volumen) &middot; Modelar &middot; Dificultad: Intermedio</div>
-    <h3>Pregunta 3</h3>
-    <p class="enunciado">Una caja rectangular (paralelepípedo) tiene dimensiones 8 cm × 5 cm × 3 cm. ¿Cuál es su volumen?</p>
-    <div class="alternativas" data-correcta="C">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-03', this)">A) 16 cm³</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-03', this)">B) 40 cm³</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-03', this)">C) 120 cm³</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-03', this)">D) 240 cm³</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-03')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-03')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-03">
-      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-03"></span>
-      <span>Alternativa correcta: <strong>C</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-03">
-      <p class="concepto"><strong>Concepto clave:</strong> El volumen de un paralelepípedo rectangular se calcula multiplicando largo × ancho × alto: V = a × b × c.</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: Identificar dimensiones: largo = 8 cm, ancho = 5 cm, alto = 3 cm</li>
-      <li>Paso 2: Aplicar fórmula: V = 8 × 5 × 3</li>
-      <li>Paso 3: Calcular: V = 40 × 3 = 120 cm³</li>
-      <li>Paso final: El volumen es 120 cm³</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-GEO-2026-08-15-04">
-    <div class="meta">Geometria &middot; Transformaciones isometricas (Traslacion) &middot; Representar &middot; Dificultad: Intermedio</div>
-    <h3>Pregunta 4</h3>
-    <p class="enunciado">Un triángulo tiene vértices en A(2, 3), B(5, 3) y C(3, 6). Si el triángulo se traslada 3 unidades a la derecha y 2 unidades hacia arriba, ¿cuáles son las nuevas coordenadas del vértice A?</p>
-    <div class="alternativas" data-correcta="A">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-04', this)">A) (5, 5)</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-04', this)">B) (2, 6)</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-04', this)">C) (3, 3)</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-04', this)">D) (6, 8)</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-04')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-04')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-04">
-      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-04"></span>
-      <span>Alternativa correcta: <strong>A</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-04">
-      <p class="concepto"><strong>Concepto clave:</strong> Una traslación mueve todos los puntos de una figura en la misma dirección y distancia. Si se traslada (d_x, d_y), el nuevo punto es (x+d_x, y+d_y).</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: Vértice original: A(2, 3)</li>
-      <li>Paso 2: Traslación: 3 unidades derecha (+3 en x), 2 unidades arriba (+2 en y)</li>
-      <li>Paso 3: Nuevas coordenadas: A&#x27;(2+3, 3+2) = A&#x27;(5, 5)</li>
-      <li>Paso final: El nuevo vértice A está en (5, 5)</li>
-      </ol>
-    </div>
-  </section>
-
-
-  <section class="pregunta" id="preg-M1-GEO-2026-08-15-05">
-    <div class="meta">Geometria &middot; Figuras geometricas (Area de poligonos) &middot; Argumentar &middot; Dificultad: Avanzado</div>
-    <h3>Pregunta 5</h3>
-    <p class="enunciado">¿Cuál es el área de un triángulo con base 10 cm y altura 8 cm?</p>
-    <div class="alternativas" data-correcta="B">
-      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-05', this)">A) 18 cm²</button>
-<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-05', this)">B) 40 cm²</button>
-<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-05', this)">C) 80 cm²</button>
-<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-05', this)">D) 18 cm²</button>
-
-    </div>
-    <div class="botones-revelar">
-      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-05')">Ver respuesta</button>
-      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-05')">Ver explicación paso a paso</button>
-    </div>
-    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-05">
-      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-05"></span>
-      <span>Alternativa correcta: <strong>B</strong></span>
-    </div>
-    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-05">
-      <p class="concepto"><strong>Concepto clave:</strong> El área de un triángulo se calcula con la fórmula A = (base × altura) / 2. La altura debe ser perpendicular a la base.</p>
-      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
-      <ol class="pasos">
-      <li>Paso 1: Datos: base = 10 cm, altura = 8 cm</li>
-      <li>Paso 2: Aplicar fórmula: A = (base × altura) / 2</li>
-      <li>Paso 3: Calcular: A = (10 × 8) / 2 = 80 / 2 = 40 cm²</li>
-      <li>Paso final: El área del triángulo es 40 cm²</li>
-      </ol>
-    </div>
-  </section>
-
-    </div>
-      <div class="cobertura">
-        <strong>Cobertura de este set:</strong> Geometria<br>
-        Unidades cubiertas: Figuras geometricas, Cuerpos geometricos, Transformaciones isometricas<br>
-        Habilidades cubiertas: Resolver problemas, Modelar, Representar, Argumentar<br>
-        Próxima semana: Probabilidad y estadistica
-      </div>
+    <div class="ronda-content active" id="ronda-biologia-1"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 1 (Celula) - 2026-08-22</p></div>
+    <div class="ronda-content " id="ronda-matematica-1"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 1 (Numeros) - 2026-08-01</p></div>
+    <div class="ronda-content " id="ronda-matematica-2"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 2 (Algebra y funciones) - 2026-08-08</p></div>
+    <div class="ronda-content active" id="ronda-matematica-3"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 3 (Geometria) - 2026-08-15</p></div>
 
       <h2>Progreso</h2>
       <table class="historial">
         <thead>
-          <tr><th>Ronda</th><th>Fecha</th><th>Eje</th><th>Estado</th><th></th></tr>
+          <tr><th>Materia</th><th>Ronda</th><th>Fecha</th><th>Eje</th><th>Estado</th><th></th></tr>
         </thead>
         <tbody>
           
-      <tr data-ronda-id="2026-08-01-Geometria">
+      <tr data-ronda-id="matematica-2026-08-15-Geometria">
+        <td>Matematica</td>
         <td>3</td>
-        <td>2026-08-01</td>
+        <td>2026-08-15</td>
         <td>Geometria</td>
         <td class="col-check">
           <label class="check-label">
-            <input type="checkbox" class="check-hecho" onchange="marcarHecho('2026-08-01-Geometria', this)">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-2026-08-15-Geometria', this)">
             <span class="check-texto">Hecho</span>
           </label>
         </td>
-        <td class="col-fecha-hecho" id="fecha-hecho-2026-08-01-Geometria"></td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-2026-08-15-Geometria"></td>
       </tr>
 
 
-      <tr data-ronda-id="2026-08-08-Algebra_y_funciones">
+      <tr data-ronda-id="matematica-2026-08-08-Algebra_y_funciones">
+        <td>Matematica</td>
         <td>2</td>
         <td>2026-08-08</td>
         <td>Algebra y funciones</td>
         <td class="col-check">
           <label class="check-label">
-            <input type="checkbox" class="check-hecho" onchange="marcarHecho('2026-08-08-Algebra_y_funciones', this)">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-2026-08-08-Algebra_y_funciones', this)">
             <span class="check-texto">Hecho</span>
           </label>
         </td>
-        <td class="col-fecha-hecho" id="fecha-hecho-2026-08-08-Algebra_y_funciones"></td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-2026-08-08-Algebra_y_funciones"></td>
       </tr>
 
 
-      <tr data-ronda-id="2026-08-01-Numeros">
+      <tr data-ronda-id="matematica-2026-08-01-Numeros">
+        <td>Matematica</td>
         <td>1</td>
         <td>2026-08-01</td>
         <td>Numeros</td>
         <td class="col-check">
           <label class="check-label">
-            <input type="checkbox" class="check-hecho" onchange="marcarHecho('2026-08-01-Numeros', this)">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-2026-08-01-Numeros', this)">
             <span class="check-texto">Hecho</span>
           </label>
         </td>
-        <td class="col-fecha-hecho" id="fecha-hecho-2026-08-01-Numeros"></td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-2026-08-01-Numeros"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-2026-08-22-Celula">
+        <td>Biologia</td>
+        <td>1</td>
+        <td>2026-08-22</td>
+        <td>Celula</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-2026-08-22-Celula', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-2026-08-22-Celula"></td>
       </tr>
 
         </tbody>
@@ -653,13 +203,38 @@
   </div>
 
 <script>
-function mostrarRonda(rondaNum) {
+function cambiarMateria(materia) {
+  // Actualizar tabs
+  document.querySelectorAll('.materia-tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+
+  // Actualizar sidebar items visibles
+  document.querySelectorAll('.sidebar-item').forEach(item => {
+    if (item.dataset.materia === materia) {
+      item.classList.add('visible');
+    } else {
+      item.classList.remove('visible');
+    }
+  });
+
+  // Actualizar título del sidebar
+  const titulo = materia === 'matematica' ? 'Rondas Matemática' : 'Rondas Biología';
+  document.getElementById('titulo-materia').textContent = titulo;
+
+  // Mostrar primera ronda de la materia
+  const firstItem = document.querySelector(`.sidebar-item[data-materia="{materia}"]`);
+  if (firstItem) {
+    firstItem.click();
+  }
+}
+
+function mostrarRonda(contentId) {
   const allContent = document.querySelectorAll('.ronda-content');
   const allItems = document.querySelectorAll('.sidebar-item');
   allContent.forEach(c => c.classList.remove('active'));
   allItems.forEach(i => i.classList.remove('active'));
-  document.getElementById('ronda-' + rondaNum).classList.add('active');
-  document.querySelector('[data-ronda="' + rondaNum + '"]').classList.add('active');
+  document.getElementById(contentId).classList.add('active');
+  document.querySelector('[data-ronda="' + contentId + '"]').classList.add('active');
 }
 
 function seleccionar(qid, btn) {
@@ -704,7 +279,6 @@ function mostrarExplicacion(qid) {
   document.getElementById('sol-' + qid).classList.toggle('oculto');
 }
 
-// --- Progreso: persistido en localStorage, sobrevive a que este HTML se regenere ---
 const PREFIJO_STORAGE = 'paes_m1_progreso_';
 
 function pintarFilaHistorial(fila) {
@@ -734,7 +308,21 @@ function marcarHecho(rondaId, checkbox) {
   pintarFilaHistorial(fila);
 }
 
+// Inicializar: mostrar Matemática por defecto
+document.querySelectorAll('.sidebar-item').forEach(item => {
+  if (item.dataset.materia === 'matematica') {
+    item.classList.add('visible');
+  }
+});
+
+// Restaurar progreso guardado
 document.querySelectorAll('table.historial tbody tr').forEach(pintarFilaHistorial);
+
+// Mostrar primera ronda (Matemática)
+const firstRonda = document.querySelector('.sidebar-item[data-materia="matematica"]');
+if (firstRonda) {
+  setTimeout(() => firstRonda.click(), 50);
+}
 </script>
     </div>
   </div>
