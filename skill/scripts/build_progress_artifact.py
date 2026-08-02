@@ -91,7 +91,7 @@ def load_questions_for_entry(entry):
     try:
         materia = entry.get('materia', 'matematica')
         archivo_json = entry.get('archivo_json', '')
-        ronda_json_path = Path(__file__).parent.parent / "data" / "rondas" / materia / archivo_json
+        ronda_json_path = Path(__file__).parent.parent.parent / "data" / "rondas" / materia / archivo_json
         if ronda_json_path.exists():
             with open(ronda_json_path, "r", encoding="utf-8") as f:
                 return json.load(f)
