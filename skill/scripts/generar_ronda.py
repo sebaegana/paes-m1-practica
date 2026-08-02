@@ -97,7 +97,7 @@ Instrucciones:
 6. Contexto: alterna entre Cotidiano y Matemático
 7. Cada pregunta: ID + eje + unidad + habilidad + dificultad + contexto + enunciado + 4 alternativas (A-D) + correcta + explicación (concepto + pasos)
 
-Devuelve un JSON válido con esta estructura:
+Devuelve un JSON válido, COMPACTO (en una sola línea, sin saltos de línea dentro de strings), con esta estructura:
 {{
   "fecha": "{date.today().isoformat()}",
   "eje_semana": "{eje_info['eje_de_esta_semana']}",
@@ -130,14 +130,33 @@ Devuelve un JSON válido con esta estructura:
 CRÍTICO: El JSON debe ser válido y parseable. Responde SOLO el JSON, sin explicaciones extra."""
 
     message = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-opus-5",
         max_tokens=4000,
         messages=[
             {"role": "user", "content": prompt}
         ]
     )
 
-    response_text = message.content[0].text.strip()
+    # Extraer el texto de la respuesta (manejar thinking blocks)
+    response_text = ""
+    for block in message.content:
+        if hasattr(block, 'text'):
+            response_text = block.text.strip()
+            break
+
+    if not response_text:
+        print(f"Error: No se encontró texto en la respuesta de Claude", file=sys.stderr)
+        print(f"Contenido recibido: {message.content}", file=sys.stderr)
+        sys.exit(1)
+
+    # Limpiar el JSON: si está dentro de ```json ... ```, extraerlo
+    if response_text.startswith("```"):
+        try:
+            start = response_text.find("{")
+            end = response_text.rfind("}") + 1
+            response_text = response_text[start:end]
+        except:
+            pass
 
     # Intentar parsear el JSON
     try:
@@ -145,7 +164,7 @@ CRÍTICO: El JSON debe ser válido y parseable. Responde SOLO el JSON, sin expli
         return preguntas_json
     except json.JSONDecodeError as e:
         print(f"Error al parsear JSON de Claude: {e}", file=sys.stderr)
-        print(f"Respuesta recibida:\n{response_text}", file=sys.stderr)
+        print(f"Primeros 500 caracteres:\n{response_text[:500]}", file=sys.stderr)
         sys.exit(1)
 
 
