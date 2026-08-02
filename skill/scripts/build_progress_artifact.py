@@ -163,7 +163,7 @@ def build_html(preguntas_data, registro):
   .sidebar-ronda {{ font-weight: 600; font-size: 0.95em; margin-bottom: 4px; }}
   .sidebar-eje {{ font-size: 0.85em; color: #666; margin-bottom: 2px; }}
   .sidebar-fecha {{ font-size: 0.75em; color: #999; }}
-  .main {{ flex: 1; overflow-y: auto; padding: 24px 32px; max-width: 900px; }}
+  .main {{ flex: 1; overflow-y: auto; padding: 24px 32px; }}
   .header {{ margin-bottom: 24px; }}
   h1 {{ font-size: 1.4em; margin: 0 0 8px; }}
   .actualizado {{ font-size: 0.8em; color: #999; margin: 0; }}
