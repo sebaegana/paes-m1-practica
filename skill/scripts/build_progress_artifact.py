@@ -120,7 +120,9 @@ def build_html(preguntas_data, registro):
         else:
             # Intentar cargar el JSON de la ronda anterior desde data/rondas/
             try:
-                ronda_json_path = Path(sys.argv[1]).parent.parent / "rondas" / f"{record.get('fecha', '')}.json"
+                # Usar el nombre del archivo del registro, no construirlo
+                archivo_json = record.get('archivo_json', f"{record.get('fecha', '')}.json")
+                ronda_json_path = Path(sys.argv[1]).parent.parent / "rondas" / archivo_json
                 if ronda_json_path.exists():
                     with open(ronda_json_path, "r", encoding="utf-8") as f:
                         ronda_data = json.load(f)
