@@ -14,5 +14,13 @@
     "archivo_json": "2026-08-08.json",
     "archivo_html": "paes-m1-2026-08-08.html",
     "borrador_gmail_id": null
+  },
+  {
+    "ronda": 3,
+    "fecha": "2026-08-01",
+    "eje": "Geometria",
+    "archivo_json": "2026-08-15.json",
+    "archivo_html": "paes-m1-2026-08-15.html",
+    "borrador_gmail_id": null
   }
 ]

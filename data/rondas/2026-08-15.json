@@ -1,0 +1,146 @@
+{
+  "fecha": "2026-08-15",
+  "eje_semana": "Geometria",
+  "saludo": "Esta semana: Geometría. Figuras geométricas, Teorema de Pitágoras, perímetro, área y transformaciones isométricas.",
+  "preguntas": [
+    {
+      "id": "M1-GEO-2026-08-15-01",
+      "eje": "Geometria",
+      "unidad": "Figuras geometricas (Teorema de Pitagoras)",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un terreno rectangular tiene dimensiones de 12 metros de largo y 9 metros de ancho. ¿Cuál es la longitud de la diagonal del terreno?",
+      "alternativas": {
+        "A": "15 m",
+        "B": "21 m",
+        "C": "10.5 m",
+        "D": "225 m"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El Teorema de Pitágoras establece que en un triángulo rectángulo, la hipotenusa² = cateto1² + cateto2². La diagonal de un rectángulo forma la hipotenusa.",
+        "pasos": [
+          "Paso 1: Identificar los catetos: largo = 12 m, ancho = 9 m",
+          "Paso 2: Aplicar Pitágoras: d² = 12² + 9² = 144 + 81 = 225",
+          "Paso 3: Calcular la diagonal: d = √225 = 15 m",
+          "Paso final: La diagonal mide 15 metros"
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-2026-08-15-02",
+      "eje": "Geometria",
+      "unidad": "Figuras geometricas (Perímetro y área)",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un círculo tiene radio 7 cm. ¿Cuál es su área? (Usa π ≈ 3,14)",
+      "alternativas": {
+        "A": "21.98 cm²",
+        "B": "43.96 cm²",
+        "C": "153.86 cm²",
+        "D": "49 cm²"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El área de un círculo se calcula con la fórmula A = π × r², donde r es el radio.",
+        "pasos": [
+          "Paso 1: Datos: radio = 7 cm",
+          "Paso 2: Aplicar fórmula: A = π × r² = 3,14 × 7²",
+          "Paso 3: Calcular: A = 3,14 × 49 = 153.86 cm²",
+          "Paso final: El área es 153.86 cm²"
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-2026-08-15-03",
+      "eje": "Geometria",
+      "unidad": "Cuerpos geometricos (Volumen)",
+      "habilidad": "Modelar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Una caja rectangular (paralelepípedo) tiene dimensiones 8 cm × 5 cm × 3 cm. ¿Cuál es su volumen?",
+      "alternativas": {
+        "A": "16 cm³",
+        "B": "40 cm³",
+        "C": "120 cm³",
+        "D": "240 cm³"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El volumen de un paralelepípedo rectangular se calcula multiplicando largo × ancho × alto: V = a × b × c.",
+        "pasos": [
+          "Paso 1: Identificar dimensiones: largo = 8 cm, ancho = 5 cm, alto = 3 cm",
+          "Paso 2: Aplicar fórmula: V = 8 × 5 × 3",
+          "Paso 3: Calcular: V = 40 × 3 = 120 cm³",
+          "Paso final: El volumen es 120 cm³"
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-2026-08-15-04",
+      "eje": "Geometria",
+      "unidad": "Transformaciones isometricas (Traslacion)",
+      "habilidad": "Representar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Un triángulo tiene vértices en A(2, 3), B(5, 3) y C(3, 6). Si el triángulo se traslada 3 unidades a la derecha y 2 unidades hacia arriba, ¿cuáles son las nuevas coordenadas del vértice A?",
+      "alternativas": {
+        "A": "(5, 5)",
+        "B": "(2, 6)",
+        "C": "(3, 3)",
+        "D": "(6, 8)"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Una traslación mueve todos los puntos de una figura en la misma dirección y distancia. Si se traslada (d_x, d_y), el nuevo punto es (x+d_x, y+d_y).",
+        "pasos": [
+          "Paso 1: Vértice original: A(2, 3)",
+          "Paso 2: Traslación: 3 unidades derecha (+3 en x), 2 unidades arriba (+2 en y)",
+          "Paso 3: Nuevas coordenadas: A'(2+3, 3+2) = A'(5, 5)",
+          "Paso final: El nuevo vértice A está en (5, 5)"
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-2026-08-15-05",
+      "eje": "Geometria",
+      "unidad": "Figuras geometricas (Area de poligonos)",
+      "habilidad": "Argumentar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es el área de un triángulo con base 10 cm y altura 8 cm?",
+      "alternativas": {
+        "A": "18 cm²",
+        "B": "40 cm²",
+        "C": "80 cm²",
+        "D": "18 cm²"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El área de un triángulo se calcula con la fórmula A = (base × altura) / 2. La altura debe ser perpendicular a la base.",
+        "pasos": [
+          "Paso 1: Datos: base = 10 cm, altura = 8 cm",
+          "Paso 2: Aplicar fórmula: A = (base × altura) / 2",
+          "Paso 3: Calcular: A = (10 × 8) / 2 = 80 / 2 = 40 cm²",
+          "Paso final: El área del triángulo es 40 cm²"
+        ]
+      }
+    }
+  ],
+  "cobertura": {
+    "unidades": [
+      "Figuras geometricas",
+      "Cuerpos geometricos",
+      "Transformaciones isometricas"
+    ],
+    "habilidades": [
+      "Resolver problemas",
+      "Modelar",
+      "Representar",
+      "Argumentar"
+    ],
+    "proxima_semana": "Probabilidad y estadistica"
+  }
+}

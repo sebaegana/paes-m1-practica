@@ -89,16 +89,21 @@
         <div class="sidebar-eje">Numeros</div>
         <div class="sidebar-fecha">2026-08-01</div>
       </div>
-      <div class="sidebar-item active" onclick="mostrarRonda(2)" data-ronda="2">
+      <div class="sidebar-item " onclick="mostrarRonda(2)" data-ronda="2">
         <div class="sidebar-ronda">Round 2</div>
         <div class="sidebar-eje">Algebra y funciones</div>
         <div class="sidebar-fecha">2026-08-08</div>
+      </div>
+      <div class="sidebar-item active" onclick="mostrarRonda(3)" data-ronda="3">
+        <div class="sidebar-ronda">Round 3</div>
+        <div class="sidebar-eje">Geometria</div>
+        <div class="sidebar-fecha">2026-08-01</div>
       </div>
     </div>
     <div class="main">
       <div class="header">
         <h1>PAES M1 &mdash; Panel de práctica</h1>
-        <p class="actualizado">Última generación: 2026-08-08 &middot; Eje de esta semana: Algebra y funciones</p>
+        <p class="actualizado">Última generación: 2026-08-15 &middot; Eje de esta semana: Geometria</p>
       </div>
     <div class="ronda-content" id="ronda-1">
       <p class="saludo">Esta semana toca Números, con foco en porcentaje y en el conjunto de los números enteros y racionales. Intenta responder antes de ver la respuesta de cada pregunta.</p>
@@ -265,7 +270,7 @@
   </section>
 
     </div>
-    <div class="ronda-content active" id="ronda-2">
+    <div class="ronda-content" id="ronda-2">
       <p class="saludo">Esta semana: Álgebra y funciones. Expresiones algebraicas, ecuaciones, sistemas lineales y funciones.</p>
 
   <section class="pregunta" id="preg-M1-ALG-2026-08-08-01">
@@ -424,11 +429,174 @@
   </section>
 
     </div>
+    <div class="ronda-content active" id="ronda-3">
+      <p class="saludo">Esta semana: Geometría. Figuras geométricas, Teorema de Pitágoras, perímetro, área y transformaciones isométricas.</p>
+
+  <section class="pregunta" id="preg-M1-GEO-2026-08-15-01">
+    <div class="meta">Geometria &middot; Figuras geometricas (Teorema de Pitagoras) &middot; Resolver problemas &middot; Dificultad: Básico</div>
+    <h3>Pregunta 1</h3>
+    <p class="enunciado">Un terreno rectangular tiene dimensiones de 12 metros de largo y 9 metros de ancho. ¿Cuál es la longitud de la diagonal del terreno?</p>
+    <div class="alternativas" data-correcta="A">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-01', this)">A) 15 m</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-01', this)">B) 21 m</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-01', this)">C) 10.5 m</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-01', this)">D) 225 m</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-01')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-01')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-01">
+      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-01"></span>
+      <span>Alternativa correcta: <strong>A</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-01">
+      <p class="concepto"><strong>Concepto clave:</strong> El Teorema de Pitágoras establece que en un triángulo rectángulo, la hipotenusa² = cateto1² + cateto2². La diagonal de un rectángulo forma la hipotenusa.</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Paso 1: Identificar los catetos: largo = 12 m, ancho = 9 m</li>
+      <li>Paso 2: Aplicar Pitágoras: d² = 12² + 9² = 144 + 81 = 225</li>
+      <li>Paso 3: Calcular la diagonal: d = √225 = 15 m</li>
+      <li>Paso final: La diagonal mide 15 metros</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="pregunta" id="preg-M1-GEO-2026-08-15-02">
+    <div class="meta">Geometria &middot; Figuras geometricas (Perímetro y área) &middot; Resolver problemas &middot; Dificultad: Básico</div>
+    <h3>Pregunta 2</h3>
+    <p class="enunciado">Un círculo tiene radio 7 cm. ¿Cuál es su área? (Usa π ≈ 3,14)</p>
+    <div class="alternativas" data-correcta="C">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-02', this)">A) 21.98 cm²</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-02', this)">B) 43.96 cm²</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-02', this)">C) 153.86 cm²</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-02', this)">D) 49 cm²</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-02')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-02')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-02">
+      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-02"></span>
+      <span>Alternativa correcta: <strong>C</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-02">
+      <p class="concepto"><strong>Concepto clave:</strong> El área de un círculo se calcula con la fórmula A = π × r², donde r es el radio.</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Paso 1: Datos: radio = 7 cm</li>
+      <li>Paso 2: Aplicar fórmula: A = π × r² = 3,14 × 7²</li>
+      <li>Paso 3: Calcular: A = 3,14 × 49 = 153.86 cm²</li>
+      <li>Paso final: El área es 153.86 cm²</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="pregunta" id="preg-M1-GEO-2026-08-15-03">
+    <div class="meta">Geometria &middot; Cuerpos geometricos (Volumen) &middot; Modelar &middot; Dificultad: Intermedio</div>
+    <h3>Pregunta 3</h3>
+    <p class="enunciado">Una caja rectangular (paralelepípedo) tiene dimensiones 8 cm × 5 cm × 3 cm. ¿Cuál es su volumen?</p>
+    <div class="alternativas" data-correcta="C">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-03', this)">A) 16 cm³</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-03', this)">B) 40 cm³</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-03', this)">C) 120 cm³</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-03', this)">D) 240 cm³</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-03')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-03')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-03">
+      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-03"></span>
+      <span>Alternativa correcta: <strong>C</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-03">
+      <p class="concepto"><strong>Concepto clave:</strong> El volumen de un paralelepípedo rectangular se calcula multiplicando largo × ancho × alto: V = a × b × c.</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Paso 1: Identificar dimensiones: largo = 8 cm, ancho = 5 cm, alto = 3 cm</li>
+      <li>Paso 2: Aplicar fórmula: V = 8 × 5 × 3</li>
+      <li>Paso 3: Calcular: V = 40 × 3 = 120 cm³</li>
+      <li>Paso final: El volumen es 120 cm³</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="pregunta" id="preg-M1-GEO-2026-08-15-04">
+    <div class="meta">Geometria &middot; Transformaciones isometricas (Traslacion) &middot; Representar &middot; Dificultad: Intermedio</div>
+    <h3>Pregunta 4</h3>
+    <p class="enunciado">Un triángulo tiene vértices en A(2, 3), B(5, 3) y C(3, 6). Si el triángulo se traslada 3 unidades a la derecha y 2 unidades hacia arriba, ¿cuáles son las nuevas coordenadas del vértice A?</p>
+    <div class="alternativas" data-correcta="A">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-04', this)">A) (5, 5)</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-04', this)">B) (2, 6)</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-04', this)">C) (3, 3)</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-04', this)">D) (6, 8)</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-04')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-04')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-04">
+      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-04"></span>
+      <span>Alternativa correcta: <strong>A</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-04">
+      <p class="concepto"><strong>Concepto clave:</strong> Una traslación mueve todos los puntos de una figura en la misma dirección y distancia. Si se traslada (d_x, d_y), el nuevo punto es (x+d_x, y+d_y).</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Paso 1: Vértice original: A(2, 3)</li>
+      <li>Paso 2: Traslación: 3 unidades derecha (+3 en x), 2 unidades arriba (+2 en y)</li>
+      <li>Paso 3: Nuevas coordenadas: A&#x27;(2+3, 3+2) = A&#x27;(5, 5)</li>
+      <li>Paso final: El nuevo vértice A está en (5, 5)</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="pregunta" id="preg-M1-GEO-2026-08-15-05">
+    <div class="meta">Geometria &middot; Figuras geometricas (Area de poligonos) &middot; Argumentar &middot; Dificultad: Avanzado</div>
+    <h3>Pregunta 5</h3>
+    <p class="enunciado">¿Cuál es el área de un triángulo con base 10 cm y altura 8 cm?</p>
+    <div class="alternativas" data-correcta="B">
+      <button type="button" class="alt-btn" data-letra="A" onclick="seleccionar('M1-GEO-2026-08-15-05', this)">A) 18 cm²</button>
+<button type="button" class="alt-btn" data-letra="B" onclick="seleccionar('M1-GEO-2026-08-15-05', this)">B) 40 cm²</button>
+<button type="button" class="alt-btn" data-letra="C" onclick="seleccionar('M1-GEO-2026-08-15-05', this)">C) 80 cm²</button>
+<button type="button" class="alt-btn" data-letra="D" onclick="seleccionar('M1-GEO-2026-08-15-05', this)">D) 18 cm²</button>
+
+    </div>
+    <div class="botones-revelar">
+      <button type="button" class="ver-respuesta" onclick="mostrarRespuesta('M1-GEO-2026-08-15-05')">Ver respuesta</button>
+      <button type="button" class="ver-explicacion" onclick="mostrarExplicacion('M1-GEO-2026-08-15-05')">Ver explicación paso a paso</button>
+    </div>
+    <div class="respuesta oculto" id="resp-M1-GEO-2026-08-15-05">
+      <span class="respuesta-icono" id="resp-icono-M1-GEO-2026-08-15-05"></span>
+      <span>Alternativa correcta: <strong>B</strong></span>
+    </div>
+    <div class="solucion oculto" id="sol-M1-GEO-2026-08-15-05">
+      <p class="concepto"><strong>Concepto clave:</strong> El área de un triángulo se calcula con la fórmula A = (base × altura) / 2. La altura debe ser perpendicular a la base.</p>
+      <p class="pasos-titulo"><strong>Resolución paso a paso</strong></p>
+      <ol class="pasos">
+      <li>Paso 1: Datos: base = 10 cm, altura = 8 cm</li>
+      <li>Paso 2: Aplicar fórmula: A = (base × altura) / 2</li>
+      <li>Paso 3: Calcular: A = (10 × 8) / 2 = 80 / 2 = 40 cm²</li>
+      <li>Paso final: El área del triángulo es 40 cm²</li>
+      </ol>
+    </div>
+  </section>
+
+    </div>
       <div class="cobertura">
-        <strong>Cobertura de este set:</strong> Algebra y funciones<br>
-        Unidades cubiertas: Expresiones algebraicas, Ecuaciones de primer grado, Sistemas de ecuaciones lineales, Función lineal, Función cuadrática<br>
+        <strong>Cobertura de este set:</strong> Geometria<br>
+        Unidades cubiertas: Figuras geometricas, Cuerpos geometricos, Transformaciones isometricas<br>
         Habilidades cubiertas: Resolver problemas, Modelar, Representar, Argumentar<br>
-        Próxima semana: Geometría
+        Próxima semana: Probabilidad y estadistica
       </div>
 
       <h2>Progreso</h2>
@@ -438,6 +606,20 @@
         </thead>
         <tbody>
           
+      <tr data-ronda-id="2026-08-01-Geometria">
+        <td>3</td>
+        <td>2026-08-01</td>
+        <td>Geometria</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('2026-08-01-Geometria', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-2026-08-01-Geometria"></td>
+      </tr>
+
+
       <tr data-ronda-id="2026-08-08-Algebra_y_funciones">
         <td>2</td>
         <td>2026-08-08</td>
