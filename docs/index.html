@@ -3,14 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <title>PAES M1 - Panel de práctica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root { color-scheme: light; }
-  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px;
-         margin: 0 auto; padding: 24px 16px 48px; color: #1d1d1f; background: #fafafa; }
-  h1 { font-size: 1.4em; margin-bottom: 4px; }
-  h2 { font-size: 1.1em; margin-top: 36px; }
-  .actualizado { font-size: 0.8em; color: #999; margin-bottom: 18px; }
-  .saludo { color: #444; margin-bottom: 24px; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 0;
+         color: #1d1d1f; background: #fafafa; display: flex; min-height: 100vh; }
+  .container { display: flex; width: 100%; }
+  .sidebar { width: 280px; background: #fff; border-right: 1px solid #e2e2e2; overflow-y: auto;
+              padding: 20px 0; position: relative; }
+  .sidebar-header { padding: 0 16px 20px; border-bottom: 1px solid #e2e2e2; margin-bottom: 16px; }
+  .sidebar-title { font-size: 0.9em; font-weight: 600; color: #666; text-transform: uppercase;
+                    letter-spacing: 0.05em; margin-bottom: 4px; }
+  .sidebar-item { padding: 12px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;
+                   transition: all 0.2s; border-left: 3px solid transparent; }
+  .sidebar-item:hover { background: #f2f2f7; }
+  .sidebar-item.active { background: #eeeeff; border-left-color: #6b6bd6; }
+  .sidebar-ronda { font-weight: 600; font-size: 0.95em; margin-bottom: 4px; }
+  .sidebar-eje { font-size: 0.85em; color: #666; margin-bottom: 2px; }
+  .sidebar-fecha { font-size: 0.75em; color: #999; }
+  .main { flex: 1; overflow-y: auto; padding: 24px 32px; max-width: 900px; }
+  .header { margin-bottom: 24px; }
+  h1 { font-size: 1.4em; margin: 0 0 8px; }
+  .actualizado { font-size: 0.8em; color: #999; margin: 0; }
+  .saludo { color: #444; margin-bottom: 24px; font-size: 1em; line-height: 1.5; }
   .pregunta { background: #fff; border: 1px solid #e2e2e2; border-radius: 10px;
                padding: 18px 20px; margin-bottom: 18px; }
   .meta { font-size: 0.78em; color: #888; text-transform: uppercase; letter-spacing: 0.02em;
@@ -43,15 +59,8 @@
   .solucion .pasos { margin: 0; padding-left: 20px; }
   .solucion .pasos li { margin-bottom: 6px; }
   .oculto { display: none; }
-  .tabs { display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid #e2e2e2; overflow-x: auto; }
-  .tab-btn { padding: 12px 18px; border: none; background: transparent; cursor: pointer;
-              font-size: 0.95em; color: #666; border-bottom: 3px solid transparent;
-              transition: all 0.2s; white-space: nowrap; }
-  .tab-btn:hover { color: #1d1d1f; }
-  .tab-btn.active { color: #1d1d1f; border-bottom-color: #6b6bd6; font-weight: 600; }
-  .tabs-container { position: relative; }
-  .tab-content { display: none; }
-  .tab-content.active { display: block; }
+  .ronda-content { display: none; }
+  .ronda-content.active { display: block; }
   .cobertura { font-size: 0.85em; color: #666; border-top: 1px solid #e2e2e2; padding-top: 14px;
                 margin-top: 20px; }
   table.historial { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px;
@@ -62,20 +71,36 @@
   .col-check { white-space: nowrap; }
   .check-label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
   .col-fecha-hecho { color: #888; font-size: 0.85em; }
+  @media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e2e2; max-height: 120px; }
+    .main { padding: 16px; }
+  }
 </style>
 </head>
 <body>
-  <h1>PAES M1 &mdash; Panel de práctica</h1>
-  <p class="actualizado">Última generación: 2026-08-08 &middot; Eje de esta semana: Algebra y funciones</p>
-
-  <h2>Rondas de práctica</h2>
-  <div class="tabs">
-      <button class="tab-btn " onclick="cambiarTab(1)" data-ronda="1">Round 1: Numeros</button>
-      <button class="tab-btn active" onclick="cambiarTab(2)" data-ronda="2">Round 2: Algebra y funciones</button>
-  </div>
-
-  <div class="tabs-container">
-    <div class="tab-content" id="tab-ronda-1">
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title">Rondas de práctica</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda(1)" data-ronda="1">
+        <div class="sidebar-ronda">Round 1</div>
+        <div class="sidebar-eje">Numeros</div>
+        <div class="sidebar-fecha">2026-08-01</div>
+      </div>
+      <div class="sidebar-item active" onclick="mostrarRonda(2)" data-ronda="2">
+        <div class="sidebar-ronda">Round 2</div>
+        <div class="sidebar-eje">Algebra y funciones</div>
+        <div class="sidebar-fecha">2026-08-08</div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="header">
+        <h1>PAES M1 &mdash; Panel de práctica</h1>
+        <p class="actualizado">Última generación: 2026-08-08 &middot; Eje de esta semana: Algebra y funciones</p>
+      </div>
+    <div class="ronda-content" id="ronda-1">
       <p class="saludo">Esta semana toca Números, con foco en porcentaje y en el conjunto de los números enteros y racionales. Intenta responder antes de ver la respuesta de cada pregunta.</p>
 
   <section class="pregunta" id="preg-M1-NUM-2026-08-01-01">
@@ -240,7 +265,7 @@
   </section>
 
     </div>
-    <div class="tab-content active" id="tab-ronda-2">
+    <div class="ronda-content active" id="ronda-2">
       <p class="saludo">Esta semana: Álgebra y funciones. Expresiones algebraicas, ecuaciones, sistemas lineales y funciones.</p>
 
   <section class="pregunta" id="preg-M1-ALG-2026-08-08-01">
@@ -399,6 +424,7 @@
   </section>
 
     </div>
+    </div>
   </div>
 
   <div class="cobertura">
@@ -446,12 +472,12 @@
   </table>
 
 <script>
-function cambiarTab(rondaNum) {
-  const allTabs = document.querySelectorAll('.tab-content');
-  const allBtns = document.querySelectorAll('.tab-btn');
-  allTabs.forEach(t => t.classList.remove('active'));
-  allBtns.forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-ronda-' + rondaNum).classList.add('active');
+function mostrarRonda(rondaNum) {
+  const allContent = document.querySelectorAll('.ronda-content');
+  const allItems = document.querySelectorAll('.sidebar-item');
+  allContent.forEach(c => c.classList.remove('active'));
+  allItems.forEach(i => i.classList.remove('active'));
+  document.getElementById('ronda-' + rondaNum).classList.add('active');
   document.querySelector('[data-ronda="' + rondaNum + '"]').classList.add('active');
 }
 
@@ -529,5 +555,7 @@ function marcarHecho(rondaId, checkbox) {
 
 document.querySelectorAll('table.historial tbody tr').forEach(pintarFilaHistorial);
 </script>
+    </div>
+  </div>
 </body>
 </html>

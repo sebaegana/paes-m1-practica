@@ -102,25 +102,26 @@ def build_html(preguntas_data, registro):
     habilidades = ", ".join(cobertura.get("habilidades", []))
     proxima = esc(cobertura.get("proxima_semana", ""))
 
-    # Generar pestañas de rondas - intentar leer todos los JSONs
-    tabs_html = ""
-    tabs_content = ""
+    # Generar barra lateral + contenido
+    sidebar_html = ""
+    main_content = ""
     for i, record in enumerate(sorted(registro, key=lambda r: r.get("ronda", 0))):
         ronda_num = record.get("ronda", i+1)
         eje = esc(record.get("eje", ""))
         fecha_ronda = esc(record.get("fecha", ""))
-        tab_id = f"tab-ronda-{ronda_num}"
-        active = "active" if ronda_num == preguntas_data.get("ronda_numero", len(registro)) else ""
+        content_id = f"ronda-{ronda_num}"
+        is_active = ronda_num == preguntas_data.get("ronda_numero", len(registro))
+        active_class = "active" if is_active else ""
 
-        tabs_html += f'      <button class="tab-btn {active}" onclick="cambiarTab({ronda_num})" data-ronda="{ronda_num}">Round {ronda_num}: {eje}</button>\n'
+        # Item en sidebar
+        sidebar_html += f'      <div class="sidebar-item {active_class}" onclick="mostrarRonda({ronda_num})" data-ronda="{ronda_num}">\n        <div class="sidebar-ronda">Round {ronda_num}</div>\n        <div class="sidebar-eje">{eje}</div>\n        <div class="sidebar-fecha">{fecha_ronda}</div>\n      </div>\n'
 
-        # Si es la ronda actual, mostrar sus preguntas
-        if ronda_num == preguntas_data.get("ronda_numero", len(registro)):
-            tabs_content += f'    <div class="tab-content active" id="{tab_id}">\n      <p class="saludo">{saludo}</p>\n{preguntas_html}\n    </div>\n'
+        # Contenido de la ronda
+        if is_active:
+            main_content += f'    <div class="ronda-content active" id="{content_id}">\n      <p class="saludo">{saludo}</p>\n{preguntas_html}\n    </div>\n'
         else:
             # Intentar cargar el JSON de la ronda anterior desde data/rondas/
             try:
-                # Usar el nombre del archivo del registro, no construirlo
                 archivo_json = record.get('archivo_json', f"{record.get('fecha', '')}.json")
                 ronda_json_path = Path(sys.argv[1]).parent.parent / "rondas" / archivo_json
                 if ronda_json_path.exists():
@@ -129,11 +130,11 @@ def build_html(preguntas_data, registro):
                         ronda_preguntas_html = "\n".join(
                             render_question(i + 1, q) for i, q in enumerate(ronda_data.get("preguntas", []))
                         )
-                        tabs_content += f'    <div class="tab-content" id="{tab_id}">\n      <p class="saludo">{esc(ronda_data.get("saludo", ""))}</p>\n{ronda_preguntas_html}\n    </div>\n'
+                        main_content += f'    <div class="ronda-content" id="{content_id}">\n      <p class="saludo">{esc(ronda_data.get("saludo", ""))}</p>\n{ronda_preguntas_html}\n    </div>\n'
                 else:
-                    tabs_content += f'    <div class="tab-content" id="{tab_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
+                    main_content += f'    <div class="ronda-content" id="{content_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
             except:
-                tabs_content += f'    <div class="tab-content" id="{tab_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
+                main_content += f'    <div class="ronda-content" id="{content_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
 
     registro_ordenado = sorted(registro, key=lambda r: r.get("ronda", 0), reverse=True)
     historial_html = "\n".join(render_historial_row(r) for r in registro_ordenado)
@@ -143,14 +144,30 @@ def build_html(preguntas_data, registro):
 <head>
 <meta charset="UTF-8">
 <title>PAES M1 - Panel de práctica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {{ color-scheme: light; }}
-  body {{ font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px;
-         margin: 0 auto; padding: 24px 16px 48px; color: #1d1d1f; background: #fafafa; }}
-  h1 {{ font-size: 1.4em; margin-bottom: 4px; }}
-  h2 {{ font-size: 1.1em; margin-top: 36px; }}
-  .actualizado {{ font-size: 0.8em; color: #999; margin-bottom: 18px; }}
-  .saludo {{ color: #444; margin-bottom: 24px; }}
+  * {{ box-sizing: border-box; }}
+  body {{ font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 0;
+         color: #1d1d1f; background: #fafafa; display: flex; min-height: 100vh; }}
+  .container {{ display: flex; width: 100%; }}
+  .sidebar {{ width: 280px; background: #fff; border-right: 1px solid #e2e2e2; overflow-y: auto;
+              padding: 20px 0; position: relative; }}
+  .sidebar-header {{ padding: 0 16px 20px; border-bottom: 1px solid #e2e2e2; margin-bottom: 16px; }}
+  .sidebar-title {{ font-size: 0.9em; font-weight: 600; color: #666; text-transform: uppercase;
+                    letter-spacing: 0.05em; margin-bottom: 4px; }}
+  .sidebar-item {{ padding: 12px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;
+                   transition: all 0.2s; border-left: 3px solid transparent; }}
+  .sidebar-item:hover {{ background: #f2f2f7; }}
+  .sidebar-item.active {{ background: #eeeeff; border-left-color: #6b6bd6; }}
+  .sidebar-ronda {{ font-weight: 600; font-size: 0.95em; margin-bottom: 4px; }}
+  .sidebar-eje {{ font-size: 0.85em; color: #666; margin-bottom: 2px; }}
+  .sidebar-fecha {{ font-size: 0.75em; color: #999; }}
+  .main {{ flex: 1; overflow-y: auto; padding: 24px 32px; max-width: 900px; }}
+  .header {{ margin-bottom: 24px; }}
+  h1 {{ font-size: 1.4em; margin: 0 0 8px; }}
+  .actualizado {{ font-size: 0.8em; color: #999; margin: 0; }}
+  .saludo {{ color: #444; margin-bottom: 24px; font-size: 1em; line-height: 1.5; }}
   .pregunta {{ background: #fff; border: 1px solid #e2e2e2; border-radius: 10px;
                padding: 18px 20px; margin-bottom: 18px; }}
   .meta {{ font-size: 0.78em; color: #888; text-transform: uppercase; letter-spacing: 0.02em;
@@ -183,15 +200,8 @@ def build_html(preguntas_data, registro):
   .solucion .pasos {{ margin: 0; padding-left: 20px; }}
   .solucion .pasos li {{ margin-bottom: 6px; }}
   .oculto {{ display: none; }}
-  .tabs {{ display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid #e2e2e2; overflow-x: auto; }}
-  .tab-btn {{ padding: 12px 18px; border: none; background: transparent; cursor: pointer;
-              font-size: 0.95em; color: #666; border-bottom: 3px solid transparent;
-              transition: all 0.2s; white-space: nowrap; }}
-  .tab-btn:hover {{ color: #1d1d1f; }}
-  .tab-btn.active {{ color: #1d1d1f; border-bottom-color: #6b6bd6; font-weight: 600; }}
-  .tabs-container {{ position: relative; }}
-  .tab-content {{ display: none; }}
-  .tab-content.active {{ display: block; }}
+  .ronda-content {{ display: none; }}
+  .ronda-content.active {{ display: block; }}
   .cobertura {{ font-size: 0.85em; color: #666; border-top: 1px solid #e2e2e2; padding-top: 14px;
                 margin-top: 20px; }}
   table.historial {{ width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px;
@@ -202,18 +212,27 @@ def build_html(preguntas_data, registro):
   .col-check {{ white-space: nowrap; }}
   .check-label {{ display: flex; align-items: center; gap: 6px; cursor: pointer; }}
   .col-fecha-hecho {{ color: #888; font-size: 0.85em; }}
+  @media (max-width: 768px) {{
+    .container {{ flex-direction: column; }}
+    .sidebar {{ width: 100%; border-right: none; border-bottom: 1px solid #e2e2e2; max-height: 120px; }}
+    .main {{ padding: 16px; }}
+  }}
 </style>
 </head>
 <body>
-  <h1>PAES M1 &mdash; Panel de práctica</h1>
-  <p class="actualizado">Última generación: {fecha} &middot; Eje de esta semana: {eje_semana}</p>
-
-  <h2>Rondas de práctica</h2>
-  <div class="tabs">
-{tabs_html}  </div>
-
-  <div class="tabs-container">
-{tabs_content}  </div>
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title">Rondas de práctica</div>
+      </div>
+{sidebar_html}    </div>
+    <div class="main">
+      <div class="header">
+        <h1>PAES M1 &mdash; Panel de práctica</h1>
+        <p class="actualizado">Última generación: {fecha} &middot; Eje de esta semana: {eje_semana}</p>
+      </div>
+{main_content}    </div>
+  </div>
 
   <div class="cobertura">
     <strong>Cobertura de este set:</strong> {eje_semana}<br>
@@ -233,12 +252,12 @@ def build_html(preguntas_data, registro):
   </table>
 
 <script>
-function cambiarTab(rondaNum) {{
-  const allTabs = document.querySelectorAll('.tab-content');
-  const allBtns = document.querySelectorAll('.tab-btn');
-  allTabs.forEach(t => t.classList.remove('active'));
-  allBtns.forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-ronda-' + rondaNum).classList.add('active');
+function mostrarRonda(rondaNum) {{
+  const allContent = document.querySelectorAll('.ronda-content');
+  const allItems = document.querySelectorAll('.sidebar-item');
+  allContent.forEach(c => c.classList.remove('active'));
+  allItems.forEach(i => i.classList.remove('active'));
+  document.getElementById('ronda-' + rondaNum).classList.add('active');
   document.querySelector('[data-ronda="' + rondaNum + '"]').classList.add('active');
 }}
 
@@ -316,6 +335,8 @@ function marcarHecho(rondaId, checkbox) {{
 
 document.querySelectorAll('table.historial tbody tr').forEach(pintarFilaHistorial);
 </script>
+    </div>
+  </div>
 </body>
 </html>
 """
