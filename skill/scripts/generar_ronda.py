@@ -149,47 +149,53 @@ CRÍTICO: El JSON debe ser válido y parseable. Responde SOLO el JSON, sin expli
         print(f"Contenido recibido: {message.content}", file=sys.stderr)
         sys.exit(1)
 
-    # Limpiar el JSON: si está dentro de ```json ... ```, extraerlo
-    if "```" in response_text:
-        try:
-            start = response_text.find("{")
-            end = response_text.rfind("}") + 1
-            response_text = response_text[start:end]
-        except:
-            pass
+    # Limpiar el JSON: extraer desde el primer { al último }
+    start_idx = response_text.find("{")
+    end_idx = response_text.rfind("}")
 
-    # Intentar parsear el JSON
-    for intento in range(2):
+    if start_idx == -1 or end_idx == -1:
+        print(f"Error: No se encontraron { o } en la respuesta", file=sys.stderr)
+        print(f"Respuesta completa:\n{response_text[:1000]}", file=sys.stderr)
+        sys.exit(1)
+
+    response_text = response_text[start_idx:end_idx + 1]
+
+    # Intentar parsear el JSON con reintentos
+    for intento in range(3):
         try:
             preguntas_json = json.loads(response_text)
             return preguntas_json
         except json.JSONDecodeError as e:
-            if intento == 0:
-                # Primer intento falló, intentar limpiar
-                print(f"Primer intento falló: {e}", file=sys.stderr)
-                print(f"Intentando limpiar JSON...", file=sys.stderr)
+            print(f"Intento {intento + 1} falló: {e}", file=sys.stderr)
 
-                # Buscar el JSON más probable dentro del texto
-                import re
-                json_match = re.search(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', response_text)
-                if json_match:
-                    response_text = json_match.group(0)
-                    print(f"JSON limpiado encontrado, reintentando...", file=sys.stderr)
-                else:
-                    print(f"No se pudo encontrar JSON válido", file=sys.stderr)
-                    print(f"Primeros 500 caracteres:\n{response_text[:500]}", file=sys.stderr)
-                    sys.exit(1)
+            if intento < 2:
+                # Intentar arreglar caracteres comunes problemáticos
+                print(f"Intentando reparar JSON...", file=sys.stderr)
+
+                # Reemplazar algunos caracteres problemáticos
+                response_text = response_text.replace('\n', ' ')  # Saltos de línea
+                response_text = response_text.replace('\r', '')    # Retornos
+                response_text = response_text.replace('\t', ' ')   # Tabs
+
+                # Intentar nuevamente
+                print(f"Reintentando con caracteres reparados...", file=sys.stderr)
             else:
-                print(f"Error final al parsear JSON de Claude: {e}", file=sys.stderr)
-                print(f"Primeros 500 caracteres:\n{response_text[:500]}", file=sys.stderr)
+                print(f"Error final al parsear JSON de Claude después de 3 intentos", file=sys.stderr)
+                print(f"Primeros 1000 caracteres:\n{response_text[:1000]}", file=sys.stderr)
                 sys.exit(1)
 
 
 def validar_json(data):
     """Valida que el JSON tenga la estructura esperada."""
     required_top_level = {"fecha", "eje_semana", "saludo", "preguntas", "cobertura"}
-    if not all(key in data for key in required_top_level):
-        raise ValueError(f"Falta alguna clave obligatoria: {required_top_level}")
+    missing = required_top_level - set(data.keys())
+    if missing:
+        print(f"DEBUG: Falta claves: {missing}", file=sys.stderr)
+        print(f"DEBUG: JSON tiene claves: {set(data.keys())}", file=sys.stderr)
+        raise ValueError(f"Falta alguna clave obligatoria: {missing}")
+
+    if not data.get("preguntas"):
+        raise ValueError("No hay preguntas en el JSON")
 
     if len(data["preguntas"]) != 5:
         raise ValueError(f"Debe haber exactamente 5 preguntas, hay {len(data['preguntas'])}")
@@ -200,7 +206,8 @@ def validar_json(data):
             "enunciado", "alternativas", "correcta", "explicacion"
         }
         if not all(key in preg for key in required_preg):
-            raise ValueError(f"Pregunta {i+1} falta claves: {required_preg}")
+            missing_keys = required_preg - set(preg.keys())
+            raise ValueError(f"Pregunta {i+1} falta claves: {missing_keys}")
 
         if len(preg["alternativas"]) != 4 or set(preg["alternativas"].keys()) != {"A", "B", "C", "D"}:
             raise ValueError(f"Pregunta {i+1}: alternativas debe tener exactamente A, B, C, D")
@@ -208,7 +215,7 @@ def validar_json(data):
         if preg["correcta"] not in ["A", "B", "C", "D"]:
             raise ValueError(f"Pregunta {i+1}: correcta debe ser A, B, C o D")
 
-        if "concepto" not in preg["explicacion"] or "pasos" not in preg["explicacion"]:
+        if "concepto" not in preg.get("explicacion", {}) or "pasos" not in preg.get("explicacion", {}):
             raise ValueError(f"Pregunta {i+1}: explicación falta concepto o pasos")
 
 
