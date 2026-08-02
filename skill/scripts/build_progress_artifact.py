@@ -231,25 +231,24 @@ def build_html(preguntas_data, registro):
         <h1>PAES M1 &mdash; Panel de práctica</h1>
         <p class="actualizado">Última generación: {fecha} &middot; Eje de esta semana: {eje_semana}</p>
       </div>
-{main_content}    </div>
-  </div>
+{main_content}      <div class="cobertura">
+        <strong>Cobertura de este set:</strong> {eje_semana}<br>
+        Unidades cubiertas: {esc(unidades)}<br>
+        Habilidades cubiertas: {esc(habilidades)}<br>
+        Próxima semana: {proxima}
+      </div>
 
-  <div class="cobertura">
-    <strong>Cobertura de este set:</strong> {eje_semana}<br>
-    Unidades cubiertas: {esc(unidades)}<br>
-    Habilidades cubiertas: {esc(habilidades)}<br>
-    Próxima semana: {proxima}
+      <h2>Progreso</h2>
+      <table class="historial">
+        <thead>
+          <tr><th>Ronda</th><th>Fecha</th><th>Eje</th><th>Estado</th><th></th></tr>
+        </thead>
+        <tbody>
+          {historial_html}
+        </tbody>
+      </table>
+    </div>
   </div>
-
-  <h2>Progreso</h2>
-  <table class="historial">
-    <thead>
-      <tr><th>Ronda</th><th>Fecha</th><th>Eje</th><th>Estado</th><th></th></tr>
-    </thead>
-    <tbody>
-      {historial_html}
-    </tbody>
-  </table>
 
 <script>
 function mostrarRonda(rondaNum) {{
