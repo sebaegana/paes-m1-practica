@@ -1,0 +1,140 @@
+{
+  "eje": "Cuerpo humano y salud",
+  "unidad": "Reproducción humana",
+  "saludo": "Exploraremos los sistemas reproductivos y los procesos biológicos fundamentales para la continuación de la especie humana.",
+  "preguntas": [
+    {
+      "id": "BIO-SAL-21",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Reproducción humana",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la función principal de los testículos en el sistema reproductor masculino?",
+      "alternativas": {
+        "A": "Producir esperma y secretar testosterona",
+        "B": "Producir solo orina",
+        "C": "Almacenar esperma indefinidamente",
+        "D": "Regular la temperatura corporal"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Los testículos son órganos glandulares con funciones reproductivas y endocrinas",
+        "pasos": [
+          "Estructuralmente divididos en túbulos seminíferos y tejido intersticial",
+          "Los túbulos seminíferos producen espermatozoides mediante espermatogénesis",
+          "Las células de Leydig producen testosterona",
+          "La testosterona controla características sexuales secundarias y fertilidad"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-22",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Reproducción humana",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cuál es el nombre del proceso donde un óvulo es liberado del ovario?",
+      "alternativas": {
+        "A": "Menstruación",
+        "B": "Ovulación",
+        "C": "Fertilización",
+        "D": "Implantación"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La ovulación es la liberación cíclica del óvulo del ovario",
+        "pasos": [
+          "Ocurre aproximadamente en la mitad del ciclo menstrual (día 14 de 28)",
+          "Es causada por un pico de hormona luteinizante (LH)",
+          "El óvulo es expulsado del ovario y capturado por las fimbrias de la trompa",
+          "El óvulo viaja a través de la trompa de Falopio hacia el útero"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-23",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Reproducción humana",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es el papel del cuerpo lúteo en la segunda fase del ciclo menstrual?",
+      "alternativas": {
+        "A": "Produce estrógeno para engrosar el útero",
+        "B": "Produce progesterona para mantener el endometrio y preparar el útero para la implantación",
+        "C": "Destruye óvulos infertilizados",
+        "D": "Produce hormona estimulante del folículo"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El cuerpo lúteo es una glándula endocrina temporal formada tras la ovulación",
+        "pasos": [
+          "Después de la ovulación, las células de la granulosa se transforman",
+          "Forman el cuerpo lúteo que produce progesterona",
+          "La progesterona mantiene el endometrio engrosado y vascularizado",
+          "Prepara el útero para la posible implantación del embrión",
+          "Si no hay embarazo, el cuerpo lúteo degenera causando menstruación"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-24",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Reproducción humana",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Por qué es importante el ácido fólico durante el embarazo, especialmente en el primer trimestre?",
+      "alternativas": {
+        "A": "Previene la osteoporosis en la madre",
+        "B": "Previene defectos del tubo neural en el embrión como espina bífida",
+        "C": "Reduce los antojos de comida",
+        "D": "Elimina bacterias del útero"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El ácido fólico es esencial para la síntesis de ácidos nucleicos y división celular",
+        "pasos": [
+          "El tubo neural se forma en las primeras 4 semanas de embarazo",
+          "Es la estructura embrionaria que da origen al sistema nervioso",
+          "Deficiencia de ácido fólico causa defectos de cierre del tubo neural",
+          "Esto resulta en espina bífida (defecto en vértebras) o anencefalia",
+          "Suplementación preconcepcional y durante el primer trimestre es crítica",
+          "Se recomienda 400-800 μg diarios de ácido fólico"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-25",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Reproducción humana",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Explica cómo el sistema reproductivo femenino está coordinado con el sistema endocrino para mantener el ciclo menstrual regular.",
+      "alternativas": {
+        "A": "No existe coordinación real; el ciclo es aleatorio",
+        "B": "El hipotálamo libera GnRH, estimulando FSH y LH de la hipófisis que regulan estrógeno y progesterona ováricos en un ciclo de retroalimentación",
+        "C": "Los ovarios producen directamente las hormonas sin estimulación hipofisaria",
+        "D": "Solo los estrógenos regulan el ciclo sin intervención hormonal adicional"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El eje hipotálamo-hipófisis-ovario (HPO) integra control neuroendocrino",
+        "pasos": [
+          "El hipotálamo libera hormona liberadora de gonadotropinas (GnRH) pulsátilmente",
+          "GnRH estimula la hipófisis anterior para liberar FSH y LH",
+          "FSH estimula el desarrollo folicular y producción de estrógeno en ovarios",
+          "Aumento de estrógeno causa retroalimentación positiva sobre LH (pico ovulatorio)",
+          "El pico de LH causa ovulación",
+          "Después de ovulación, el cuerpo lúteo produce progesterona",
+          "Progesterona causa retroalimentación negativa inhibiendo FSH y LH",
+          "Sin LH/FSH, el cuerpo lúteo degenera causando menstruación",
+          "Caída de estrógeno/progesterona permite reinicio del ciclo"
+        ]
+      }
+    }
+  ]
+}

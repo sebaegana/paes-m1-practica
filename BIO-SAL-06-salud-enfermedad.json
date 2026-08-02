@@ -1,0 +1,142 @@
+{
+  "eje": "Cuerpo humano y salud",
+  "unidad": "Salud y enfermedad",
+  "saludo": "Analiza los conceptos de salud, enfermedad, inmunidad y cómo el cuerpo se defiende de los patógenos y mantiene el bienestar.",
+  "preguntas": [
+    {
+      "id": "BIO-SAL-26",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Salud y enfermedad",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la primera línea de defensa del cuerpo contra la infección?",
+      "alternativas": {
+        "A": "Los linfocitos T",
+        "B": "Las barreras físicas y químicas como la piel, mucosas y ácido gástrico",
+        "C": "Los anticuerpos en la sangre",
+        "D": "Las células de memoria inmunológica"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La inmunidad innata comienza con barreras que impiden la entrada de patógenos",
+        "pasos": [
+          "La piel es una barrera física impermeable a la mayoría de patógenos",
+          "Las mucosas secretan lisozima que degrada paredes bacterianas",
+          "El ácido gástrico destruye bacterias y virus en el estómago",
+          "Las lágrimas contienen lisozima y lactoferrina",
+          "Estos mecanismos actúan 24/7 sin requerir exposición previa al patógeno"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-27",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Salud y enfermedad",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Qué tipo de células del sistema inmunológico producen anticuerpos?",
+      "alternativas": {
+        "A": "Linfocitos T citotóxicos",
+        "B": "Células B",
+        "C": "Macrófagos",
+        "D": "Células mastocitos"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las células B son linfocitos especializados en la inmunidad humoral",
+        "pasos": [
+          "Las células B se diferencian en células plasmáticas",
+          "Las células plasmáticas secretan anticuerpos específicos",
+          "Cada anticuerpo reconoce un antígeno específico",
+          "Los anticuerpos neutralizan patógenos y marcan objetivos para destrucción",
+          "Algunas células B se convierten en células de memoria para respuesta rápida posterior"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-28",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Salud y enfermedad",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la diferencia entre inmunidad específica e inespecífica?",
+      "alternativas": {
+        "A": "La inmunidad inespecífica es más potente que la específica",
+        "B": "La inmunidad inespecífica responde a cualquier patógeno; la específica reconoce antígenos particulares",
+        "C": "Solo existe inmunidad específica en adultos",
+        "D": "Son sinónimos del mismo tipo de respuesta"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El sistema inmunológico tiene dos componentes complementarios",
+        "pasos": [
+          "Inmunidad inespecífica (innata): responde a cualquier patógeno",
+          "Incluye barreras físicas, inflamación, complemento, fagocitos",
+          "Actúa inmediatamente sin requerir exposición previa",
+          "Inmunidad específica (adaptativa): reconoce antígenos particulares",
+          "Mediada por linfocitos T (celular) y B (humoral)",
+          "Requiere tiempo para activarse pero genera memoria duradero",
+          "Juntas proporcionan defensa multicapa efectiva"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-29",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Salud y enfermedad",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Por qué es importante la vacunación incluso cuando una enfermedad es rara?",
+      "alternativas": {
+        "A": "Las vacunas son obligatorias por ley en todos los países",
+        "B": "Mantienen la inmunidad colectiva que protege a personas vulnerables y previene brotes epidémicos",
+        "C": "Las vacunas no son realmente importantes para enfermedades raras",
+        "D": "Solo la inmunidad natural adquirida por infección proporciona protección"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La vacunación es una medida de salud pública que protege tanto al individuo como a la comunidad",
+        "pasos": [
+          "Las vacunas entrenan el sistema inmunológico sin riesgo de enfermedad grave",
+          "Cuando suficiente población está vacunada (umbral de inmunidad colectiva)",
+          "Se reduce la transmisión de la enfermedad a niveles muy bajos",
+          "Esto protege a personas que no pueden recibir vacunas (alérgias, inmunoincompromiso)",
+          "Previene la re-aparición de enfermedades casi erradicadas",
+          "Ejemplo: la viruela fue erradicada gracias a vacunación sistemática"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-30",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Salud y enfermedad",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un paciente con VIH desarrolla infecciones oportunistas como neumonía por Pneumocystis (PCP). Explica por qué una infección normalmente controlada se torna grave en este contexto.",
+      "alternativas": {
+        "A": "El VIH causa neumonía directamente en los pulmones",
+        "B": "El VIH destruye principalmente linfocitos T CD4+ (células cooperadoras), reduciendo la inmunidad específica y permitiendo que patógenos oportunistas causen infecciones graves",
+        "C": "El VIH afecta solo a la inmunidad innata, no a la adaptativa",
+        "D": "Las infecciones oportunistas no están relacionadas con el VIH"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El VIH es citotropo para linfocitos T CD4+, el centro coordinador de inmunidad adaptativa",
+        "pasos": [
+          "El VIH infecta y destruye preferentemente células T CD4+ (helper)",
+          "Las células T CD4+ coordinan respuesta de células B y T citotóxicas",
+          "Con conteo CD4+ < 200 células/μL, la inmunidad celular colapsa",
+          "Patógenos oportunistas (Pneumocystis, CMV, Mycobacterium) proliferan",
+          "Estos patógenos son controlados por inmunidad en individuos inmunoecompetentes",
+          "Sin ella, causan infecciones sistémicas graves y potencialmente mortales",
+          "La antiretroviral moderna mantiene CD4+ y previene SIDA"
+        ]
+      }
+    }
+  ]
+}

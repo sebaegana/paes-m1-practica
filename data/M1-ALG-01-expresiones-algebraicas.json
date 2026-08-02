@@ -1,0 +1,127 @@
+{
+  "eje": "Álgebra y funciones",
+  "unidad": "Expresiones algebraicas",
+  "saludo": "Esta semana exploramos expresiones algebraicas: simplificación, factorización y productos notables. Dominar estas herramientas es fundamental para resolver ecuaciones y modelar situaciones reales.",
+  "preguntas": [
+    {
+      "id": "M1-ALG-01",
+      "eje": "Álgebra y funciones",
+      "unidad": "Expresiones algebraicas",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es el resultado de simplificar la expresión 3x + 5y - 2x + y?",
+      "alternativas": {
+        "A": "x + 6y",
+        "B": "5x + 6y",
+        "C": "x + 4y",
+        "D": "5x + 4y"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Simplificación de expresiones algebraicas mediante la agrupación de términos semejantes (reducción de coeficientes).",
+        "pasos": [
+          "Paso 1: Agrupar términos con la misma variable. Términos con x: 3x - 2x. Términos con y: 5y + y.",
+          "Paso 2: Realizar las operaciones entre coeficientes. 3x - 2x = x. 5y + y = 6y.",
+          "Paso final: La expresión simplificada es x + 6y."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-02",
+      "eje": "Álgebra y funciones",
+      "unidad": "Expresiones algebraicas",
+      "habilidad": "Aplicar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un carpintero cobra $50 por hora de trabajo más $200 de costo fijo por el desplazamiento. Si trabaja h horas, ¿cuál expresión representa el costo total?",
+      "alternativas": {
+        "A": "50 + 200h",
+        "B": "50h + 200",
+        "C": "250h",
+        "D": "(50 + 200)h"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Modelado de situaciones cotidianas mediante expresiones algebraicas, identificando términos variables (dependientes de h) y términos constantes.",
+        "pasos": [
+          "Paso 1: Identificar lo que es fijo: $200 de costo de desplazamiento (constante).",
+          "Paso 2: Identificar lo que es variable: $50 por cada hora trabajada, lo que se expresa como 50h.",
+          "Paso final: El costo total es 50h + 200. Las opciones A y D confunden el orden o multiplican el total."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-03",
+      "eje": "Álgebra y funciones",
+      "unidad": "Expresiones algebraicas",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Factoriza completamente: 4x² - 9",
+      "alternativas": {
+        "A": "(2x - 3)²",
+        "B": "(2x - 3)(2x + 3)",
+        "C": "2x(2x - 9)",
+        "D": "(4x - 9)(x + 1)"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Reconocimiento y aplicación del producto notable diferencia de cuadrados: a² - b² = (a - b)(a + b).",
+        "pasos": [
+          "Paso 1: Identificar que 4x² = (2x)² y 9 = 3², por lo que la expresión es una diferencia de cuadrados.",
+          "Paso 2: Aplicar la fórmula: (2x)² - 3² = (2x - 3)(2x + 3).",
+          "Paso final: La factorización correcta es (2x - 3)(2x + 3). La opción A es un trinomio cuadrado perfecto, no una diferencia."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-04",
+      "eje": "Álgebra y funciones",
+      "unidad": "Expresiones algebraicas",
+      "habilidad": "Analizar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Un negocio vende camisetas a $12.000 cada una. El costo de producción es $6.000 por unidad, y hay gastos fijos mensuales de $120.000. ¿Cuál es la expresión para la ganancia (utilidad) si vende x camisetas?",
+      "alternativas": {
+        "A": "6x - 120.000",
+        "B": "12.000x - 6.000x - 120.000",
+        "C": "6.000x - 120.000",
+        "D": "18.000x - 120.000"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Análisis de situaciones comerciales y construcción de expresiones algebraicas que representen ganancias (ingresos menos costos).",
+        "pasos": [
+          "Paso 1: El ingreso por vender x camisetas es 12.000x (precio de venta × cantidad).",
+          "Paso 2: El costo es 6.000x por producción más 120.000 en gastos fijos, totalizando 6.000x + 120.000.",
+          "Paso final: La ganancia es ingresos menos costos: 12.000x - (6.000x + 120.000) = 12.000x - 6.000x - 120.000 = 6.000x - 120.000. La opción B muestra todos los términos explícitamente."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-05",
+      "eje": "Álgebra y funciones",
+      "unidad": "Expresiones algebraicas",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Simplifica la expresión (x + 2)² - (x - 2)² y señala cuál de las siguientes afirmaciones es verdadera.",
+      "alternativas": {
+        "A": "El resultado es 0 para cualquier valor de x",
+        "B": "El resultado es 8x para cualquier valor de x",
+        "C": "El resultado es 4 para cualquier valor de x",
+        "D": "El resultado depende del valor específico de x"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Aplicación de productos notables (cuadrado del binomio) y análisis algebraico para detectar patrones en expresiones.",
+        "pasos": [
+          "Paso 1: Expandir (x + 2)² = x² + 4x + 4 y (x - 2)² = x² - 4x + 4.",
+          "Paso 2: Restar: (x² + 4x + 4) - (x² - 4x + 4) = x² + 4x + 4 - x² + 4x - 4 = 8x.",
+          "Paso final: El resultado es 8x para cualquier valor de x, lo que muestra que la diferencia de estos binomios genera una expresión lineal que simplifica considerablemente."
+        ]
+      }
+    }
+  ]
+}

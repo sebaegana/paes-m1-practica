@@ -1,0 +1,137 @@
+{
+  "eje": "Célula",
+  "unidad": "Estructura y función celular",
+  "saludo": "Comenzamos explorando la estructura fundamental de la célula y cómo sus componentes se relacionan con sus funciones. Entender la organización celular es clave para comprender toda la biología.",
+  "preguntas": [
+    {
+      "id": "BIO-CEL-01",
+      "eje": "Célula",
+      "unidad": "Estructura y función celular",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la principal característica que distingue una célula procariota de una eucariota?",
+      "alternativas": {
+        "A": "Las células procariotastienen un núcleo definido por membrana nuclear",
+        "B": "Las células procariotascarecen de un núcleo definido delimitado por membrana nuclear",
+        "C": "Las células procariotasposeen mitocondrias especializadas",
+        "D": "Las células procariotastienen una pared celular más gruesa que las eucariotas"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La diferencia estructural fundamental entre procariotas y eucariotas es la presencia o ausencia de un núcleo membranoso. Los procariotas (bacterias y arqueas) tienen su ADN disperso en el nucleoide, mientras que los eucariotas tienen un núcleo bien definido.",
+        "pasos": [
+          "Las células procariotas son estructuralmente más simples: no poseen un núcleo membranoso",
+          "El ADN en procariotas se encuentra en el nucleoide, una región que no está separada del citoplasma",
+          "Las células eucariotas tienen un núcleo rodeado de membrana nuclear que contiene el ADN",
+          "Los eucariotas también tienen organelos membranosos como mitocondrias, retículo endoplasmático y aparato de Golgi",
+          "Por lo tanto, la ausencia de núcleo es la característica distintiva de las procariotas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-02",
+      "eje": "Célula",
+      "unidad": "Estructura y función celular",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la función principal de la membrana plasmática en todas las células?",
+      "alternativas": {
+        "A": "Sintetizar ATP para proporcionar energía a la célula",
+        "B": "Regular el paso de sustancias hacia adentro y hacia afuera de la célula",
+        "C": "Producir enzimas para acelerar las reacciones químicas",
+        "D": "Almacenar el material genético de la célula"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La membrana plasmática es una barrera selectivamente permeable que controla el intercambio de sustancias entre la célula y su ambiente. Está compuesta por una bicapa lipídica con proteínas embebidas.",
+        "pasos": [
+          "La membrana plasmática rodea a toda la célula y la separa del ambiente externo",
+          "Su estructura de bicapa lipídica permite el paso de algunas sustancias y bloquea otras",
+          "Las proteínas en la membrana actúan como canales y receptores para moléculas específicas",
+          "Esta permeabilidad selectiva permite que la célula mantenga su homeostasis",
+          "Sin esta regulación, la célula no podría controlar su composición interna"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-03",
+      "eje": "Célula",
+      "unidad": "Estructura y función celular",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Las células del páncreas productoras de enzimas digestivas tienen un retículo endoplasmático rugoso muy desarrollado. ¿Por qué esta estructura es especialmente abundante en este tipo de célula?",
+      "alternativas": {
+        "A": "El retículo endoplasmático rugoso descompone las proteínas que no se necesitan",
+        "B": "Es donde se sintetizan las proteínas (enzimas) que serán secretadas hacia el tubo digestivo",
+        "C": "Sirve para almacenar las enzimas antes de ser liberadas",
+        "D": "Es responsable de absorber los nutrientes digeridos en el intestino"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La estructura de las células refleja su función especializada. Las células secretoras tienen desarrollado el retículo endoplasmático rugoso porque aquí es donde se sintetizan proteínas destinadas a ser secretadas.",
+        "pasos": [
+          "El retículo endoplasmático rugoso tiene ribosomas adheridos en su superficie",
+          "En estos ribosomas se sintetizan proteínas específicamente",
+          "Las células pancreáticas producen muchas enzimas digestivas que deben ser secretadas",
+          "Por eso necesitan mucho retículo endoplasmático rugoso para sintetizar todas estas proteínas",
+          "Las proteínas se transportan luego al aparato de Golgi y se empaquetan en vesículas para secretar"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-04",
+      "eje": "Célula",
+      "unidad": "Estructura y función celular",
+      "habilidad": "Analizar",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Una célula muscular tiene una cantidad extraordinaria de mitocondrias en comparación con una célula nerviosa. ¿Cuál es la relación entre esta característica estructural y la función de las células musculares?",
+      "alternativas": {
+        "A": "Las mitocondrias sintetizan las proteínas contráctiles necesarias para la contracción",
+        "B": "Las mitocondrias generan ATP (energía) que es necesario para las contracciones musculares sostenidas",
+        "C": "Las mitocondrias almacenan el calcio necesario para la relajación muscular",
+        "D": "Las mitocondrias producen ácido láctico durante el esfuerzo muscular"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las células especializadas en una función demandante de energía tienen más mitocondrias. Las mitocondrias son las 'centrales energéticas' que producen ATP mediante la respiración aeróbica.",
+        "pasos": [
+          "La contracción muscular requiere una cantidad enorme de energía (ATP)",
+          "Las mitocondrias son responsables de generar ATP durante la respiración aeróbica",
+          "Las células musculares necesitan contracción sostenida y potente, lo que demanda mucha energía",
+          "Por eso tienen más mitocondrias: para producir la cantidad de ATP necesaria",
+          "Esta es una adaptación estructural a su función de contracción muscular"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-05",
+      "eje": "Célula",
+      "unidad": "Estructura y función celular",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Las células epiteliales del intestino delgado tienen microvellosidades en su membrana apical. ¿Cuáles son las ventajas funcionales de esta especialización estructural?",
+      "alternativas": {
+        "A": "Las microvellosidades reducen el área de contacto, facilitando la digestión más rápida",
+        "B": "Las microvellosidades aumentan considerablemente el área de absorción de nutrientes, mejorando la eficiencia de captación",
+        "C": "Las microvellosidades secretan enzimas digestivas adicionales que completan la digestión",
+        "D": "Las microvellosidades protegen el epitelio del daño causado por alimentos irritantes"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las microvellosidades son extensiones digitiformes de la membrana plasmática que aumentan enormemente el área superficial. Esto es una adaptación estructural para optimizar una función específica: la absorción.",
+        "pasos": [
+          "Las células absortivas del intestino tienen la función de transferir nutrientes del lumen intestinal al torrente sanguíneo",
+          "Cuanto mayor sea el área de membrana disponible, mayor será la capacidad de absorción",
+          "Las microvellosidades pueden multiplicar la superficie de absorción entre 20 a 30 veces",
+          "Esta especialización estructural permite una absorción más eficiente de glucosa, aminoácidos, lípidos y otros nutrientes",
+          "Es un ejemplo perfecto de cómo la forma celular se adapta a la función"
+        ]
+      }
+    }
+  ]
+}

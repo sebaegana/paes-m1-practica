@@ -1,0 +1,115 @@
+{
+  "eje": "Geometría",
+  "unidad": "Figuras geométricas",
+  "saludo": "Esta semana estudiamos Figuras Geométricas: perímetro, área y el Teorema de Pitágoras. Recuerda que el perímetro es la distancia alrededor de la figura, mientras que el área mide el espacio que ocupa. ¡Intenta resolver cada pregunta antes de ver la respuesta!",
+  "preguntas": [
+    {
+      "id": "M1-GEO-FIG-01",
+      "eje": "Geometría",
+      "unidad": "Figuras geométricas",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un cuadrado tiene un lado de 8 metros. ¿Cuál es su perímetro?",
+      "alternativas": {"A": "16 m", "B": "32 m", "C": "64 m", "D": "256 m"},
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El perímetro de un cuadrado es la suma de todos sus lados. Como un cuadrado tiene 4 lados iguales, el perímetro es 4 veces la longitud del lado.",
+        "pasos": [
+          "Un cuadrado tiene 4 lados iguales.",
+          "Si cada lado mide 8 metros, entonces: Perímetro = 4 × 8 = 32 metros.",
+          "Nota: la alternativa C (64 m) es el área del cuadrado (8 × 8), no el perímetro."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-FIG-02",
+      "eje": "Geometría",
+      "unidad": "Figuras geométricas",
+      "habilidad": "Aplicar",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "Un triángulo rectángulo tiene catetos de 3 cm y 4 cm. ¿Cuál es la longitud de la hipotenusa según el Teorema de Pitágoras?",
+      "alternativas": {"A": "5 cm", "B": "7 cm", "C": "12 cm", "D": "25 cm"},
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El Teorema de Pitágoras establece que en un triángulo rectángulo, el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los catetos: c² = a² + b².",
+        "pasos": [
+          "Identificamos los catetos: a = 3 cm, b = 4 cm.",
+          "Aplicamos la fórmula: c² = 3² + 4² = 9 + 16 = 25.",
+          "Sacamos la raíz cuadrada: c = √25 = 5 cm.",
+          "La hipotenusa mide 5 cm. Este es el famoso triángulo 3-4-5, muy común en ejercicios de PAES."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-FIG-03",
+      "eje": "Geometría",
+      "unidad": "Figuras geométricas",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Una cancha de tenis tiene forma rectangular con dimensiones de 24 m de largo y 11 m de ancho. Se quiere colocar una cinta de seguridad alrededor de toda la cancha, más una franja adicional de 1 metro alrededor. ¿Cuántos metros de cinta se necesitan?",
+      "alternativas": {"A": "70 m", "B": "74 m", "C": "78 m", "D": "82 m"},
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Cuando se agrega una franja adicional alrededor de una figura, el perímetro aumenta en una cantidad que depende del ancho de la franja y el número de lados.",
+        "pasos": [
+          "Las dimensiones originales son: largo = 24 m, ancho = 11 m.",
+          "Al agregar 1 metro de franja alrededor, el nuevo largo = 24 + 2(1) = 26 m (se suma 1 m por cada lado).",
+          "El nuevo ancho = 11 + 2(1) = 13 m (se suma 1 m por cada lado).",
+          "Perímetro de la cancha con franja = 2(26) + 2(13) = 52 + 26 = 78 metros.",
+          "Se necesitan 78 metros de cinta de seguridad."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-FIG-04",
+      "eje": "Geometría",
+      "unidad": "Figuras geométricas",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Una habitación rectangular mide 6 metros de largo por 5 metros de ancho. Se desea instalar un piso cerámico cuyo costo es de $15.000 por metro cuadrado. ¿Cuál es el costo total del piso?",
+      "alternativas": {"A": "$180.000", "B": "$330.000", "C": "$450.000", "D": "$1.350.000"},
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El área de un rectángulo se calcula multiplicando largo por ancho. Para calcular el costo total, se multiplica el área por el precio unitario por metro cuadrado.",
+        "pasos": [
+          "Largo = 6 m, Ancho = 5 m.",
+          "Área = 6 × 5 = 30 m².",
+          "Costo unitario = $15.000 por m².",
+          "Costo total = 30 × 15.000 = $450.000.",
+          "La alternativa A es solo el perímetro multiplicado por un factor; la D es un error de cálculo muy grande."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-FIG-05",
+      "eje": "Geometría",
+      "unidad": "Figuras geométricas",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Un triángulo rectángulo tiene una hipotenusa de 13 metros. Uno de sus catetos mide 5 metros. ¿Cuánto mide el otro cateto y cuál es el área del triángulo?",
+      "alternativas": {"A": "Cateto = 8 m; Área = 30 m²", "B": "Cateto = 12 m; Área = 30 m²", "C": "Cateto = 8 m; Área = 52 m²", "D": "Cateto = 12 m; Área = 65 m²"},
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Primero aplicamos el Teorema de Pitágoras para encontrar el cateto desconocido, y luego calculamos el área del triángulo rectángulo usando la fórmula: Área = (base × altura) / 2.",
+        "pasos": [
+          "Usando c² = a² + b², donde c = 13 (hipotenusa), a = 5 (cateto conocido), b = ? (cateto desconocido).",
+          "Sustituimos: 13² = 5² + b² → 169 = 25 + b² → b² = 144 → b = 12 metros.",
+          "Los catetos son 5 m y 12 m. Este es el triángulo 5-12-13, múltiplo del 3-4-5.",
+          "Área = (5 × 12) / 2 = 60 / 2 = 30 m².",
+          "Respuesta: el cateto mide 12 m y el área es 30 m²."
+        ]
+      }
+    }
+  ],
+  "cobertura": {
+    "unidades": ["Figuras geométricas"],
+    "temas": ["Perímetro", "Área", "Teorema de Pitágoras"],
+    "habilidades": ["Resolver problemas", "Aplicar", "Analizar"],
+    "proxima_unidad": "Cuerpos geométricos"
+  }
+}

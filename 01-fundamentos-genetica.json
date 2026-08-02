@@ -1,0 +1,127 @@
+{
+  "eje": "Herencia y variabilidad genética",
+  "unidad": "Fundamentos de genética",
+  "saludo": "En esta unidad exploraremos los conceptos básicos que sustentan la herencia biológica, desde la estructura del ADN hasta el rol de los genes en la transmisión de características.",
+  "preguntas": [
+    {
+      "id": "BIO-GEN-01",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Fundamentos de genética",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la función principal del ADN en las células?",
+      "alternativas": {
+        "A": "Transportar aminoácidos en el citoplasma",
+        "B": "Almacenar la información genética necesaria para la síntesis de proteínas",
+        "C": "Producir energía mediante la respiración celular",
+        "D": "Regular el pH dentro de las organelas celulares"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El ADN es la molécula que contiene las instrucciones genéticas para la vida",
+        "pasos": [
+          "El ADN se localiza en el núcleo de las células eucariotas",
+          "Está organizado en genes, que son segmentos de ADN con instrucciones específicas",
+          "Estos genes codifican la síntesis de proteínas, que determinan las características de un organismo"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-02",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Fundamentos de genética",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "Un gen es:",
+      "alternativas": {
+        "A": "Una proteína que regula la transcripción del ARN",
+        "B": "Un segmento de ADN que codifica una característica específica heredable",
+        "C": "Una molécula de ARN mensajero que produce proteínas",
+        "D": "Un cromosoma presente en las células sexuales"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Definición de gen en el contexto de la genética molecular",
+        "pasos": [
+          "Un gen es la unidad funcional de la herencia",
+          "Consiste en una secuencia de ADN con información para un rasgo específico",
+          "Se transmite de padres a hijos durante la reproducción"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-03",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Fundamentos de genética",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la relación entre ARN mensajero (ARNm) y la síntesis de proteínas?",
+      "alternativas": {
+        "A": "El ARNm transporta la información del ADN desde el núcleo hasta los ribosomas en el citoplasma",
+        "B": "El ARNm es la molécula responsable de replicar el ADN durante la división celular",
+        "C": "El ARNm forma parte de la estructura de los cromosomas junto con las proteínas",
+        "D": "El ARNm regula la actividad de los genes mediante la unión directa al ADN"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El flujo de información genética desde ADN hasta proteínas",
+        "pasos": [
+          "El ADN se transcribe en ARNm dentro del núcleo",
+          "El ARNm sale del núcleo y se une a los ribosomas",
+          "Los ribosomas traducen el código del ARNm para sintetizar proteínas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-04",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Fundamentos de genética",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Por qué los hijos heredan características de ambos padres si solo reciben un cromosoma X de la madre?",
+      "alternativas": {
+        "A": "Porque el cromosoma X de la madre contiene todos los genes necesarios para la herencia",
+        "B": "Porque reciben 23 cromosomas de cada progenitor, no solo genes del cromosoma X",
+        "C": "Porque la madre transmite genes a través del ARNm en el citoplasma del óvulo",
+        "D": "Porque los genes maternos y paternos se combinan aleatoriamente en la meiosis"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La herencia diploides y la transmisión cromosómica",
+        "pasos": [
+          "Los humanos son organismos diploides con 23 pares de cromosomas",
+          "Cada progenitor aporta un cromosoma de cada par durante la reproducción sexual",
+          "Por lo tanto, los hijos heredan genes de ambos padres en todos los cromosomas, no solo el X"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-05",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Fundamentos de genética",
+      "habilidad": "Aplicar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Si un gen tiene dos variantes alélicas diferentes (A y a), ¿cuántos genotipos diferentes puede presentar un individuo diploide? ¿Cuáles serían?",
+      "alternativas": {
+        "A": "2 genotipos: AA y aa",
+        "B": "3 genotipos: AA, Aa y aa",
+        "C": "4 genotipos: AA, Aa, aA y aa",
+        "D": "Infinitos genotipos dependiendo del número de alelos en la población"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Combinaciones genotípicas en organismos diploides",
+        "pasos": [
+          "Un organismo diploide tiene dos copias de cada gen, una de cada progenitor",
+          "Con dos alelos diferentes (A y a), las combinaciones posibles son: AA, Aa y aa",
+          "El genotipo Aa es diferente de aA en términos de origen, pero son equivalentes en expresión"
+        ]
+      }
+    }
+  ]
+}

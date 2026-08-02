@@ -1,0 +1,127 @@
+{
+  "eje": "Herencia y variabilidad genética",
+  "unidad": "Cromosomas y herencia",
+  "saludo": "Examinaremos cómo los cromosomas actúan como portadores de genes y cómo la determinación del sexo y la herencia ligada al sexo revelan la conexión entre cromosomas y características hereditarias.",
+  "preguntas": [
+    {
+      "id": "BIO-GEN-11",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Cromosomas y herencia",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuántos cromosomas tienen los humanos en las células somáticas?",
+      "alternativas": {
+        "A": "23 cromosomas",
+        "B": "46 cromosomas",
+        "C": "92 cromosomas",
+        "D": "48 cromosomas"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Número cromosómico en humanos",
+        "pasos": [
+          "Los humanos tienen 23 pares de cromosomas (46 total)",
+          "22 pares son autosomas (cromosomas no sexuales)",
+          "1 par son cromosomas sexuales (XX en mujeres, XY en hombres)"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-12",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Cromosomas y herencia",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la función principal de los cromosomas?",
+      "alternativas": {
+        "A": "Producir energía en la mitocondria",
+        "B": "Transportar y organizar el ADN dentro del núcleo celular",
+        "C": "Sintetizar proteínas en los ribosomas",
+        "D": "Regulara el pH del citoplasma"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Estructura y función de los cromosomas",
+        "pasos": [
+          "Los cromosomas están compuestos por ADN y proteínas (histonas)",
+          "El ADN se enrolla alrededor de las histonas formando nucleosomas",
+          "Los cromosomas permiten que el material genético se organize y se transmita correctamente"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-13",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Cromosomas y herencia",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cómo se determina el sexo en los mamíferos como los humanos?",
+      "alternativas": {
+        "A": "Por el número total de autosomas que hereda el individuo",
+        "B": "Por el par de cromosomas sexuales (XX o XY) que posee",
+        "C": "Por la cantidad de genes dominantes en el cromosoma X",
+        "D": "Por factores ambientales durante el desarrollo embrionario"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Determinación cromosómica del sexo",
+        "pasos": [
+          "Los mamíferos utilizan un sistema XY de determinación del sexo",
+          "Las hembras tienen dos cromosomas X (XX)",
+          "Los machos tienen un cromosoma X y uno Y (XY)"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-14",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Cromosomas y herencia",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Qué es la herencia ligada al sexo?",
+      "alternativas": {
+        "A": "La herencia de caracteres controlados por genes localizados en los cromosomas sexuales",
+        "B": "La herencia que ocurre solo en organismos que se reproducen sexualmente",
+        "C": "El proceso por el cual los cromosomas sexuales se intercambian información",
+        "D": "La determinación del sexo del descendiente basada en el fenotipo de los padres"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Caracteres ligados al sexo y su herencia",
+        "pasos": [
+          "Algunos genes están localizados en los cromosomas X o Y",
+          "En humanos, el cromosoma Y es muy pequeño y contiene pocos genes",
+          "La mayoría de caracteres ligados al sexo están en el cromosoma X"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-15",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Cromosomas y herencia",
+      "habilidad": "Aplicar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "El daltonismo (ceguera al color rojo-verde) es una característica ligada al cromosoma X. Si una madre portadora (XᴬXᵃ) tiene hijos con un padre sin daltonismo (XᴬY), ¿cuál es la probabilidad de que una hija presente daltonismo?",
+      "alternativas": {
+        "A": "0%, porque las hijas siempre reciben un alelo normal del padre",
+        "B": "25%, porque solo uno de los cuatro posibles genotipos resulta en daltonismo",
+        "C": "50%, porque la madre es portadora del alelo recesivo",
+        "D": "75%, porque el daltonismo es ligado al sexo"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Herencia ligada al X en caracteres recesivos",
+        "pasos": [
+          "Las hijas heredan un cromosoma X de la madre y uno del padre",
+          "El padre sin daltonismo aporta X normal (Xᴬ)",
+          "Aunque la madre sea portadora, la hija recibirá al menos un alelo normal del padre"
+        ]
+      }
+    }
+  ]
+}

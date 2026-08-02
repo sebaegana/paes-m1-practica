@@ -1,0 +1,138 @@
+{
+  "eje": "Cuerpo humano y salud",
+  "unidad": "Respuesta y regulación",
+  "saludo": "Descubre cómo tu cuerpo responde a los cambios del ambiente y se autorregula para mantener el equilibrio interno.",
+  "preguntas": [
+    {
+      "id": "BIO-SAL-16",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respuesta y regulación",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es el principal órgano regulador del sistema endocrino?",
+      "alternativas": {
+        "A": "La glándula tiroides",
+        "B": "El páncreas",
+        "C": "La hipófisis o glándula pituitaria",
+        "D": "Las glándulas suprarrenales"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "La hipófisis es la glándula maestra que controla al resto del sistema endocrino",
+        "pasos": [
+          "La hipófisis anterior secreta hormonas estimulantes de otras glándulas",
+          "La hipófisis posterior almacena y libera hormonas producidas por el hipotálamo",
+          "Regula el crecimiento, metabolismo, reproducción y homeostasis",
+          "Es controlada por el hipotálamo a través de hormonas liberadoras"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-17",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respuesta y regulación",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cuál es la hormona responsable de aumentar los niveles de glucosa en sangre cuando están bajos?",
+      "alternativas": {
+        "A": "Insulina",
+        "B": "Glucagón",
+        "C": "Adrenalina",
+        "D": "Cortisol"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El glucagón es la hormona hiperglucemiante que actúa cuando hay hipoglucemia",
+        "pasos": [
+          "El páncreas detecta baja concentración de glucosa en sangre",
+          "Las células alfa secretan glucagón",
+          "El glucagón actúa en el hígado y el músculo",
+          "Estimula la gluconeogénesis (síntesis de glucosa) y glucogenólisis (degradación de glucógeno)",
+          "Esto restaura los niveles normales de glucosa en sangre"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-18",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respuesta y regulación",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cómo mantiene el cuerpo la homeostasis del pH sanguíneo?",
+      "alternativas": {
+        "A": "Solo a través de los riñones excretando ácidos",
+        "B": "A través de sistemas amortiguadores (buffer), respiración y función renal",
+        "C": "El hígado produce sustancias que neutralizan todos los ácidos",
+        "D": "El pH sanguíneo no se regula y fluctúa constantemente"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La homeostasis del pH es compleja y requiere múltiples mecanismos",
+        "pasos": [
+          "Sistemas amortiguadores de bicarbonato (HCO3-/H2CO3) neutralizan cambios de pH",
+          "La respiración ajusta la concentración de CO2, regulando el pH",
+          "La hiperventilación reduce CO2 y aumenta pH (alcalinemia)",
+          "La hipoventilación retiene CO2 y disminuye pH (acidemia)",
+          "Los riñones excretan H+ e iones bicarbonato para ajustar el pH"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-19",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respuesta y regulación",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Qué sucede en el cuerpo cuando experimentas estrés agudo?",
+      "alternativas": {
+        "A": "Solo la frecuencia cardíaca aumenta",
+        "B": "Se produce una respuesta coordinada del sistema nervioso simpático y liberación de adrenalina y cortisol",
+        "C": "El sistema digestivo se acelera para obtener más energía",
+        "D": "La presión arterial disminuye para conservar sangre"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La respuesta al estrés es una activación integrada de múltiples sistemas",
+        "pasos": [
+          "El hipotálamo activa el eje HPA (hipotálamo-hipófisis-suprarrenales)",
+          "El sistema nervioso simpático se activa liberando noradrenalina",
+          "Las glándulas suprarrenales liberan adrenalina (epinefrina) y cortisol",
+          "Aumentan frecuencia cardíaca, presión arterial y glucemia",
+          "Se reduce la digestión y la función inmunológica",
+          "El cuerpo se prepara para la respuesta de 'lucha o huida'"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-20",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respuesta y regulación",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un paciente con hipotiroidismo presenta baja temperatura corporal, fatiga y aumento de peso. ¿Cómo explicas estos síntomas basándote en la fisiología de la hormona tiroidea?",
+      "alternativas": {
+        "A": "La tiroides no produce hormona tiroidea, reduciendo el metabolismo basal, por lo que hay menos producción de calor, baja energía y mayor acumulación de grasa",
+        "B": "El hipotiroidismo afecta solo a los músculos causando debilidad",
+        "C": "La tiroides produce demasiada hormona causando metabolismo acelerado",
+        "D": "El hipotiroidismo no tiene efectos reales en el peso corporal"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "La hormona tiroidea (T3 y T4) es esencial para regular el metabolismo",
+        "pasos": [
+          "La hormona tiroidea aumenta la tasa metabólica basal de las células",
+          "Deficiencia de hormona tiroidea reduce la oxidación de nutrientes",
+          "Menos energía disponible causa fatiga y letargo",
+          "Menor generación de calor corporal causa hipotermia leve",
+          "Reducción del gasto energético favorece acumulación de grasa corporal",
+          "La síntesis proteica también se reduce, afectando la masa muscular"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "eje": "Números",
+  "unidad": "Números Enteros y Racionales",
+  "saludo": "En esta unidad aprenderás a operar con números enteros y racionales, comparar valores, resolver problemas en contexto real y comprender las propiedades de estas operaciones.",
+  "preguntas": [
+    {
+      "id": "M1-NUM-01-01",
+      "eje": "Números",
+      "unidad": "Números Enteros y Racionales",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un estudiante tiene $250,000 en su cuenta. Gasta $85,000 en libros y $45,000 en transporte. ¿Cuánto dinero le queda?",
+      "alternativas": {
+        "A": "$120,000",
+        "B": "$125,000",
+        "C": "$130,000",
+        "D": "$135,000"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Operaciones con números enteros (sustracción)",
+        "pasos": [
+          "Dinero inicial: $250,000",
+          "Gasto total: $85,000 + $45,000 = $130,000",
+          "Dinero restante: $250,000 - $130,000 = $120,000"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-01-02",
+      "eje": "Números",
+      "unidad": "Números Enteros y Racionales",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál de los siguientes números enteros es el menor (más alejado del cero en dirección negativa)?",
+      "alternativas": {
+        "A": "-5",
+        "B": "-3",
+        "C": "-8",
+        "D": "-1"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Orden y comparación de números enteros negativos",
+        "pasos": [
+          "En la recta numérica, -8 está más a la izquierda",
+          "Los números más negativos son menores",
+          "Orden: -8 < -5 < -3 < -1"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-01-03",
+      "eje": "Números",
+      "unidad": "Números Enteros y Racionales",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Una receta para 4 personas requiere 2/3 de taza de harina. Si se desea preparar la receta para 6 personas, ¿cuántas tazas de harina se necesitan?",
+      "alternativas": {
+        "A": "1 taza",
+        "B": "1 1/4 tazas",
+        "C": "1 1/3 tazas",
+        "D": "1 1/2 tazas"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Operaciones con fracciones y proporcionalidad",
+        "pasos": [
+          "Factor de ampliación: 6 ÷ 4 = 3/2",
+          "Harina necesaria: (2/3) × (3/2) = 6/6 = 1",
+          "Se necesita 1 taza de harina"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-01-04",
+      "eje": "Números",
+      "unidad": "Números Enteros y Racionales",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es el resultado de la operación: -12 + 8 - (-5) + 3?",
+      "alternativas": {
+        "A": "-6",
+        "B": "-2",
+        "C": "2",
+        "D": "4"
+      },
+      "correcta": "D",
+      "explicacion": {
+        "concepto": "Operaciones combinadas con números enteros (adición y sustracción)",
+        "pasos": [
+          "-12 + 8 = -4",
+          "-4 - (-5) = -4 + 5 = 1",
+          "1 + 3 = 4"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-01-05",
+      "eje": "Números",
+      "unidad": "Números Enteros y Racionales",
+      "habilidad": "Argumentar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Juan afirma que 'al multiplicar un número entero negativo por un número racional positivo, el resultado siempre es negativo'. ¿Cuál de los siguientes es un contraejemplo válido de su afirmación?",
+      "alternativas": {
+        "A": "(-3) × (1/2) = -3/2",
+        "B": "(-5) × 0 = 0",
+        "C": "(-2) × (3/4) = -3/2",
+        "D": "(-1) × (2/3) = -2/3"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Propiedades de multiplicación y análisis de afirmaciones",
+        "pasos": [
+          "Un contraejemplo refuta la afirmación",
+          "La opción B: (-5) × 0 = 0, que NO es negativo",
+          "Esto contradice la afirmación de Juan",
+          "Nota: 0 es un número racional (se puede escribir como 0/1)"
+        ]
+      }
+    }
+  ]
+}

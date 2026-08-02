@@ -1,0 +1,131 @@
+{
+  "eje": "Evolución y biodiversidad",
+  "unidad": "Clasificación biológica",
+  "saludo": "Aprenderás a clasificar los organismos vivos según el sistema de Linneo. Comprenderás la jerarquía taxonómica y cómo refleja las relaciones evolutivas entre especies.",
+  "preguntas": [
+    {
+      "id": "BIO-EVO-16",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Clasificación biológica",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la categoría taxonómica más específica en la clasificación linneana?",
+      "alternativas": {
+        "A": "Género",
+        "B": "Especie",
+        "C": "Familia",
+        "D": "Orden"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La especie es la unidad básica de clasificación y la más específica. Agrupa organismos que pueden reproducirse entre sí y producir descendencia viable.",
+        "pasos": [
+          "La jerarquía linneana va de lo general a lo específico",
+          "Reino es la categoría más amplia",
+          "Especie es la categoría más específica"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-17",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Clasificación biológica",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "El nombre científico de la especie humana es Homo sapiens. ¿Qué información sobre clasificación proporciona cada parte de este nombre?",
+      "alternativas": {
+        "A": "Homo es la especie y sapiens es el reino",
+        "B": "Homo es el género y sapiens es la especie",
+        "C": "Ambas partes son nombres de especies diferentes",
+        "D": "Homo es la familia y sapiens es el orden"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La nomenclatura binomial consta de dos palabras: la primera (mayúscula) es el género y la segunda (minúscula) es el epíteto específico o especie.",
+        "pasos": [
+          "El sistema binomial fue desarrollado por Linneo",
+          "Homo es el género que agrupa a los humanos y otros homínidos extintos",
+          "Sapiens es la especie específica, significando 'sabio' en latín"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-18",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Clasificación biológica",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es el orden correcto de las categorías taxonómicas de menor a mayor especificidad?",
+      "alternativas": {
+        "A": "Reino - Filo - Clase - Orden - Familia - Género - Especie",
+        "B": "Especie - Género - Familia - Orden - Clase - Filo - Reino",
+        "C": "Orden - Familia - Género - Especie - Clase - Filo - Reino",
+        "D": "Género - Especie - Familia - Orden - Clase - Filo - Reino"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La jerarquía taxonómica procede de lo más específico (especie) a lo más general (reino). Cada categoría agrupa a varias del nivel inferior.",
+        "pasos": [
+          "La especie es la categoría más específica",
+          "Luego sigue el género que agrupa especies relacionadas",
+          "Familia agrupa géneros, y así sucesivamente",
+          "Reino es la categoría más amplia que agrupa todas las demás"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-19",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Clasificación biológica",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Los leones y los leopardos pertenecen al mismo género (Panthera) pero a especies diferentes (P. leo y P. pardus). ¿Qué característica comparten que justifica su clasificación conjunta en el mismo género?",
+      "alternativas": {
+        "A": "Pueden reproducirse entre sí sin restricción",
+        "B": "Tienen características anatómicas y evolutivas comunes que indican ancestro común reciente",
+        "C": "Habitan en el mismo continente",
+        "D": "Tienen exactamente el mismo tamaño corporal"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El género agrupa especies que comparten características derivadas comunes indicando un ancestro común más reciente que con otras especies de la familia.",
+        "pasos": [
+          "Leones y leopardos comparten muchas características anatómicas",
+          "Ambos son grandes felinos carnívoros",
+          "Su estructura esquelética y patrones genéticos indican divergencia reciente",
+          "Aunque no producen descendencia viable, su proximidad genética justifica el género común"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-20",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Clasificación biológica",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Se descubre una especie nueva de mamífero con características únicas. Los análisis genéticos muestran mayor similitud con primates que con otros mamíferos. ¿Cómo se reflejaría este hallazgo en la clasificación linneana?",
+      "alternativas": {
+        "A": "Se crearía un reino completamente nuevo para esta especie",
+        "B": "La especie se clasificaría en el mismo orden que otros primates, pero posiblemente en una familia distinta",
+        "C": "Se eliminarían todas las clasificaciones previas de primates",
+        "D": "La clasificación no cambiaría ya que está basada solo en características físicas observables"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La clasificación refleja relaciones evolutivas. Las similitudes genéticas indican que la nueva especie comparte ancestro común reciente con primates, justificando su inclusión en el mismo orden.",
+        "pasos": [
+          "Se comparan características genéticas y anatómicas",
+          "Mayor similitud genética con primates sugiere divergencia reciente",
+          "Se asigna a la clase Mammalia y orden Primates",
+          "La diferencia en características únicas justifica una familia nueva o nueva subfamilia",
+          "La clasificación refleja parentesco evolutivo basado en evidencia genética"
+        ]
+      }
+    }
+  ]
+}

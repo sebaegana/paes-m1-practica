@@ -1,0 +1,127 @@
+{
+  "eje": "Herencia y variabilidad genética",
+  "unidad": "Leyes de Mendel",
+  "saludo": "Descubriremos cómo Gregor Mendel estableció los principios fundamentales de la herencia a través de sus experimentos con plantas de arveja, sentando las bases de la genética moderna.",
+  "preguntas": [
+    {
+      "id": "BIO-GEN-06",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Leyes de Mendel",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "La Primera Ley de Mendel, también conocida como Ley de la Segregación, establece que:",
+      "alternativas": {
+        "A": "Los genes dominantes siempre se expresan en la segunda generación",
+        "B": "Los alelos de un gen se separan durante la formación de gametos, distribuyéndose equitativamente",
+        "C": "Los genes de diferentes cromosomas se heredan de forma independiente",
+        "D": "Los rasgos recesivos desaparecen en la primera generación filial"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La segregación de alelos durante la meiosis",
+        "pasos": [
+          "Mendel observó que cada rasgo tenía dos factores (ahora llamados alelos)",
+          "Estos factores se separan durante la formación de gametos",
+          "Cada gameto recibe solo un alelo de cada gen"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-07",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Leyes de Mendel",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Qué es la dominancia genética?",
+      "alternativas": {
+        "A": "La capacidad de un alelo de expresarse fenotípicamente sobre otro alelo",
+        "B": "La capacidad de un cromosoma de replicarse más rápido que otros",
+        "C": "El proceso por el cual un gen se duplica en la meiosis",
+        "D": "La herencia de genes únicamente del progenitor masculino"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Relaciones de dominancia entre alelos",
+        "pasos": [
+          "En un heterocigoto (Aa), uno de los alelos es dominante y el otro recesivo",
+          "El alelo dominante se expresa en el fenotipo aunque sea una sola copia",
+          "El alelo recesivo solo se expresa cuando está presente en dos copias (aa)"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-08",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Leyes de Mendel",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Si cruzamos dos plantas heterocigóticas (Aa) para un carácter con dominancia completa, ¿cuál será la proporción fenotípica esperada en la F1?",
+      "alternativas": {
+        "A": "100% dominante",
+        "B": "75% dominante y 25% recesivo",
+        "C": "50% dominante y 50% recesivo",
+        "D": "100% recesivo"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Cruzamiento entre heterocigotos (prueba de Mendel)",
+        "pasos": [
+          "Al cruzar Aa x Aa, los posibles genotipos son: AA, Aa, Aa, aa",
+          "AA (dominante) = 25%, Aa (dominante) = 50%, aa (recesivo) = 25%",
+          "Fenotípicamente: 75% dominante (AA + Aa) y 25% recesivo (aa)"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-09",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Leyes de Mendel",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la diferencia entre la Segunda Ley de Mendel (Ley de la Distribución Independiente) y la Primera?",
+      "alternativas": {
+        "A": "La Segunda Ley solo aplica a caracteres recesivos, la Primera a caracteres dominantes",
+        "B": "La Segunda Ley estudia dos o más genes independientes, la Primera estudia un solo gen",
+        "C": "La Segunda Ley describe la segregación de alelos, la Primera describe la herencia de dos caracteres",
+        "D": "No hay diferencia, son descripciones del mismo fenómeno"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Comparación entre las leyes de herencia mendeliana",
+        "pasos": [
+          "La Primera Ley analiza la herencia de un carácter (un gen)",
+          "La Segunda Ley analiza la herencia simultánea de dos o más caracteres independientes",
+          "Ambas leyes describen cómo se heredan los genes de generación en generación"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-10",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Leyes de Mendel",
+      "habilidad": "Aplicar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "En una familia, ambos padres tienen ojos marrones (dominante sobre azules) pero tienen un hijo con ojos azules. Si esta pareja tiene otro hijo, ¿cuál es la probabilidad de que tenga ojos azules?",
+      "alternativas": {
+        "A": "0%, porque ambos padres tienen ojos marrones",
+        "B": "25%, porque el gen recesivo se expresa en cada generación",
+        "C": "50%, porque cada hijo independiente tiene una probabilidad diferente",
+        "D": "75%, porque el gen dominante es más probable"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Aplicación de las leyes de Mendel en problemas de herencia",
+        "pasos": [
+          "El hijo con ojos azules tiene genotipo aa (homocigoto recesivo)",
+          "Por lo tanto, ambos padres deben ser Aa (heterocigotos portadores)",
+          "En cada cruzamiento Aa x Aa, la probabilidad de aa es 25%"
+        ]
+      }
+    }
+  ]
+}

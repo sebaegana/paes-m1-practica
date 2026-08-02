@@ -1,0 +1,130 @@
+{
+  "eje": "Probabilidad y estadística",
+  "unidad": "Medidas de posición",
+  "saludo": "En esta unidad explorarás las medidas de posición como el promedio, mediana, cuartiles y percentiles. Estas herramientas te permitirán resumir y comparar conjuntos de datos de manera más informativa.",
+  "preguntas": [
+    {
+      "id": "M1-PRO-01",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Medidas de posición",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es el promedio (media aritmética) de los siguientes datos: 8, 10, 6, 12, 14?",
+      "alternativas": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "8"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Promedio o media aritmética: suma de todos los datos dividida por la cantidad de datos",
+        "pasos": [
+          "Sumar todos los datos: 8 + 10 + 6 + 12 + 14 = 50",
+          "Contar la cantidad de datos: 5",
+          "Dividir: 50 ÷ 5 = 10"
+        ]
+      }
+    },
+    {
+      "id": "M1-PRO-02",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Medidas de posición",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Las calificaciones de un estudiante en 5 pruebas fueron: 5.0, 5.5, 6.0, 6.5, 7.0. ¿Cuál es la mediana?",
+      "alternativas": {
+        "A": "5.5",
+        "B": "6.0",
+        "C": "6.5",
+        "D": "5.0"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Mediana: valor que ocupa la posición central cuando los datos están ordenados de menor a mayor",
+        "pasos": [
+          "Los datos ya están ordenados: 5.0, 5.5, 6.0, 6.5, 7.0",
+          "Con 5 datos, la posición central es (5+1)/2 = 3",
+          "El tercer valor es 6.0"
+        ]
+      }
+    },
+    {
+      "id": "M1-PRO-03",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Medidas de posición",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Los sueldos mensuales de 8 empleados son: $400k, $450k, $500k, $550k, $600k, $650k, $700k, $750k. ¿Cuál es el cuartil Q2 (mediana)?",
+      "alternativas": {
+        "A": "$525k",
+        "B": "$550k",
+        "C": "$575k",
+        "D": "$600k"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Cuartil Q2: divide el conjunto de datos en dos mitades iguales, coincide con la mediana",
+        "pasos": [
+          "Los datos están ordenados: $400k, $450k, $500k, $550k, $600k, $650k, $700k, $750k",
+          "Con 8 datos (número par), la mediana es el promedio de los valores centrales (4º y 5º)",
+          "Q2 = (550k + 600k) ÷ 2 = 1150k ÷ 2 = $575k"
+        ]
+      }
+    },
+    {
+      "id": "M1-PRO-04",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Medidas de posición",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Se tienen 100 estudiantes clasificados por puntaje de 0 a 100. El percentil 75 (P75) es 85. ¿Qué significa esto?",
+      "alternativas": {
+        "A": "El 75% de estudiantes obtuvo exactamente 85 puntos",
+        "B": "El 75% de estudiantes obtuvo 85 puntos o menos",
+        "C": "El 25% de estudiantes obtuvo 85 puntos o menos",
+        "D": "75 estudiantes obtuvieron más de 85 puntos"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Percentil: valor por debajo del cual se encuentra un porcentaje específico de los datos",
+        "pasos": [
+          "El percentil 75 divide el conjunto en dos partes",
+          "75% de los datos están en o por debajo del P75",
+          "25% de los datos están por encima del P75",
+          "Si P75 = 85, entonces el 75% de estudiantes obtuvieron 85 o menos"
+        ]
+      }
+    },
+    {
+      "id": "M1-PRO-05",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Medidas de posición",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Cotidiano",
+      "enunciado": "Un conjunto de 200 trabajadores tiene sueldos con: Q1 = $800k, Q2 = $1200k, Q3 = $1600k. Un trabajador gana $1400k. ¿En qué posición relativa se encuentra?",
+      "alternativas": {
+        "A": "En el primer cuartil (gana menos que el 75% de trabajadores)",
+        "B": "Entre Q1 y Q2 (gana más que el 25% pero menos que el 50%)",
+        "C": "Entre Q2 y Q3 (gana más que el 50% pero menos que el 75%)",
+        "D": "En el tercer cuartil (gana más que el 75% de trabajadores)"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Interpretación de cuartiles: ubicar un valor dentro de la distribución usando los cuartiles como referencia",
+        "pasos": [
+          "Q1 = $800k: 25% gana $800k o menos",
+          "Q2 = $1200k: 50% gana $1200k o menos",
+          "Q3 = $1600k: 75% gana $1600k o menos",
+          "El sueldo de $1400k está entre Q2 ($1200k) y Q3 ($1600k)",
+          "Esto significa que gana más que el 50% pero menos que el 75%"
+        ]
+      }
+    }
+  ]
+}

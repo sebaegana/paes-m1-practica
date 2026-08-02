@@ -1,0 +1,114 @@
+{
+  "eje": "Geometría",
+  "unidad": "Cuerpos geométricos",
+  "saludo": "Esta semana trabajamos con Cuerpos Geométricos: prismas, cilindros y esferas. Aprenderemos a calcular volúmenes y áreas superficiales. Recuerda que el volumen mide el espacio 3D que ocupa un objeto, mientras que el área superficial es toda la superficie que lo cubre. ¡Vamos!",
+  "preguntas": [
+    {
+      "id": "M1-GEO-CUE-01",
+      "eje": "Geometría",
+      "unidad": "Cuerpos geométricos",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "Un cubo tiene una arista (lado) de 5 cm. ¿Cuál es su volumen?",
+      "alternativas": {"A": "25 cm³", "B": "75 cm³", "C": "125 cm³", "D": "150 cm³"},
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El volumen de un cubo se calcula elevando la arista al cubo: V = a³, donde a es la longitud de una arista.",
+        "pasos": [
+          "La arista mide 5 cm.",
+          "Volumen = 5³ = 5 × 5 × 5 = 125 cm³.",
+          "Un cubo de 5 cm de lado ocupa un volumen de 125 centímetros cúbicos.",
+          "La alternativa A (25) es el área de una cara, no el volumen."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-CUE-02",
+      "eje": "Geometría",
+      "unidad": "Cuerpos geométricos",
+      "habilidad": "Aplicar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un cilindro tiene radio de 3 cm y altura de 10 cm. ¿Cuál es su volumen? (Usa π ≈ 3,14)",
+      "alternativas": {"A": "282,6 cm³", "B": "301,4 cm³", "C": "565,2 cm³", "D": "942 cm³"},
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El volumen de un cilindro se calcula con la fórmula: V = π × r² × h, donde r es el radio y h es la altura.",
+        "pasos": [
+          "Radio (r) = 3 cm, Altura (h) = 10 cm, π ≈ 3,14.",
+          "Primero calculamos el área de la base: A = π × r² = 3,14 × 3² = 3,14 × 9 = 28,26 cm².",
+          "Luego multiplicamos por la altura: V = 28,26 × 10 = 282,6 cm³.",
+          "El volumen del cilindro es 282,6 centímetros cúbicos."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-CUE-03",
+      "eje": "Geometría",
+      "unidad": "Cuerpos geométricos",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Una piscina tiene forma de paralelepípedo (caja rectangular) con dimensiones: 8 m de largo, 6 m de ancho y 2 m de profundidad. ¿Cuántos litros de agua se necesitan para llenarla completamente? (1 m³ = 1.000 litros)",
+      "alternativas": {"A": "16.000 litros", "B": "48.000 litros", "C": "96.000 litros", "D": "192.000 litros"},
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El volumen de un paralelepípedo (o prisma rectangular) se calcula multiplicando largo × ancho × profundidad. Luego convertimos metros cúbicos a litros usando la conversión 1 m³ = 1.000 L.",
+        "pasos": [
+          "Dimensiones: largo = 8 m, ancho = 6 m, profundidad = 2 m.",
+          "Volumen = 8 × 6 × 2 = 96 m³.",
+          "Conversión a litros: 96 m³ × 1.000 L/m³ = 96.000 litros.",
+          "Se necesitan 96.000 litros de agua para llenar la piscina."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-CUE-04",
+      "eje": "Geometría",
+      "unidad": "Cuerpos geométricos",
+      "habilidad": "Modelar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Un envase de leche tiene forma de paralelepípedo con base cuadrada de lado 8 cm y altura de 28 cm. ¿Cuál es el área total de cartón necesaria para fabricar este envase (incluyendo tapa y base)?",
+      "alternativas": {"A": "384 cm²", "B": "768 cm²", "C": "1.024 cm²", "D": "1.280 cm²"},
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El área superficial de un paralelepípedo se calcula sumando el área de todas sus caras. Para una base cuadrada: 2 bases (tapa y fondo) + 4 caras laterales.",
+        "pasos": [
+          "Área de la base cuadrada: A_base = 8 × 8 = 64 cm². Como hay 2 (tapa y fondo): 2 × 64 = 128 cm².",
+          "Área de las 4 caras laterales: cada cara es un rectángulo de 8 × 28 = 224 cm². Total: 4 × 224 = 896 cm².",
+          "Área total = 128 + 896 = 1.024 cm².",
+          "El área total de cartón necesaria es 1.024 cm², que es la cantidad de superficie que debe cubrirse al fabricar el envase."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-CUE-05",
+      "eje": "Geometría",
+      "unidad": "Cuerpos geométricos",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Un prisma triangular tiene una base triangular con base de 6 cm y altura de 4 cm, y el prisma tiene una profundidad de 10 cm. ¿Cuál es su volumen y cuánto aumentaría el volumen si se duplica la profundidad del prisma?",
+      "alternativas": {"A": "Volumen = 120 cm³; aumento = 120 cm³", "B": "Volumen = 240 cm³; aumento = 240 cm³", "C": "Volumen = 120 cm³; aumento = 240 cm³", "D": "Volumen = 60 cm³; aumento = 60 cm³"},
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El volumen de un prisma se calcula multiplicando el área de la base por la altura (profundidad). Si se duplica una dimensión lineal, el volumen también se duplica (relación lineal).",
+        "pasos": [
+          "Primero, calculamos el área de la base triangular: A = (base × altura) / 2 = (6 × 4) / 2 = 12 cm².",
+          "El volumen del prisma es: V = A_base × profundidad = 12 × 10 = 120 cm³.",
+          "Si se duplica la profundidad (20 cm en lugar de 10 cm): V_nuevo = 12 × 20 = 240 cm³.",
+          "El aumento de volumen es: 240 - 120 = 120 cm³.",
+          "La respuesta correcta es: Volumen original = 120 cm³; aumento = 120 cm³."
+        ]
+      }
+    }
+  ],
+  "cobertura": {
+    "unidades": ["Cuerpos geométricos"],
+    "temas": ["Volumen", "Área superficial", "Prismas", "Cilindros"],
+    "habilidades": ["Resolver problemas", "Aplicar", "Modelar", "Analizar"],
+    "proxima_unidad": "Transformaciones isométricas"
+  }
+}

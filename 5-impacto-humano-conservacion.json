@@ -1,0 +1,146 @@
+{
+  "eje": "Organismo y ambiente",
+  "unidad": "Impacto humano y conservación",
+  "saludo": "Analiza cómo las actividades humanas afectan los ecosistemas y qué estrategias de conservación podemos implementar para proteger la biodiversidad y los recursos naturales.",
+  "preguntas": [
+    {
+      "id": "BIO-ECO-21",
+      "eje": "Organismo y ambiente",
+      "unidad": "Impacto humano y conservación",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cuál de las siguientes actividades humanas es un ejemplo directo de pérdida de biodiversidad?",
+      "alternativas": {
+        "A": "La reforestación de áreas degradadas",
+        "B": "La deforestación para crear plantaciones de soya",
+        "C": "La protección de reservas naturales",
+        "D": "La restauración de humedales"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La pérdida de biodiversidad ocurre cuando se destruyen hábitats naturales, eliminando especies y ecosistemas.",
+        "pasos": [
+          "La deforestación destruye el hábitat de múltiples especies",
+          "Especies que viven en el bosque pierden su refugio y alimento",
+          "Muchas especies desaparecen o quedan en peligro de extinción",
+          "Se pierde la diversidad genética y de ecosistemas",
+          "Las otras opciones son estrategias de conservación, no de pérdida"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-22",
+      "eje": "Organismo y ambiente",
+      "unidad": "Impacto humano y conservación",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es el principal gas de efecto invernadero responsable del cambio climático?",
+      "alternativas": {
+        "A": "Oxígeno (O₂)",
+        "B": "Nitrógeno (N₂)",
+        "C": "Dióxido de carbono (CO₂)",
+        "D": "Argón (Ar)"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El CO₂ es el gas de efecto invernadero más abundante de origen antropogénico, causando calentamiento global.",
+        "pasos": [
+          "El CO₂ representa más del 75% de los gases de efecto invernadero antropogénicos",
+          "Proviene principalmente de la quema de combustibles fósiles",
+          "Crea una capa que atrapa calor en la atmósfera",
+          "Causa aumento de temperaturas globales",
+          "O₂ y N₂ no causan efecto invernadero",
+          "Argón es inerte y no contribuye al efecto invernadero"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-23",
+      "eje": "Organismo y ambiente",
+      "unidad": "Impacto humano y conservación",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cómo impacta el cambio climático en la estabilidad de los ecosistemas y las poblaciones?",
+      "alternativas": {
+        "A": "No tiene ningún impacto significativo",
+        "B": "Solo afecta a los animales acuáticos",
+        "C": "Altera ciclos reproductivos, migraciones, disponibilidad de alimento y hábitats, causando desajustes en todo el ecosistema",
+        "D": "Solo aumenta la biodiversidad"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El cambio climático tiene efectos sistémicos en todos los niveles de organización ecológica.",
+        "pasos": [
+          "Cambios de temperatura alteran épocas de reproducción y migración",
+          "Modifican la disponibilidad estacional de alimento",
+          "Algunos hábitats se vuelven inhabitable (ej: derretimiento de hielo polar)",
+          "Especies no pueden adaptarse rápidamente y desaparecen",
+          "Se rompen relaciones depredador-presa y mutualistas",
+          "Afecta cadenas tróficas completas",
+          "Incrementa extinción, no biodiversidad"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-24",
+      "eje": "Organismo y ambiente",
+      "unidad": "Impacto humano y conservación",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cuál es una estrategia efectiva de conservación que protege a múltiples especies y mantiene funciones ecológicas?",
+      "alternativas": {
+        "A": "La caza selectiva de depredadores",
+        "B": "La creación de áreas protegidas (parques nacionales, reservas)",
+        "C": "El uso intensivo de pesticidas en agricultura",
+        "D": "La urbanización controlada de ecosistemas naturales"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las áreas protegidas preservan hábitats intactos, manteniendo la biodiversidad y los servicios ecosistémicos.",
+        "pasos": [
+          "Las áreas protegidas mantienen ecosistemas completos sin intervención humana",
+          "Protegen múltiples especies simultáneamente",
+          "Preservan relaciones ecológicas (depredador-presa, mutualismo)",
+          "Mantienen ciclos biogeoquímicos funcionales",
+          "Sirven como refugios para especies en peligro",
+          "La opción A reduce biodiversidad",
+          "La opción C causa daño ambiental",
+          "La opción D destruye ecosistemas naturales"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-25",
+      "eje": "Organismo y ambiente",
+      "unidad": "Impacto humano y conservación",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un país declara un área como protegida pero permite minería limitada en sus bordes. Analiza cómo esto podría afectar a una población de especies migratorias que usan toda el área.",
+      "alternativas": {
+        "A": "No habría efecto porque la minería solo ocurre en los bordes",
+        "B": "La minería crearía barreras que interrumpen migraciones, fragmentan el hábitat y reducen conectividad ecológica",
+        "C": "Las especies se adaptarían rápidamente a la minería",
+        "D": "La minería aumentaría la biodiversidad al crear nuevos hábitats"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La fragmentación de hábitats es una de las mayores amenazas para poblaciones de animales migratorios.",
+        "pasos": [
+          "Paso 1: La minería crea ruido, contaminación y barreras físicas",
+          "Paso 2: Los animales migratorios necesitan corredores continuos",
+          "Paso 3: Las barreras interrumpen rutas migratorias ancestrales",
+          "Paso 4: Se reduce la conectividad entre poblaciones",
+          "Paso 5: Poblaciones aisladas tienen menor variabilidad genética",
+          "Paso 6: Aumenta riesgo de extinción local",
+          "Paso 7: Se pierde la función ecológica de la migración (dispersión de semillas, control de plagas)",
+          "Conclusión: La protección parcial sin garantizar continuidad es ineficaz"
+        ]
+      }
+    }
+  ]
+}

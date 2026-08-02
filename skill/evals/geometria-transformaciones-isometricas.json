@@ -1,0 +1,116 @@
+{
+  "eje": "Geometría",
+  "unidad": "Transformaciones isométricas",
+  "saludo": "Esta semana estudiamos las Transformaciones Isométricas: traslaciones, rotaciones, reflexiones y sus composiciones. Estas transformaciones preservan la forma y el tamaño de las figuras, solo cambian su posición u orientación. ¡Prepárate para movimientos geométricos!",
+  "preguntas": [
+    {
+      "id": "M1-GEO-TRN-01",
+      "eje": "Geometría",
+      "unidad": "Transformaciones isométricas",
+      "habilidad": "Representar",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "Un triángulo tiene vértices en A(1,2), B(4,2) y C(2,5). Si se aplica una traslación 3 unidades a la derecha y 2 unidades hacia arriba, ¿cuáles son las nuevas coordenadas del vértice A?",
+      "alternativas": {"A": "(4,4)", "B": "(3,0)", "C": "(-2,0)", "D": "(1,5)"},
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Una traslación mueve cada punto de la figura en la misma dirección y distancia. Para trasladar un punto (x,y) con vector (a,b), el nuevo punto es (x+a, y+b).",
+        "pasos": [
+          "Vértice original: A(1,2).",
+          "Vector de traslación: 3 unidades a la derecha (+3 en x) y 2 unidades hacia arriba (+2 en y).",
+          "Nuevo vértice: A' = (1+3, 2+2) = (4,4).",
+          "La traslación es una transformación isométrica, por lo que la forma y tamaño del triángulo no cambian, solo su posición."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-TRN-02",
+      "eje": "Geometría",
+      "unidad": "Transformaciones isométricas",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Cuando te ves reflejado en un espejo, tu imagen es una reflexión de tu cuerpo respecto a la línea del espejo. Si una reflexión se aplica sobre el eje Y (eje vertical), ¿cuál es la imagen del punto P(3,4) después de la reflexión?",
+      "alternativas": {"A": "P'(-3,4)", "B": "P'(3,-4)", "C": "P'(-3,-4)", "D": "P'(4,3)"},
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Una reflexión sobre el eje Y cambia el signo de la coordenada x, mientras que la coordenada y permanece igual. La fórmula es: (x,y) → (-x,y).",
+        "pasos": [
+          "Punto original: P(3,4).",
+          "Reflexión sobre el eje Y (eje vertical).",
+          "Nueva coordenada: P' = (-3, 4).",
+          "La alternativa B sería la reflexión sobre el eje X (eje horizontal). La C sería reflexión sobre el origen."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-TRN-03",
+      "eje": "Geometría",
+      "unidad": "Transformaciones isométricas",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Un cuadrado tiene vértices en A(0,0), B(4,0), C(4,4) y D(0,4). Se aplica una rotación de 90° en sentido antihorario con centro en el origen. ¿Cuáles son las nuevas coordenadas del vértice B?",
+      "alternativas": {"A": "(0,4)", "B": "(4,4)", "C": "(0,-4)", "D": "(-4,0)"},
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Una rotación de 90° antihorario alrededor del origen transforma un punto (x,y) en (-y,x). La rotación es una transformación isométrica que preserva distancias y ángulos.",
+        "pasos": [
+          "Vértice original: B(4,0).",
+          "Rotación de 90° antihorario con centro en (0,0).",
+          "Aplicar la fórmula (x,y) → (-y,x): B' = (-0, 4) = (0,4).",
+          "El nuevo vértice B está en la posición (0,4), que era la posición original del vértice D.",
+          "Esto es correcto porque la rotación de 90° antihorario mueve cada vértice del cuadrado a la posición del siguiente vértice en sentido antihorario."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-TRN-04",
+      "eje": "Geometría",
+      "unidad": "Transformaciones isométricas",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Una imagen fotográfica debe ser impresa en una página. Primero se refleja la imagen sobre el eje X (para voltearla verticalmente) y luego se traslada 5 unidades a la derecha y 3 unidades hacia arriba. Si la esquina inferior izquierda original está en (0,0), ¿en qué posición estará después de ambas transformaciones?",
+      "alternativas": {"A": "(5,3)", "B": "(5,-3)", "C": "(-5,-3)", "D": "(0,0)"},
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Cuando se aplican dos transformaciones sucesivas (composición), se aplica primero una transformación y luego la otra sobre el resultado. La reflexión sobre el eje X transforma (x,y) en (x,-y), y la traslación suma componentes.",
+        "pasos": [
+          "Punto original: (0,0).",
+          "Paso 1 - Reflexión sobre el eje X: (0,0) → (0,-0) = (0,0). (El origen permanece en el origen)",
+          "Paso 2 - Traslación 5 unidades a la derecha y 3 hacia arriba: (0,0) + (5,3) = (5,3).",
+          "El punto final está en (5,3).",
+          "Nota: aunque el origen no se movió con la reflexión, otros puntos sí lo habrían hecho. Por ejemplo, (0,2) → (0,-2) con la reflexión."
+        ]
+      }
+    },
+    {
+      "id": "M1-GEO-TRN-05",
+      "eje": "Geometría",
+      "unidad": "Transformaciones isométricas",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Un rectángulo tiene vértices en A(1,1), B(5,1), C(5,3) y D(1,3). Se aplica una rotación de 180° con centro en (3,2), seguida de una reflexión sobre la recta y=2. ¿Cuáles son las coordenadas finales del vértice A después de ambas transformaciones?",
+      "alternativas": {"A": "(1,1)", "B": "(5,3)", "C": "(5,1)", "D": "(1,3)"},
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Para una rotación de 180° con centro en un punto (h,k), un punto (x,y) se transforma en (2h-x, 2k-y). Una reflexión sobre una recta horizontal y=k transforma (x,y) en (x, 2k-y).",
+        "pasos": [
+          "Vértice original: A(1,1).",
+          "Paso 1 - Rotación de 180° con centro en (3,2): A' = (2(3)-1, 2(2)-1) = (6-1, 4-1) = (5,3).",
+          "Paso 2 - Reflexión sobre la recta y=2: A'' = (5, 2(2)-3) = (5, 4-3) = (5,1).",
+          "Las coordenadas finales del vértice A son (5,1).",
+          "Este es un ejercicio que requiere aplicar dos transformaciones sucesivas y seguir cuidadosamente cada paso."
+        ]
+      }
+    }
+  ],
+  "cobertura": {
+    "unidades": ["Transformaciones isométricas"],
+    "temas": ["Traslación", "Reflexión", "Rotación", "Composición de transformaciones"],
+    "habilidades": ["Representar", "Comprender", "Aplicar", "Resolver problemas", "Analizar"],
+    "eje_completado": "Geometría"
+  }
+}

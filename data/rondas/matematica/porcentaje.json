@@ -1,0 +1,129 @@
+{
+  "eje": "Números",
+  "unidad": "Porcentaje",
+  "saludo": "En esta unidad explorarás el concepto de porcentaje, cálculos de aumentos y disminuciones, y aplicaciones en contextos cotidianos como descuentos, impuestos y variaciones.",
+  "preguntas": [
+    {
+      "id": "M1-NUM-02-01",
+      "eje": "Números",
+      "unidad": "Porcentaje",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Una tienda ofrece un descuento del 20% en todos sus artículos. Si un libro cuesta $15,000, ¿cuál es el precio final con descuento?",
+      "alternativas": {
+        "A": "$3,000",
+        "B": "$9,000",
+        "C": "$12,000",
+        "D": "$13,000"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Cálculo de descuentos porcentuales",
+        "pasos": [
+          "Descuento: 20% de $15,000 = 0.20 × $15,000 = $3,000",
+          "Precio final: $15,000 - $3,000 = $12,000",
+          "O directamente: $15,000 × (1 - 0.20) = $15,000 × 0.80 = $12,000"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-02-02",
+      "eje": "Números",
+      "unidad": "Porcentaje",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál de las siguientes expresiones representa correctamente el 25% de un número x?",
+      "alternativas": {
+        "A": "(1/4) × x",
+        "B": "(1/5) × x",
+        "C": "(1/25) × x",
+        "D": "25 × x"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Equivalencia entre porcentaje y fracción",
+        "pasos": [
+          "25% = 25/100",
+          "Simplificando: 25/100 = 1/4",
+          "Por lo tanto, 25% de x = (1/4) × x"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-02-03",
+      "eje": "Números",
+      "unidad": "Porcentaje",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "En una encuesta, el 60% de 150 estudiantes prefieren matemática a otras asignaturas. ¿Cuántos estudiantes prefieren matemática?",
+      "alternativas": {
+        "A": "60",
+        "B": "75",
+        "C": "90",
+        "D": "100"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Cálculo de un porcentaje de una cantidad",
+        "pasos": [
+          "60% de 150 = 0.60 × 150",
+          "= (60/100) × 150",
+          "= 9,000/100 = 90 estudiantes"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-02-04",
+      "eje": "Números",
+      "unidad": "Porcentaje",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Si un número aumenta en 30% y luego disminuye en 20%, ¿cuál es el cambio porcentual neto?",
+      "alternativas": {
+        "A": "4%",
+        "B": "10%",
+        "C": "24%",
+        "D": "50%"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Variaciones porcentuales sucesivas",
+        "pasos": [
+          "Supongamos valor inicial: 100",
+          "Después de aumento 30%: 100 × 1.30 = 130",
+          "Después de disminución 20%: 130 × 0.80 = 104",
+          "Cambio neto: (104 - 100)/100 = 4/100 = 4%"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-02-05",
+      "eje": "Números",
+      "unidad": "Porcentaje",
+      "habilidad": "Modelar",
+      "dificultad": "Avanzado",
+      "contexto": "Cotidiano",
+      "enunciado": "Una empresa vende un producto a $50,000. Los costos de producción son el 40% del precio de venta y los gastos administrativos son el 15% del precio de venta. ¿Qué porcentaje del precio de venta representa la ganancia neta?",
+      "alternativas": {
+        "A": "25%",
+        "B": "35%",
+        "C": "45%",
+        "D": "55%"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Análisis de componentes y ganancia en un modelo de negocio",
+        "pasos": [
+          "Precio de venta: 100%",
+          "Costos de producción: 40%",
+          "Gastos administrativos: 15%",
+          "Ganancia neta: 100% - 40% - 15% = 45%"
+        ]
+      }
+    }
+  ]
+}

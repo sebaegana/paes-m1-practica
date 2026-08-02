@@ -1,0 +1,135 @@
+{
+  "eje": "Organismo y ambiente",
+  "unidad": "Niveles de organización ecológica",
+  "saludo": "Bienvenido a este módulo sobre los niveles de organización ecológica. Aquí exploraremos cómo los organismos se estructuran en diferentes niveles, desde el individuo hasta la biosfera, formando sistemas complejos.",
+  "preguntas": [
+    {
+      "id": "BIO-ECO-01",
+      "eje": "Organismo y ambiente",
+      "unidad": "Niveles de organización ecológica",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es el orden correcto de los niveles de organización ecológica, desde el más pequeño al más grande?",
+      "alternativas": {
+        "A": "Individuo → Población → Comunidad → Ecosistema → Biosfera",
+        "B": "Comunidad → Población → Individuo → Ecosistema → Biosfera",
+        "C": "Población → Individuo → Comunidad → Biosfera → Ecosistema",
+        "D": "Individuo → Ecosistema → Población → Comunidad → Biosfera"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Los niveles de organización ecológica forman una jerarquía que comienza con organismos individuales y escala hacia sistemas cada vez más complejos.",
+        "pasos": [
+          "Individuo: un organismo único de una especie",
+          "Población: grupo de individuos de la misma especie que comparten un espacio",
+          "Comunidad: todas las poblaciones de diferentes especies que conviven en una zona",
+          "Ecosistema: la comunidad más el ambiente físico (biótico + abiótico)",
+          "Biosfera: todos los ecosistemas del planeta"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-02",
+      "eje": "Organismo y ambiente",
+      "unidad": "Niveles de organización ecológica",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "En un acuario que contiene peces, plantas acuáticas, bacterias y caracoles, ¿cuál de los siguientes representa la comunidad?",
+      "alternativas": {
+        "A": "Todos los peces dorados del acuario",
+        "B": "El pez, la planta y el caracol presentes en el acuario",
+        "C": "El agua, la grava y todos los organismos del acuario",
+        "D": "Solo las plantas acuáticas"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La comunidad incluye todas las poblaciones de diferentes especies que viven juntas en un área, pero no considera factores abióticos.",
+        "pasos": [
+          "La comunidad es el conjunto de todas las especies diferentes",
+          "En este caso: peces, plantas, bacterias y caracoles representan especies distintas",
+          "La opción A solo menciona una población (peces dorados)",
+          "La opción C incluye factores abióticos (agua, grava), lo que sería un ecosistema",
+          "La opción D incluye solo una población"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-03",
+      "eje": "Organismo y ambiente",
+      "unidad": "Niveles de organización ecológica",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Qué diferencia principal existe entre un ecosistema y una comunidad ecológica?",
+      "alternativas": {
+        "A": "El ecosistema incluye solo organismos vivos, mientras que la comunidad incluye factores físicos",
+        "B": "La comunidad incluye los organismos vivos, mientras que el ecosistema añade los factores abióticos del ambiente",
+        "C": "El ecosistema es más pequeño que la comunidad",
+        "D": "La comunidad es exclusiva de organismos autótrofos"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Existe una relación jerárquica donde la comunidad forma parte del ecosistema, siendo este último un concepto más amplio.",
+        "pasos": [
+          "Comunidad = todas las poblaciones de organismos (componente biótico)",
+          "Ecosistema = Comunidad + Ambiente físico (factores abióticos como luz, temperatura, suelo, agua)",
+          "El ecosistema es un concepto más integral que incluye tanto lo viviente como lo no viviente",
+          "Sin los factores abióticos no podríamos hablar de un ecosistema completo"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-04",
+      "eje": "Organismo y ambiente",
+      "unidad": "Niveles de organización ecológica",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "En un bosque tropical, varias especies de árboles comparten el mismo territorio. ¿A qué nivel de organización ecológica corresponde el conjunto de todos los árboles de diferentes especies?",
+      "alternativas": {
+        "A": "Una población",
+        "B": "Una comunidad",
+        "C": "Un ecosistema",
+        "D": "Una comunidad de árboles"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Cuando se reúnen organismos de diferentes especies en un espacio compartido, forman una comunidad, independientemente de su tipo.",
+        "pasos": [
+          "Cada especie de árbol forma una población independiente",
+          "El conjunto de todas estas poblaciones (árboles + otros organismos) forma la comunidad",
+          "La comunidad incluye todos los seres vivos del bosque, no solo árboles",
+          "El ecosistema sería el bosque completo incluyendo suelo, clima y agua"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-05",
+      "eje": "Organismo y ambiente",
+      "unidad": "Niveles de organización ecológica",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un estudiante observa que los insectos en una región cambian de comportamiento cuando la temperatura desciende. ¿Cuál de las siguientes explicaciones mejor justifica cómo el factor abiótico (temperatura) afecta diferentes niveles de organización?",
+      "alternativas": {
+        "A": "El cambio afecta solo a la población de insectos, sin repercusiones en otros niveles",
+        "B": "La temperatura afecta el comportamiento individual, lo que impacta la población y eventualmente la comunidad y el ecosistema",
+        "C": "Solo el ecosistema se ve afectado por cambios de temperatura",
+        "D": "La biosfera es responsable de regular los cambios de temperatura en los insectos"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Los factores abióticos actúan sobre todos los niveles de organización de forma integrada, creando una cascada de efectos.",
+        "pasos": [
+          "Efecto a nivel individual: el insecto modifica su metabolismo y comportamiento",
+          "Efecto a nivel poblacional: cambios en reproducción, migración o supervivencia alteran la cantidad de individuos",
+          "Efecto a nivel comunitario: cambios en poblaciones de insectos afectan depredadores, polinizadores y plantas",
+          "Efecto a nivel de ecosistema: alteración de ciclos nutrientes, flujo energético y funciones ecológicas",
+          "Esta es una visión sistémica que muestra cómo todo está interconectado"
+        ]
+      }
+    }
+  ]
+}

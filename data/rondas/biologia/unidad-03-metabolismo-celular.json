@@ -1,0 +1,140 @@
+{
+  "eje": "Célula",
+  "unidad": "Metabolismo celular",
+  "saludo": "Exploraremos cómo las células obtienen y utilizan energía. La fotosíntesis y la respiración celular son procesos fundamentales que sostienen toda la vida en el planeta.",
+  "preguntas": [
+    {
+      "id": "BIO-CEL-11",
+      "eje": "Célula",
+      "unidad": "Metabolismo celular",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuáles son los reactivos (sustancias de entrada) en el proceso de fotosíntesis?",
+      "alternativas": {
+        "A": "Glucosa y oxígeno",
+        "B": "Dióxido de carbono, agua y luz",
+        "C": "ATP y moléculas de glucosa",
+        "D": "Oxígeno, agua y clorofila"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La fotosíntesis es el proceso donde los organismos autótrofos (plantas, algas) convierten luz solar en energía química. Los reactivos son el dióxido de carbono (CO2) del aire, el agua (H2O) del suelo y la energía luminosa.",
+        "pasos": [
+          "La ecuación general de la fotosíntesis es: 6CO2 + 6H2O + luz → C6H12O6 + 6O2",
+          "El dióxido de carbono se absorbe a través de los estomas de las hojas",
+          "El agua se absorbe por las raíces desde el suelo",
+          "La luz es capturada por la clorofila en los tilacoides del cloroplasto",
+          "Los productos son glucosa (carbohidrato) y oxígeno liberado"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-12",
+      "eje": "Célula",
+      "unidad": "Metabolismo celular",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la función principal de la respiración celular aeróbica en las células?",
+      "alternativas": {
+        "A": "Sintetizar nuevas moléculas de glucosa usando luz",
+        "B": "Descomponer la glucosa para liberar energía en forma de ATP",
+        "C": "Producir oxígeno para el ambiente externo",
+        "D": "Almacenar energía en moléculas de lípidos"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La respiración celular aeróbica es el proceso inverso a la fotosíntesis. Descompone la glucosa en presencia de oxígeno para liberar la energía química contenida en sus enlaces químicos, que se captura en moléculas de ATP.",
+        "pasos": [
+          "La glucosa contiene energía en sus enlaces químicos",
+          "En la respiración aeróbica, la glucosa se oxida (se elimina hidrógeno) en presencia de oxígeno",
+          "La ecuación es: C6H12O6 + 6O2 → 6CO2 + 6H2O + energía (ATP)",
+          "Esta energía se captura en moléculas de ATP que la célula puede usar",
+          "Es mucho más eficiente que la respiración anaeróbica"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-13",
+      "eje": "Célula",
+      "unidad": "Metabolismo celular",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Durante una competencia de atletismo, un corredor de 100 metros realiza un esfuerzo máximo en solo 10 segundos. ¿Cuál es la principal razón por la que sus músculos dependen inicialmente de respiración anaeróbica?",
+      "alternativas": {
+        "A": "La respiración aeróbica es lenta para satisfacer la demanda inmediata y masiva de ATP",
+        "B": "El oxígeno disponible en la sangre es insuficiente durante el esfuerzo",
+        "C": "Los músculos no tienen mitocondrias para realizar respiración aeróbica",
+        "D": "La glucosa solo está disponible para la fermentación anaeróbica"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "La respiración aeróbica produce más ATP que la anaeróbica pero es más lenta porque requiere múltiples pasos en las mitocondrias. Durante un esfuerzo explosivo y breve, la demanda de ATP excede lo que la aeróbica puede suministrar rapidamente.",
+        "pasos": [
+          "Un esfuerzo máximo requiere enormes cantidades de ATP inmediatamente",
+          "La respiración aeróbica es más eficiente (produce ~30-32 ATP por glucosa) pero toma más tiempo",
+          "La respiración anaeróbica (glucólisis + fermentación) es rápida pero menos eficiente (produce 2 ATP por glucosa)",
+          "El músculo utiliza primero las reservas de ATP y fosfocreatina (segundos 0-10)",
+          "Luego depende de glucólisis rápida mientras la respiración aeróbica acelera",
+          "Por eso se acumula ácido láctico causando fatiga"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-14",
+      "eje": "Célula",
+      "unidad": "Metabolismo celular",
+      "habilidad": "Analizar",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la relación fundamental entre la fotosíntesis y la respiración celular en los ecosistemas?",
+      "alternativas": {
+        "A": "Son procesos independientes sin ninguna relación metabólica",
+        "B": "La fotosíntesis produce la glucosa que la respiración descompone; la respiración produce el CO2 que la fotosíntesis usa",
+        "C": "La respiración es un desperdicio de energía que la fotosíntesis intenta compensar",
+        "D": "Ambos procesos ocurren solo en células vegetales"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La fotosíntesis y la respiración celular son procesos complementarios. La fotosíntesis captura la energía solar en moléculas orgánicas, y la respiración libera esa energía. Juntos forman un ciclo biogeoquímico esencial.",
+        "pasos": [
+          "Fotosíntesis: 6CO2 + 6H2O + luz → C6H12O6 + 6O2",
+          "Respiración: C6H12O6 + 6O2 → 6CO2 + 6H2O + ATP",
+          "Los productos de la fotosíntesis (glucosa y O2) son los reactivos de la respiración",
+          "Los productos de la respiración (CO2 y H2O) son los reactivos de la fotosíntesis",
+          "Este ciclo es fundamental: sin fotosíntesis no habría alimento ni oxígeno; sin respiración no habría energía para la vida",
+          "También forman ciclos biogeoquímicos: ciclo del carbono, ciclo del oxígeno"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-15",
+      "eje": "Célula",
+      "unidad": "Metabolismo celular",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Una célula puede obtener energía por respiración aeróbica, respiración anaeróbica o fermentación. ¿Cuál de estas afirmaciones explica mejor la ventaja evolutiva de tener múltiples vías metabólicas?",
+      "alternativas": {
+        "A": "La fermentación es más eficiente que la respiración aeróbica en todas las situaciones",
+        "B": "Las diferentes vías permiten adaptación a diferentes ambientes: la aeróbica cuando hay oxígeno, la anaeróbica en su ausencia",
+        "C": "La respiración anaeróbica produce más ATP que la aeróbica",
+        "D": "Tener múltiples vías reduce la cantidad total de energía disponible"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La flexibilidad metabólica es una ventaja adaptativa. Las células que pueden cambiar entre vías metabólicas pueden sobrevivir en diferentes condiciones ambientales: ricas en oxígeno (usa aeróbica) o pobres en oxígeno (usa anaeróbica).",
+        "pasos": [
+          "Respiración aeróbica: eficiente (~30-32 ATP/glucosa) pero requiere oxígeno constante",
+          "Glucólisis anaeróbica: rápida (2 ATP/glucosa) pero no requiere oxígeno, produce ácido láctico",
+          "Fermentación alcohólica o láctica: regenera NAD+ para que glucólisis continúe sin oxígeno",
+          "Las bacterias facultativas pueden vivir en presencia o ausencia de oxígeno porque tienen estas vías",
+          "Las células musculares pueden cambiar entre vías según la intensidad del ejercicio",
+          "Esta flexibilidad metabólica aumenta la probabilidad de supervivencia en ambientes variables"
+        ]
+      }
+    }
+  ]
+}

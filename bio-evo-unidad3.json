@@ -1,0 +1,130 @@
+{
+  "eje": "Evolución y biodiversidad",
+  "unidad": "Historia de la vida",
+  "saludo": "Recorre la historia de la vida en la Tierra a través de las diferentes eras geológicas. Conocerás cómo surgieron los primeros organismos y cómo la especiación generó la diversidad que vemos hoy.",
+  "preguntas": [
+    {
+      "id": "BIO-EVO-11",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Historia de la vida",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿En cuál de las siguientes eras geológicas aparecieron los primeros organismos unicelulares en la Tierra?",
+      "alternativas": {
+        "A": "Éon Arcaico",
+        "B": "Era Paleozoica",
+        "C": "Era Mesozoica",
+        "D": "Era Cenozoica"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El Éon Arcaico (hace 4,600 a 2,500 millones de años) fue testigo del surgimiento de los primeros organismos vivos, principalmente bacterias y arqueobacterias.",
+        "pasos": [
+          "La Tierra se forma hace aproximadamente 4,600 millones de años",
+          "Gradualmente se crean condiciones para la vida",
+          "Aparecen los primeros microorganismos procariotas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-12",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Historia de la vida",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Durante la Era Paleozoica ocurrió la explosión cámbrica, un evento en el cual surgieron rápidamente la mayoría de los filos animales. ¿Cuál es una razón probable para este evento evolutivo?",
+      "alternativas": {
+        "A": "El aumento del oxígeno atmosférico permitió el desarrollo de organismos complejos",
+        "B": "La radiación ultravioleta aumentó las mutaciones beneficiosas",
+        "C": "Los organismos desarrollaron conciencia evolutiva",
+        "D": "Fue un evento completamente aleatorio sin causa natural"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El aumento de oxígeno en la atmósfera durante el Proterozoico permitió la evolución de organismos multicelulares más complejos con mayores demandas metabólicas.",
+        "pasos": [
+          "Originalmente la atmósfera terrestre carecía de oxígeno",
+          "Los organismos fotosintéticos aumentaron progresivamente el O2",
+          "Esto permitió evolución de animales multicelulares más complejos"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-13",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Historia de la vida",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál fue el grupo de vertebrados que dominó la Era Mesozoica?",
+      "alternativas": {
+        "A": "Los mamíferos",
+        "B": "Los dinosaurios",
+        "C": "Los anfibios",
+        "D": "Los peces"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La Era Mesozoica (252 a 66 millones de años atrás) es frecuentemente llamada la 'Era de los Dinosaurios' porque estos reptiles eran los vertebrados dominantes.",
+        "pasos": [
+          "Los dinosaurios se diversificaron ampliamente durante el Mesozoico",
+          "Ocupaban prácticamente todos los nichos ecológicos terrestres",
+          "Su extinción hace 66 millones de años marcó el fin de esta era"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-14",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Historia de la vida",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "La especiación alopátrida es un proceso mediante el cual una población se divide geográficamente. ¿Por qué esto favorece la evolución de nuevas especies?",
+      "alternativas": {
+        "A": "La geografía determina directamente el genotipo de los organismos",
+        "B": "El aislamiento geográfico evita el flujo génico y permite que diferentes presiones selectivas creen divergencia",
+        "C": "Los organismos desarrollan intencionalidad para adaptarse al nuevo ambiente",
+        "D": "La distancia geográfica acumula automáticamente más mutaciones"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "En la especiación alopátrida, el aislamiento reproductivo permite que poblaciones divergentes acumulen diferencias genéticas distintas bajo presiones selectivas diferentes.",
+        "pasos": [
+          "Una barrera geográfica divide una población ancestral",
+          "Las poblaciones separadas no pueden intercambiar genes",
+          "Cada una experimenta selección natural diferencial",
+          "Eventualmente surgen diferencias reproductivas que las hacen especies distintas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-15",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Historia de la vida",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Se observa que en varias islas del Pacífico existen especies de pinzones que son claramente relacionadas pero tienen picos de diferentes tamaños y formas adaptadas a distintos tipos de alimento. ¿Cómo explica la especiación alopátrida esta diversidad?",
+      "alternativas": {
+        "A": "Cada isla fue colonizada por una especie diferente completamente",
+        "B": "Una población ancestral colonizó un archipiélago, se aisló en diferentes islas, y divergió adaptándose a recursos locales",
+        "C": "Los cambios en los picos son adaptaciones individuales dentro de una sola especie",
+        "D": "Las islas están conectadas genéticamente mediante corrientes marinas"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La radiación adaptativa es resultado de la especiación alopátrida, donde una población ancestral se diversifica rápidamente en múltiples especies ocupando nichos distintos.",
+        "pasos": [
+          "Un antepasado común coloniza un archipiélago",
+          "Poblaciones en diferentes islas quedan geográficamente aisladas",
+          "Cada población experimenta selección natural para recursos locales",
+          "Se acumulan diferencias genéticas que resultan en nuevas especies",
+          "La diversidad de picos refleja adaptación a diferentes fuentes de alimento"
+        ]
+      }
+    }
+  ]
+}

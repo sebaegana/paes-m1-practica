@@ -1,0 +1,127 @@
+{
+  "eje": "Álgebra y funciones",
+  "unidad": "Función lineal y afín",
+  "saludo": "Exploraremos funciones lineales y afines: su forma algebraica, representación gráfica, pendiente e interceptos. Estas herramientas modelan relaciones proporcionales y cambios constantes en fenómenos reales.",
+  "preguntas": [
+    {
+      "id": "M1-ALG-21",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función lineal y afín",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es la pendiente de la recta y = 3x + 5?",
+      "alternativas": {
+        "A": "3",
+        "B": "5",
+        "C": "-3",
+        "D": "-5"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Identificación de la pendiente en la forma pendiente-intercepto (y = mx + b), donde m es la pendiente.",
+        "pasos": [
+          "Paso 1: Reconocer que la ecuación está en la forma y = mx + b.",
+          "Paso 2: Identificar m (el coeficiente de x) y b (el término independiente).",
+          "Paso final: En y = 3x + 5, la pendiente es m = 3 y el intercepto en y es b = 5."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-22",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función lineal y afín",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un taxi cobra $2.500 por el viaje inicial y $300 por cada kilómetro recorrido. ¿Cuál función describe el costo C en función de los kilómetros k?",
+      "alternativas": {
+        "A": "C(k) = 300k",
+        "B": "C(k) = 2.500k + 300",
+        "C": "C(k) = 300k + 2.500",
+        "D": "C(k) = 2.500 + 300"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Modelado de situaciones cotidianas mediante funciones afines (no lineales, pues tienen intercepto no nulo).",
+        "pasos": [
+          "Paso 1: El costo fijo inicial es $2.500 (independiente de k).",
+          "Paso 2: El costo variable es $300 por kilómetro, es decir, 300k.",
+          "Paso final: El costo total es C(k) = 300k + 2.500."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-23",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función lineal y afín",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es la ecuación de la recta que pasa por los puntos (2, 5) y (4, 11)?",
+      "alternativas": {
+        "A": "y = 3x - 1",
+        "B": "y = 2x + 1",
+        "C": "y = x + 3",
+        "D": "y = 3x + 1"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Determinación de la ecuación de una recta dados dos puntos: cálculo de la pendiente y luego del intercepto.",
+        "pasos": [
+          "Paso 1: Calcular la pendiente: m = (y₂ - y₁)/(x₂ - x₁) = (11 - 5)/(4 - 2) = 6/2 = 3.",
+          "Paso 2: Usar la forma punto-pendiente con (2, 5): y - 5 = 3(x - 2).",
+          "Paso 3: Despejar: y - 5 = 3x - 6, entonces y = 3x - 1."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-24",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función lineal y afín",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "La temperatura en grados Celsius se relaciona con grados Fahrenheit mediante T_F = 1,8 · T_C + 32. Si en Santiago la temperatura es 20°C, ¿cuál es en Fahrenheit?",
+      "alternativas": {
+        "A": "52°F",
+        "B": "60°F",
+        "C": "68°F",
+        "D": "75°F"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Evaluación de funciones afines en contextos de conversión de unidades y transformaciones lineales.",
+        "pasos": [
+          "Paso 1: Usar la función T_F = 1,8 · T_C + 32.",
+          "Paso 2: Reemplazar T_C = 20: T_F = 1,8(20) + 32 = 36 + 32 = 68.",
+          "Paso final: 20°C equivale a 68°F."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-25",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función lineal y afín",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Dos rectas y = 2x + 3 e y = 2x - 1 son paralelas. ¿Cuál de las siguientes afirmaciones es verdadera?",
+      "alternativas": {
+        "A": "Tienen el mismo intercepto en y",
+        "B": "Tienen la misma pendiente",
+        "C": "Se intersectan en un punto",
+        "D": "Su pendiente es diferente pero sus interceptos son iguales"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Análisis de paralelismo entre rectas: dos rectas son paralelas si y solo si tienen la misma pendiente e interceptos diferentes.",
+        "pasos": [
+          "Paso 1: Identificar las pendientes: ambas rectas tienen pendiente m = 2.",
+          "Paso 2: Identificar los interceptos: y = 3 para la primera, y = -1 para la segunda (diferentes).",
+          "Paso final: Las rectas son paralelas porque tienen pendiente idéntica pero interceptos distintos."
+        ]
+      }
+    }
+  ]
+}

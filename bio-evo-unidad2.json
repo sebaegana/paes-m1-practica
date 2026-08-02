@@ -1,0 +1,127 @@
+{
+  "eje": "Evolución y biodiversidad",
+  "unidad": "Evidencias de evolución",
+  "saludo": "Descubre las múltiples líneas de evidencia que respaldan la evolución de las especies. Examinaremos fósiles, estructuras comparativas y patrones biológicos que confirman nuestra historia evolutiva.",
+  "preguntas": [
+    {
+      "id": "BIO-EVO-06",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Evidencias de evolución",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Qué tipo de evidencia paleontológica muestra cambios graduales en una especie a lo largo del tiempo?",
+      "alternativas": {
+        "A": "Los registros fósiles estratificados en capas geológicas",
+        "B": "Las observaciones de comportamiento animal actual",
+        "C": "Los análisis de ADN mitocondrial",
+        "D": "Las distribuciones geográficas actuales de especies"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El registro fósil, organizado en capas estratificadas, permite observar cómo cambian las características de una especie a través de millones de años.",
+        "pasos": [
+          "Las capas más antiguas contienen fósiles de organismos ancestrales",
+          "Las capas sucesivas muestran cambios graduales en características",
+          "Las capas más recientes contienen formas más modernas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-07",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Evidencias de evolución",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Los huesos de la aleta de una ballena, la pata de un perro y el brazo de un humano tienen una estructura ósea similar aunque sirven para funciones distintas. ¿Qué conclusión evolutiva se puede extraer de esta observación?",
+      "alternativas": {
+        "A": "Las funciones diferentes indican que no comparten ancestro común",
+        "B": "Son estructuras homólogas que sugieren un ancestro común",
+        "C": "La similitud prueba que las especies son idénticas",
+        "D": "Las funciones evolucionan hacia mayor complejidad siempre"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las estructuras homólogas son características anatómicas similares heredadas de un ancestro común, aunque adaptadas para funciones diferentes en especies distintas.",
+        "pasos": [
+          "La estructura ósea básica es comparable en los tres organismos",
+          "Esto indica un origen evolutivo común",
+          "La selección natural modificó cada estructura para funciones específicas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-08",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Evidencias de evolución",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "Un fósil transicional es aquel que posee características de dos grupos diferentes. ¿Cuál es su importancia como evidencia evolutiva?",
+      "alternativas": {
+        "A": "Demuestra que la evolución no es posible",
+        "B": "Muestra el proceso de transformación de una especie en otra",
+        "C": "Prueba que las especies no tienen ancestros comunes",
+        "D": "Indica que la extinción es el motor de la evolución"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Los fósiles transicionales documentan estadios intermedios en la evolución, mostrando cómo características de grupos ancestrales se transforman gradualmente.",
+        "pasos": [
+          "Los fósiles transicionales poseen rasgos primitivos y derivados",
+          "Permiten conectar grupos aparentemente distantes",
+          "Ejemplifican la transformación gradual predicha por la teoría evolutiva"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-09",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Evidencias de evolución",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Se comparan las secuencias de ADN de tres primates: humano, chimpancé y gorila. Los resultados muestran que humano y chimpancé comparten mayor similitud genética que humano y gorila. ¿Qué relación evolutiva indica este hallazgo?",
+      "alternativas": {
+        "A": "El gorila es más cercano evolutivamente al humano",
+        "B": "El humano evolucionó a partir del chimpancé",
+        "C": "Humano y chimpancé comparten un ancestro más reciente que con el gorila",
+        "D": "Las similitudes genéticas no tienen valor evolutivo"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "La similitud molecular es proporcional al tiempo transcurrido desde la divergencia evolutiva. Mayor similitud de ADN indica un ancestro común más reciente.",
+        "pasos": [
+          "Se secuencian y comparan genes homólogos",
+          "Mayor porcentaje de coincidencia indica divergencia más reciente",
+          "Se reconstruyen las relaciones filogenéticas entre especies"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-10",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Evidencias de evolución",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un paleontólogo analiza una serie de fósiles de una línea evolutiva durante 50 millones de años, observando que el tamaño cerebral aumentó gradualmente. Sin embargo, en algunos períodos hubo estancamiento y en otros cambios rápidos. ¿Cómo se puede conciliar esto con la teoría evolutiva?",
+      "alternativas": {
+        "A": "La evolución es siempre gradual y constante",
+        "B": "La evolución ocurre en bursts rápidos con períodos estables (equilibrio puntuado)",
+        "C": "El registro fósil es poco confiable para estudiar evolución",
+        "D": "Los cambios rápidos indican intervención externa"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El modelo de equilibrio puntuado propone que la evolución procede mediante cambios rápidos seguidos de períodos de estasis, no siempre de forma gradual.",
+        "pasos": [
+          "Períodos de estancamiento corresponden a estabilidad selectiva",
+          "Cambios rápidos ocurren cuando hay aislamiento y presión selectiva intensa",
+          "Este patrón es consistente con la especiación alopátrida"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "eje": "Álgebra y funciones",
+  "unidad": "Sistemas de ecuaciones",
+  "saludo": "Los sistemas de ecuaciones lineales 2x2 permiten resolver problemas donde hay múltiples restricciones simultáneas. Dominará técnicas como sustitución, eliminación y representación gráfica.",
+  "preguntas": [
+    {
+      "id": "M1-ALG-16",
+      "eje": "Álgebra y funciones",
+      "unidad": "Sistemas de ecuaciones",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "Resuelve el sistema: x + y = 7 y x - y = 3",
+      "alternativas": {
+        "A": "x = 5, y = 2",
+        "B": "x = 2, y = 5",
+        "C": "x = 3, y = 4",
+        "D": "x = 4, y = 3"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Resolución de sistemas 2x2 mediante el método de adición (eliminación) de ecuaciones.",
+        "pasos": [
+          "Paso 1: Sumar las dos ecuaciones: (x + y) + (x - y) = 7 + 3.",
+          "Paso 2: Simplificar: 2x = 10, entonces x = 5.",
+          "Paso 3: Sustituir en la primera ecuación: 5 + y = 7, entonces y = 2."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-17",
+      "eje": "Álgebra y funciones",
+      "unidad": "Sistemas de ecuaciones",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "En una granja hay pollos y vacas. Contando cabezas hay 30, y contando patas hay 100. ¿Cuántas vacas hay?",
+      "alternativas": {
+        "A": "10 vacas",
+        "B": "15 vacas",
+        "C": "20 vacas",
+        "D": "25 vacas"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Modelado de problemas cotidianos como sistemas de ecuaciones lineales, donde cada ecuación representa una condición.",
+        "pasos": [
+          "Paso 1: Plantear el sistema. Sea p = pollos, v = vacas. Cabezas: p + v = 30. Patas (pollos 2, vacas 4): 2p + 4v = 100.",
+          "Paso 2: De la primera ecuación: p = 30 - v. Sustituir en la segunda: 2(30 - v) + 4v = 100.",
+          "Paso 3: Simplificar: 60 - 2v + 4v = 100, entonces 2v = 40, v = 20."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-18",
+      "eje": "Álgebra y funciones",
+      "unidad": "Sistemas de ecuaciones",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Resuelve el sistema: 2x - y = 9 y x + y = 6",
+      "alternativas": {
+        "A": "x = 4, y = 2",
+        "B": "x = 3, y = 1",
+        "C": "x = 5, y = 1",
+        "D": "x = 2, y = 3"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Resolución de sistemas 2x2 mediante el método de adición cuando los coeficientes facilitan la eliminación.",
+        "pasos": [
+          "Paso 1: Sumar las dos ecuaciones: (2x - y) + (x + y) = 9 + 6.",
+          "Paso 2: Simplificar: 3x = 15, entonces x = 5.",
+          "Paso 3: Sustituir en la segunda ecuación: 5 + y = 6, entonces y = 1."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-19",
+      "eje": "Álgebra y funciones",
+      "unidad": "Sistemas de ecuaciones",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Un cine vende entradas para adultos a $10.000 y para niños a $6.000. Si en una función se vendieron 90 entradas totalizando $700.000, ¿cuántas entradas de adulto se vendieron?",
+      "alternativas": {
+        "A": "20 entradas",
+        "B": "30 entradas",
+        "C": "40 entradas",
+        "D": "50 entradas"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Modelado de problemas comerciales mediante sistemas de ecuaciones con dos incógnitas (cantidad y valor).",
+        "pasos": [
+          "Paso 1: Sea a = entradas de adulto, n = entradas de niño. Sistema: a + n = 90 y 10.000a + 6.000n = 700.000.",
+          "Paso 2: De la primera ecuación: n = 90 - a. Sustituir: 10.000a + 6.000(90 - a) = 700.000.",
+          "Paso 3: Expandir: 10.000a + 540.000 - 6.000a = 700.000. Simplificar: 4.000a = 160.000, a = 40."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-20",
+      "eje": "Álgebra y funciones",
+      "unidad": "Sistemas de ecuaciones",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "¿Para qué valor de k el sistema kx + 2y = 8 y x - y = 2 tiene solución única?",
+      "alternativas": {
+        "A": "k ≠ -2",
+        "B": "k ≠ 1",
+        "C": "k ≠ -1",
+        "D": "k puede ser cualquier valor"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Análisis de sistemas de ecuaciones con parámetros: un sistema tiene solución única cuando las rectas no son paralelas.",
+        "pasos": [
+          "Paso 1: Escribir en forma estándar. Primera ecuación: kx + 2y = 8. Segunda: x - y = 2.",
+          "Paso 2: El sistema no tiene solución única cuando las rectas son paralelas (coeficientes proporcionales). Pasos son: k/1 = 2/(-1) → k = -2.",
+          "Paso final: Cuando k = -2, el sistema no tiene solución única. Entonces tiene solución única cuando k ≠ -2."
+        ]
+      }
+    }
+  ]
+}

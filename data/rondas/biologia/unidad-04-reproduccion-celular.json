@@ -1,0 +1,141 @@
+{
+  "eje": "Célula",
+  "unidad": "Reproducción celular",
+  "saludo": "Estudiaremos cómo las células se dividen y reproducen. La mitosis y la meiosis son procesos fundamentales para el crecimiento, la reparación de tejidos y la reproducción sexual.",
+  "preguntas": [
+    {
+      "id": "BIO-CEL-16",
+      "eje": "Célula",
+      "unidad": "Reproducción celular",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿En qué fase de la mitosis se alinean los cromosomas en el plano ecuatorial (centro) de la célula?",
+      "alternativas": {
+        "A": "Profase",
+        "B": "Metafase",
+        "C": "Anafase",
+        "D": "Telofase"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La mitosis es un proceso ordenado de división celular que consta de cuatro fases: profase, metafase, anafase y telofase. En la metafase, los cromosomas se encuentran en una posición característica.",
+        "pasos": [
+          "Profase: Los cromosomas se condensan, desaparece el nucleolo, se forma el huso mitótico",
+          "Metafase: Los cromosomas se alinean en el ecuador de la célula (plano ecuatorial), sujetos por el huso en el cinetocoro",
+          "Anafase: Las cromátidas hermanas se separan y se mueven hacia los polos opuestos",
+          "Telofase: Se forman dos núcleos separados, los cromosomas se descondensan",
+          "La alineación ecuatorial es característica de la metafase"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-17",
+      "eje": "Célula",
+      "unidad": "Reproducción celular",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la diferencia más importante entre los resultados de la mitosis y la meiosis?",
+      "alternativas": {
+        "A": "La mitosis produce dos células haploides; la meiosis produce cuatro células diploides",
+        "B": "La mitosis produce dos células diploides idénticas; la meiosis produce cuatro células haploides genéticamente diferentes",
+        "C": "La mitosis ocurre solo en plantas; la meiosis ocurre solo en animales",
+        "D": "La mitosis requiere dos divisiones; la meiosis requiere una sola división"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La mitosis y la meiosis son procesos de división celular con propósitos muy diferentes. La mitosis produce células idénticas para crecimiento y reparación; la meiosis produce gametos genéticamente diversos para reproducción sexual.",
+        "pasos": [
+          "Mitosis: una célula diploide (2n) → dos células diploides idénticas (2n)",
+          "Se utiliza para crecimiento, reparación de tejidos y reproducción asexual",
+          "Las dos células hijas tienen la misma información genética que la célula madre",
+          "Meiosis: una célula diploide (2n) → cuatro células haploides (n) genéticamente diferentes",
+          "Se utiliza para producir gametos (esperma y óvulos)",
+          "La recombinación genética y el entrecruzamiento crean diversidad genética"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-18",
+      "eje": "Célula",
+      "unidad": "Reproducción celular",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Un ciclo celular normal dura aproximadamente 24 horas, de las cuales la mitosis ocupa solo 1-2 horas. ¿En cuál es la fase del ciclo celular ocurren la mayoría de las actividades metabólicas normales de la célula?",
+      "alternativas": {
+        "A": "En la profase durante la condensación de cromosomas",
+        "B": "En la interfase cuando la célula realiza síntesis de proteínas, replicación de ADN y crecimiento",
+        "C": "En la anafase cuando se separan los cromosomas",
+        "D": "En la telofase durante la formación del nuevo núcleo"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El ciclo celular incluye la interfase (G1, S, G2) y la fase M (mitosis). La interfase representa aproximadamente el 90% del ciclo celular y es cuando ocurren todas las actividades normales de la célula.",
+        "pasos": [
+          "El ciclo celular tiene dos fases principales: interfase (G1-S-G2) y fase M (mitosis)",
+          "La interfase incluye: G1 (crecimiento y preparación), S (síntesis de ADN), G2 (más crecimiento y preparación)",
+          "Durante la interfase, la célula realiza todas sus funciones metabólicas normales: síntesis de proteínas, respiración, transporte",
+          "La célula también replica su ADN completamente durante la fase S",
+          "La mitosis (fase M) ocupa solo 1-2 horas de un ciclo de 24 horas",
+          "Por eso la interfase es el período más largo y de máxima actividad metabólica"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-19",
+      "eje": "Célula",
+      "unidad": "Reproducción celular",
+      "habilidad": "Analizar",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Por qué la meiosis requiere dos divisiones celulares sucesivas mientras que la mitosis requiere solo una?",
+      "alternativas": {
+        "A": "La meiosis es más ineficiente y necesita más tiempo para completarse",
+        "B": "La primera división separa los cromosomas homólogos (reducción de diploide a haploide); la segunda separa las cromátidas hermanas",
+        "C": "Las células de reproducción sexual necesitan más energía que las células somáticas",
+        "D": "La segunda división en la meiosis solo ocurre en animales, no en plantas"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La meiosis tiene dos divisiones con propósitos diferentes. La meiosis I separa pares de cromosomas homólogos, reduciendo de diploide a haploide. La meiosis II separa cromátidas hermanas similar a la mitosis.",
+        "pasos": [
+          "La meiosis debe cumplir dos objetivos: reducir el número de cromosomas a la mitad Y crear variabilidad genética",
+          "Meiosis I (división reduccional): cromosomas homólogos se separan; se produce recombinación genética; resultado: dos células haploides (n)",
+          "Meiosis II (división ecuacional): cromátidas hermanas se separan; similar a mitosis; resultado: cuatro células haploides (n)",
+          "La mitosis solo necesita una división porque mantiene el número de cromosomas: diploide → diploide",
+          "La meiosis necesita dos divisiones: diploide → haploide → haploide",
+          "Esta estructura de dos divisiones es esencial para la reproducción sexual"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-20",
+      "eje": "Célula",
+      "unidad": "Reproducción celular",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un investigador observa una mutación en un gen durante la profase I de la meiosis. ¿Cuáles serán las implicaciones genéticas de esta mutación en los gametos producidos?",
+      "alternativas": {
+        "A": "Todos los cuatro gametos resultantes tendrán la mutación en ambas copias del gen",
+        "B": "Ninguno de los gametos tendrá la mutación porque ocurrió después de la replicación",
+        "C": "Aproximadamente la mitad de los gametos tendrá la mutación en una copia del gen",
+        "D": "La mutación será reparada automáticamente por los mecanismos de revisión de la meiosis"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Las mutaciones que ocurren durante la profase I afectan una de las dos cromátidas del cromosoma replicado. Después de la recombinación y separación en la meiosis, aproximadamente la mitad de los gametos resultantes heredará la cromátida mutada.",
+        "pasos": [
+          "Durante la profase I, el ADN ya ha sido replicado (fase S previa), entonces cada cromosoma consiste en dos cromátidas hermanas",
+          "Si una mutación ocurre en una cromátida durante la profase I, solo esa cromátida la contiene",
+          "Durante la meiosis I, los cromosomas homólogos se separan, pero las cromátidas hermanas siguen juntas",
+          "Durante la meiosis II, las cromátidas hermanas se separan: la normal va a un gameto, la mutada a otro",
+          "Resultado: de los cuatro gametos producidos, aproximadamente dos tendrán la mutación (50%)",
+          "Esta es la base de las mutaciones heredables que afectan la descendencia"
+        ]
+      }
+    }
+  ]
+}

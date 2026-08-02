@@ -1,0 +1,127 @@
+{
+  "eje": "Álgebra y funciones",
+  "unidad": "Ecuaciones e inecuaciones",
+  "saludo": "Esta unidad trata sobre la resolución de ecuaciones e inecuaciones de primer grado. Estas herramientas son fundamentales para resolver problemas donde necesitamos encontrar valores desconocidos o determinar rangos de solución.",
+  "preguntas": [
+    {
+      "id": "M1-ALG-11",
+      "eje": "Álgebra y funciones",
+      "unidad": "Ecuaciones e inecuaciones",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "Resuelve la ecuación: 2x + 7 = 15",
+      "alternativas": {
+        "A": "x = 4",
+        "B": "x = 11",
+        "C": "x = -4",
+        "D": "x = 22"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Resolución de ecuaciones de primer grado mediante operaciones inversas para despejar la variable.",
+        "pasos": [
+          "Paso 1: Restar 7 a ambos lados: 2x + 7 - 7 = 15 - 7, quedando 2x = 8.",
+          "Paso 2: Dividir ambos lados por 2: 2x ÷ 2 = 8 ÷ 2, resultando x = 4.",
+          "Paso final: La solución es x = 4."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-12",
+      "eje": "Álgebra y funciones",
+      "unidad": "Ecuaciones e inecuaciones",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un número sumado a 8 da como resultado 23. ¿Cuál es ese número?",
+      "alternativas": {
+        "A": "31",
+        "B": "15",
+        "C": "-15",
+        "D": "8"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Modelado de enunciados cotidianos como ecuaciones lineales y resolución mediante operaciones inversas.",
+        "pasos": [
+          "Paso 1: Plantear la ecuación: x + 8 = 23.",
+          "Paso 2: Restar 8 a ambos lados: x + 8 - 8 = 23 - 8.",
+          "Paso final: x = 15, el número buscado."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-13",
+      "eje": "Álgebra y funciones",
+      "unidad": "Ecuaciones e inecuaciones",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Resuelve la inecuación: 3x - 5 < 10",
+      "alternativas": {
+        "A": "x < 5",
+        "B": "x > 5",
+        "C": "x ≤ 5",
+        "D": "x ≥ 5"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Resolución de inecuaciones de primer grado: aplicar operaciones inversas sin cambiar la dirección de la desigualdad.",
+        "pasos": [
+          "Paso 1: Sumar 5 a ambos lados: 3x - 5 + 5 < 10 + 5, quedando 3x < 15.",
+          "Paso 2: Dividir ambos lados por 3: 3x ÷ 3 < 15 ÷ 3, resultando x < 5.",
+          "Paso final: La solución es x < 5, es decir, todos los números menores que 5."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-14",
+      "eje": "Álgebra y funciones",
+      "unidad": "Ecuaciones e inecuaciones",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Una tienda vende remeras a $15.000 cada una. Si tienes $70.000 y necesitas gastar al menos $10.000 en otras cosas, ¿cuántas remeras puedes comprar como máximo?",
+      "alternativas": {
+        "A": "3 remeras",
+        "B": "4 remeras",
+        "C": "5 remeras",
+        "D": "6 remeras"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Modelado de restricciones cotidianas mediante inecuaciones y búsqueda del máximo valor que satisface la restricción.",
+        "pasos": [
+          "Paso 1: Plantear la inecuación. Si compras x remeras, gastas 15.000x. Debes tener al menos $10.000 restante: 70.000 - 15.000x ≥ 10.000.",
+          "Paso 2: Simplificar: 70.000 - 10.000 ≥ 15.000x, es decir, 60.000 ≥ 15.000x.",
+          "Paso 3: Dividir por 15.000: x ≤ 4. Entonces puedes comprar máximo 4 remeras."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-15",
+      "eje": "Álgebra y funciones",
+      "unidad": "Ecuaciones e inecuaciones",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "¿Para qué valor de m la ecuación 5x + m = 2x + 9 tiene solución x = 3?",
+      "alternativas": {
+        "A": "m = 0",
+        "B": "m = 6",
+        "C": "m = -6",
+        "D": "m = 3"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Análisis de ecuaciones con parámetros: determinar el valor del parámetro que hace que un valor específico sea solución.",
+        "pasos": [
+          "Paso 1: Si x = 3 es solución, sustituir en la ecuación: 5(3) + m = 2(3) + 9.",
+          "Paso 2: Evaluar: 15 + m = 6 + 9 = 15.",
+          "Paso final: Resolviendo m: m = 15 - 15 = 0. El parámetro m debe ser 0."
+        ]
+      }
+    }
+  ]
+}

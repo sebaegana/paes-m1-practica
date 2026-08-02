@@ -1,0 +1,138 @@
+{
+  "eje": "Organismo y ambiente",
+  "unidad": "Flujo de energía y ciclos",
+  "saludo": "Comprende cómo la energía solar se transforma en los ecosistemas y cómo los elementos esenciales circulan en ciclos biogeoquímicos. Estos procesos son vitales para la vida en nuestro planeta.",
+  "preguntas": [
+    {
+      "id": "BIO-ECO-11",
+      "eje": "Organismo y ambiente",
+      "unidad": "Flujo de energía y ciclos",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Quiénes son los organismos productores primarios en una cadena trófica?",
+      "alternativas": {
+        "A": "Los depredadores carnívoros",
+        "B": "Las plantas y los organismos fotosintéticos",
+        "C": "Los descomponedores como las bacterias",
+        "D": "Los herbívoros grandes"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Los productores primarios capturan la energía solar y la convierten en energía química a través de la fotosíntesis.",
+        "pasos": [
+          "Productores primarios: capturan luz solar y la transforman en glucosa",
+          "Ejemplos: plantas, algas, bacterias fotosintéticas",
+          "Sin ellos, no habría energía disponible para otros organismos",
+          "Ocupan el primer nivel trófico",
+          "Contienen toda la energía que circula en el ecosistema"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-12",
+      "eje": "Organismo y ambiente",
+      "unidad": "Flujo de energía y ciclos",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "En una cadena trófica: planta → conejo → zorro → león. ¿Cuál es el nivel trófico del león?",
+      "alternativas": {
+        "A": "Primer nivel trófico",
+        "B": "Segundo nivel trófico",
+        "C": "Cuarto nivel trófico",
+        "D": "Nivel descomponedor"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Los niveles tróficos se numeran secuencialmente comenzando con los productores como nivel 1.",
+        "pasos": [
+          "Planta = Nivel 1 (productor)",
+          "Conejo = Nivel 2 (consumidor primario)",
+          "Zorro = Nivel 3 (consumidor secundario)",
+          "León = Nivel 4 (consumidor terciario)",
+          "El león está al final de esta cadena como depredador superior"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-13",
+      "eje": "Organismo y ambiente",
+      "unidad": "Flujo de energía y ciclos",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Por qué la cantidad de energía disponible disminuye en cada nivel trófico sucesivo?",
+      "alternativas": {
+        "A": "La energía es destruida por los depredadores",
+        "B": "Solo los productores pueden captar energía solar",
+        "C": "La energía se pierde en procesos como respiración, movimiento y calor corporal",
+        "D": "Los descomponedores consumen toda la energía restante"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "La ley de la termodinámica establece que la energía se transforma y parte se disipa como calor. Solo aproximadamente el 10% se transfiere al siguiente nivel.",
+        "pasos": [
+          "Los organismos utilizan energía para vivir (respiración celular)",
+          "Parte se usa en movimiento, crecimiento y mantenimiento corporal",
+          "Otra se disipa como calor corporal",
+          "Solo una pequeña fracción (~10%) se convierte en biomasa disponible para el siguiente nivel",
+          "Esto explica por qué hay muchas plantas, menos herbívoros y pocos depredadores superiores"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-14",
+      "eje": "Organismo y ambiente",
+      "unidad": "Flujo de energía y ciclos",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "El ciclo del carbono incluye la fotosíntesis, la respiración y la descomposición. ¿Cuál de estos procesos devuelve más carbono a la atmósfera?",
+      "alternativas": {
+        "A": "La fotosíntesis, que captura CO₂ de la atmósfera",
+        "B": "La descomposición, que libera CO₂ de la materia orgánica",
+        "C": "La respiración de todos los organismos vivos, que consume glucosa y libera CO₂",
+        "D": "Todos devuelven la misma cantidad"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El ciclo del carbono es un balance entre procesos que capturan y liberan CO₂. La respiración de billones de organismos es un flujo continuo.",
+        "pasos": [
+          "Fotosíntesis: captura CO₂ (entrada a la atmósfera)",
+          "Respiración: libera CO₂ constantemente (salida de la atmósfera)",
+          "Descomposición: también libera CO₂, pero es más lenta que la respiración",
+          "La respiración celular ocurre en todas las células vivas continuamente",
+          "Juntas, respiración y descomposición liberan más carbono del que la fotosíntesis fija"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-15",
+      "eje": "Organismo y ambiente",
+      "unidad": "Flujo de energía y ciclos",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "¿Cómo explicas que si la fotosíntesis captura CO₂ y la respiración lo libera, los niveles de CO₂ atmosférico aumentan año tras año?",
+      "alternativas": {
+        "A": "La fotosíntesis es más lenta de lo que la industria humana emite carbono",
+        "B": "Los océanos no absorben suficiente CO₂",
+        "C": "La respiración produce más CO₂ que la fotosíntesis puede capturar",
+        "D": "Las plantas están muriendo y dejan de fotosintizar"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Aunque existe un ciclo natural, la emisión antropogénica (provocada por el humano) de CO₂ supera la capacidad de los ecosistemas para absorberlo.",
+        "pasos": [
+          "En condiciones naturales, el ciclo del carbono estaba en equilibrio",
+          "La quema de combustibles fósiles libera carbono que estuvo almacenado por millones de años",
+          "Las industrias y transporte emiten más CO₂ del que la fotosíntesis puede procesar",
+          "La deforestación reduce la capacidad de captura de carbono",
+          "Los océanos y plantas no pueden absorber todo el exceso antropogénico",
+          "Result: acumulación neta de CO₂ en la atmósfera"
+        ]
+      }
+    }
+  ]
+}

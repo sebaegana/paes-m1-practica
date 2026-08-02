@@ -1,0 +1,143 @@
+{
+  "eje": "Organismo y ambiente",
+  "unidad": "Dinámicas de población",
+  "saludo": "Explora cómo los organismos se multiplican, crecen y mueren en sus ambientes. Entender la dinámica poblacional es esencial para predecir cambios en los ecosistemas.",
+  "preguntas": [
+    {
+      "id": "BIO-ECO-16",
+      "eje": "Organismo y ambiente",
+      "unidad": "Dinámicas de población",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la definición correcta de población en ecología?",
+      "alternativas": {
+        "A": "Un grupo de organismos que viven en el mismo ecosistema",
+        "B": "Un grupo de individuos de la misma especie que habitan el mismo territorio y pueden reproducirse entre sí",
+        "C": "Todos los organismos vivos en una región geográfica",
+        "D": "Un grupo de organismos que comparten la misma cadena trófica"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Una población es una unidad biológica y ecológica con características específicas que la definen.",
+        "pasos": [
+          "Misma especie: todos deben ser genéticamente compatibles",
+          "Mismo territorio: comparten el mismo espacio geográfico",
+          "Capacidad reproductiva: pueden cruzarse y producir descendencia fértil",
+          "Aislamiento reproductivo: no se reproducen libremente con otras poblaciones geográficamente distantes",
+          "Esta definición excluye individuos de diferentes especies o territorios lejanos"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-17",
+      "eje": "Organismo y ambiente",
+      "unidad": "Dinámicas de población",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cuál de los siguientes factores es un factor limitante de la población?",
+      "alternativas": {
+        "A": "Aumento de depredadores, competencia por alimento y falta de agua",
+        "B": "Solo el color del pelaje de los animales",
+        "C": "La preferencia de alimento de los consumidores",
+        "D": "El tiempo geológico en que vive la población"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Los factores limitantes son aquellos que reducen el crecimiento poblacional al restringir recursos o aumentar mortalidad.",
+        "pasos": [
+          "Factores bióticos limitantes: depredación, competencia, parasitismo, enfermedades",
+          "Factores abióticos limitantes: agua, luz, temperatura, nutrientes del suelo",
+          "Aumento de depredadores: más muertes en la población",
+          "Competencia por alimento: menos recurso disponible per cápita",
+          "Falta de agua: limita la supervivencia y reproducción",
+          "Estos factores restringen el crecimiento exponencial potencial"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-18",
+      "eje": "Organismo y ambiente",
+      "unidad": "Dinámicas de población",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Una población de conejos en una isla sin depredadores naturales comienza con 10 individuos y se duplica cada año. ¿Qué tipo de crecimiento muestra esta población?",
+      "alternativas": {
+        "A": "Crecimiento logístico con capacidad de carga",
+        "B": "Crecimiento exponencial o geométrico",
+        "C": "Decrecimiento poblacional",
+        "D": "Crecimiento lineal constante"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Cuando una población crece sin limitaciones evidentes, mostrando duplicación periódica, refleja crecimiento exponencial.",
+        "pasos": [
+          "Año 0: 10 conejos",
+          "Año 1: 20 conejos (duplicó)",
+          "Año 2: 40 conejos (duplicó)",
+          "Año 3: 80 conejos (duplicó)",
+          "Patrón: crecimiento exponencial (J-shaped curve)",
+          "Este modelo asume recursos ilimitados, lo cual no es realista a largo plazo",
+          "En la realidad, eventualmente aparecerían limitantes"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-19",
+      "eje": "Organismo y ambiente",
+      "unidad": "Dinámicas de población",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "En un estanque con cierta cantidad de alimento y espacio, la población de peces crece rápidamente al inicio, pero después el crecimiento se ralentiza hasta estabilizarse. ¿Cuál es la razón ecológica de este patrón?",
+      "alternativas": {
+        "A": "Los peces deciden dejar de reproducirse",
+        "B": "La capacidad de carga del ambiente ha sido alcanzada",
+        "C": "El alimento desaparece completamente del estanque",
+        "D": "Los peces emigran a otros estanques"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La capacidad de carga (K) es el máximo número de individuos que un ambiente puede sostener de manera sostenible.",
+        "pasos": [
+          "Al inicio: recursos abundantes, poca competencia, alta reproducción (crecimiento rápido)",
+          "A medida que crece la población: aumenta la competencia por alimento y espacio",
+          "Disminuye el alimento disponible per cápita",
+          "Aumenta la mortalidad por estrés y desnutrición",
+          "Se alcanza un equilibrio donde nacimientos = muertes (crecimiento = 0)",
+          "Este es el crecimiento logístico (S-shaped curve)"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-20",
+      "eje": "Organismo y ambiente",
+      "unidad": "Dinámicas de población",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un ecólogo observa que una población de venados sigue un patrón cíclico: aumenta, luego disminuye drásticamente. ¿Cuál es la explicación más completa para este ciclo?",
+      "alternativas": {
+        "A": "Los venados mueren todos de enfermedades al mismo tiempo",
+        "B": "La población de depredadores (pumas) y la de venados están acopladas: más venados atraen más pumas, luego disminuyen venados y con ellos los pumas",
+        "C": "El clima cambia cada año, causando muertes masivas",
+        "D": "Los venados migran periódicamente a otro ecosistema"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las poblaciones de depredadores y presas están interrelacionadas en dinámicas que crean ciclos predecibles.",
+        "pasos": [
+          "Fase 1: recursos abundantes, población de venados aumenta",
+          "Fase 2: más venados atraen más depredadores (pumas) que se alimentan de ellos",
+          "Fase 3: depredación intensa reduce población de venados",
+          "Fase 4: con menos presas, mueren pumas por inanición",
+          "Fase 5: disminuyen depredadores, venados se recuperan",
+          "Ciclo se repite formando oscilaciones poblacionales típicas",
+          "Este es un ejemplo de coexistencia depredador-presa"
+        ]
+      }
+    }
+  ]
+}

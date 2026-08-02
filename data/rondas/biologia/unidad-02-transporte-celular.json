@@ -1,0 +1,137 @@
+{
+  "eje": "Célula",
+  "unidad": "Transporte celular",
+  "saludo": "Estudiaremos cómo las sustancias entran y salen de las células. El transporte a través de membranas es esencial para la vida y el mantenimiento del equilibrio celular.",
+  "preguntas": [
+    {
+      "id": "BIO-CEL-06",
+      "eje": "Célula",
+      "unidad": "Transporte celular",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál de los siguientes procesos de transporte NO requiere energía (ATP) de la célula?",
+      "alternativas": {
+        "A": "Transporte activo de iones sodio a través de la membrana",
+        "B": "Endocitosis de partículas grandes por fagocitosis",
+        "C": "Difusión simple de oxígeno a través de la bicapa lipídica",
+        "D": "Transporte de glucosa contra el gradiente de concentración"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "El transporte pasivo (difusión simple) no requiere energía porque el movimiento neto es a favor del gradiente de concentración. En cambio, el transporte activo y los procesos que mueven material en masa sí requieren ATP.",
+        "pasos": [
+          "La difusión simple ocurre cuando las moléculas se mueven de una región de alta concentración a otra de baja concentración",
+          "Este movimiento es espontáneo y libera energía (no requiere ATP)",
+          "Moléculas pequeñas y no polares como O2, N2 y CO2 pueden atravesar la bicapa lipídica por difusión simple",
+          "El transporte activo, por el contrario, mueve sustancias en contra del gradiente y sí requiere energía",
+          "Por lo tanto, la difusión simple es el proceso que NO requiere ATP"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-07",
+      "eje": "Célula",
+      "unidad": "Transporte celular",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Cuando se coloca una célula en una solución hipertónica (con mayor concentración de soluto que el interior celular), el agua sale de la célula. ¿Cuál es la razón biológica de este movimiento?",
+      "alternativas": {
+        "A": "El agua es atraída por el soluto presente en la solución externa",
+        "B": "El agua se mueve hacia donde hay mayor concentración de soluto (menor concentración de agua)",
+        "C": "El soluto externo extrae activamente el agua de la célula",
+        "D": "La membrana celular es impermeable al soluto, atrayendo agua hacia adentro"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La ósmosis es el movimiento de agua a través de una membrana selectivamente permeable hacia donde hay mayor concentración de soluto (menor concentración de agua relativa). Esto ocurre debido al gradiente de potencial hídrico.",
+        "pasos": [
+          "En una solución hipertónica, hay más soluto disuelto afuera que adentro",
+          "El agua es más abundante (menos concentrada en soluto) dentro de la célula",
+          "El agua se mueve por ósmosis desde donde es más abundante hacia donde es menos abundante (donde hay más soluto)",
+          "Por eso el agua sale de la célula hacia la solución externa",
+          "Esto causa deshidratación y arrugamiento de la célula"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-08",
+      "eje": "Célula",
+      "unidad": "Transporte celular",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Un investigador observa que la concentración de un nutriente dentro de una célula aumenta continuamente, incluso cuando la concentración del nutriente fuera de la célula es menor. ¿Cuál es el mecanismo de transporte que explica este fenómeno?",
+      "alternativas": {
+        "A": "Difusión simple del nutriente a través de la membrana",
+        "B": "Ósmosis del nutriente hacia el interior celular",
+        "C": "Transporte activo que utiliza ATP para mover el nutriente en contra del gradiente",
+        "D": "Exocitosis que elimina nutrientes del citoplasma"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Cuando una sustancia se mueve en contra del gradiente de concentración (hacia donde hay mayor concentración), requiere transporte activo impulsado por ATP. Este mecanismo es esencial para mantener concentraciones celulares específicas.",
+        "pasos": [
+          "Si la concentración interna es mayor que la externa, el nutriente está moviéndose en contra del gradiente",
+          "El movimiento en contra del gradiente requiere energía (ATP)",
+          "Las proteínas transportadoras en la membrana usan ATP para bombear activamente el nutriente",
+          "Este es un ejemplo de transporte activo (bomba de transporte)",
+          "Esto permite a la célula acumular nutrientes aunque sean menos abundantes afuera"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-09",
+      "eje": "Célula",
+      "unidad": "Transporte celular",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Por qué la permeabilidad selectiva de la membrana plasmática es fundamental para la supervivencia celular?",
+      "alternativas": {
+        "A": "Permite que todos los solutos entren libremente para nutrición",
+        "B": "Permite que la célula controle su composición interna y mantener el equilibrio homeostático",
+        "C": "Evita completamente el paso de cualquier molécula a través de la membrana",
+        "D": "Facilita la difusión de todos los gases sin restricción"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La permeabilidad selectiva significa que la membrana permite el paso de algunas sustancias pero impide el de otras. Esta selectividad es crucial para mantener las condiciones internas apropiadas para que funcionen las reacciones bioquímicas.",
+        "pasos": [
+          "Si la membrana fuera completamente permeable, los solutos internos se escaparían y los externos entrarían desordenadamente",
+          "Esto disrumpiría los gradientes de concentración esenciales para procesos como el transporte activo y la transmisión nerviosa",
+          "La permeabilidad selectiva permite que la célula absorba lo que necesita (nutrientes, oxígeno) y rechace lo que le daña",
+          "Mantiene concentraciones internas específicas de iones, proteínas y otras moléculas",
+          "Sin esta selectividad, sería imposible mantener la homeostasis celular"
+        ]
+      }
+    },
+    {
+      "id": "BIO-CEL-10",
+      "eje": "Célula",
+      "unidad": "Transporte celular",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Las células nerviosas mantienen una concentración baja de sodio (Na+) en el interior y alta en el exterior, lo que es esencial para generar potenciales de acción. ¿Cuáles son los procesos de transporte involucrados en mantener este gradiente?",
+      "alternativas": {
+        "A": "Solo difusión simple del sodio hacia adentro y hacia afuera",
+        "B": "Transporte activo (bomba Na+/K+) mantiene el gradiente; la difusión tiende a equilibrarlo",
+        "C": "Osmosis del agua compensa el movimiento pasivo del sodio",
+        "D": "La membrana impide completamente el paso de sodio por su tamaño"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El gradiente iónico de sodio y potasio en las células nerviosas es mantenido activamente por la bomba Na+/K+ ATPasa. Continuamente hay difusión pasiva de iones que tiende a eliminar el gradiente, por lo que requiere energía constante.",
+        "pasos": [
+          "La bomba Na+/K+ ATPasa usa ATP para expulsar 3 Na+ e importar 2 K+ constantemente",
+          "Sin este transporte activo, el gradiente se equilibraría por difusión pasiva",
+          "El sodio, siendo más concentrado afuera, tiende a entrar por difusión simple",
+          "La membrana permite el paso lento de iones (permeabilidad selectiva), pero es insuficiente sin la bomba",
+          "Esta combinación de transporte activo (bombeo) y pasivo (difusión lenta) mantiene el gradiente esencial para la excitabilidad nerviosa"
+        ]
+      }
+    }
+  ]
+}

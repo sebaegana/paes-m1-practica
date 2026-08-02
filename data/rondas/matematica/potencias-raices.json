@@ -1,0 +1,128 @@
+{
+  "eje": "Números",
+  "unidad": "Potencias y raíces",
+  "saludo": "En esta unidad comprenderás las propiedades de las potencias, la relación entre potencias y raíces, y aplicarás estos conceptos para resolver problemas matemáticos y cotidianos.",
+  "preguntas": [
+    {
+      "id": "M1-NUM-03-01",
+      "eje": "Números",
+      "unidad": "Potencias y raíces",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es el valor de 2⁴?",
+      "alternativas": {
+        "A": "6",
+        "B": "8",
+        "C": "16",
+        "D": "32"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Concepto de potencia y exponente",
+        "pasos": [
+          "2⁴ significa 2 × 2 × 2 × 2",
+          "= 4 × 4 = 16",
+          "El exponente 4 indica cuántas veces se multiplica la base por sí misma"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-03-02",
+      "eje": "Números",
+      "unidad": "Potencias y raíces",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Una bacteria se divide cada hora, duplicándose (multiplicándose por 2). Si comenzamos con 1 bacteria, ¿cuántas bacterias habrá después de 5 horas?",
+      "alternativas": {
+        "A": "10",
+        "B": "16",
+        "C": "32",
+        "D": "64"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Crecimiento exponencial",
+        "pasos": [
+          "Después de 1 hora: 1 × 2 = 2 bacterias",
+          "Después de 2 horas: 2 × 2 = 4 bacterias",
+          "Después de 5 horas: 1 × 2⁵ = 32 bacterias",
+          "Verificación: 2 × 2 × 2 × 2 × 2 = 32"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-03-03",
+      "eje": "Números",
+      "unidad": "Potencias y raíces",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Simplifica la siguiente expresión: (3² × 3³) / 3⁴",
+      "alternativas": {
+        "A": "1/3",
+        "B": "3",
+        "C": "9",
+        "D": "27"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Propiedades de potencias (producto y cociente)",
+        "pasos": [
+          "Numerador: 3² × 3³ = 3^(2+3) = 3⁵",
+          "Expresión: 3⁵ / 3⁴ = 3^(5-4) = 3¹ = 3"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-03-04",
+      "eje": "Números",
+      "unidad": "Potencias y raíces",
+      "habilidad": "Resolver problemas",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es la raíz cúbica de 125?",
+      "alternativas": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Raíces enésimas como operación inversa de potencias",
+        "pasos": [
+          "La raíz cúbica de 125 es el número que multiplicado 3 veces da 125",
+          "5 × 5 × 5 = 125",
+          "Por lo tanto, ∛125 = 5"
+        ]
+      }
+    },
+    {
+      "id": "M1-NUM-03-05",
+      "eje": "Números",
+      "unidad": "Potencias y raíces",
+      "habilidad": "Argumentar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Un estudiante afirma que √(4 + 9) = √4 + √9. Evalúa si esta afirmación es correcta.",
+      "alternativas": {
+        "A": "Correcta, porque ambos lados dan 5",
+        "B": "Incorrecta, porque √13 ≠ 5",
+        "C": "Correcta, porque la raíz se distribuye sobre la suma",
+        "D": "Incorrecta, porque no se pueden sumar raíces"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Propiedades de raíces y errores comunes en operatoria",
+        "pasos": [
+          "Lado izquierdo: √(4 + 9) = √13 ≈ 3.606",
+          "Lado derecho: √4 + √9 = 2 + 3 = 5",
+          "13 ≠ 25, por lo que √13 ≠ 5",
+          "La raíz NO se distribuye sobre la suma"
+        ]
+      }
+    }
+  ]
+}

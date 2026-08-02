@@ -1,0 +1,128 @@
+{
+  "eje": "Evolución y biodiversidad",
+  "unidad": "Teoría de la evolución",
+  "saludo": "Bienvenido a la unidad de Teoría de la Evolución. Exploraremos cómo los organismos cambian a través del tiempo mediante mecanismos como la selección natural y la adaptación.",
+  "preguntas": [
+    {
+      "id": "BIO-EVO-01",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Teoría de la evolución",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es el mecanismo principal mediante el cual Charles Darwin explicó la evolución de las especies?",
+      "alternativas": {
+        "A": "La herencia de características adquiridas",
+        "B": "La selección natural",
+        "C": "La mutación espontánea",
+        "D": "La migración de poblaciones"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La selección natural es el mecanismo evolutivo central propuesto por Darwin, donde los organismos mejor adaptados al ambiente tienen mayores probabilidades de sobrevivir y reproducirse.",
+        "pasos": [
+          "Darwin observó variación entre individuos de la misma especie",
+          "Identificó que los organismos más adaptados dejaban más descendencia",
+          "Concluyó que esto acumulaba características favorables en las poblaciones"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-02",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Teoría de la evolución",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "En una población de insectos, algunos tienen alas largas y otros alas cortas. En un ambiente con fuertes vientos, los individuos con alas cortas logran reproducirse más. ¿Qué proceso evolutivo explica este resultado después de varias generaciones?",
+      "alternativas": {
+        "A": "Aumento de la adaptación promedio de la población",
+        "B": "Desaparición completa de los insectos con alas largas",
+        "C": "Transformación de alas largas en alas cortas durante la vida",
+        "D": "Acumulación de mutaciones en individuos con alas largas"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "La selección natural incrementa la frecuencia de características beneficiosas, mejorando el promedio adaptativo de la población sin necesariamente eliminar otros alelos.",
+        "pasos": [
+          "Los individuos con alas cortas tienen mayor éxito reproductor en vientos fuertes",
+          "Pasan más frecuentemente sus genes a la siguiente generación",
+          "La población en promedio se vuelve mejor adaptada al ambiente"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-03",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Teoría de la evolución",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cómo se define la adaptación en contexto evolutivo?",
+      "alternativas": {
+        "A": "Cambios físicos que un organismo sufre durante su vida",
+        "B": "Características hereditarias que mejoran el ajuste de un organismo a su ambiente",
+        "C": "Cualquier cambio en el genotipo de una población",
+        "D": "Respuestas inmediatas del cuerpo a estímulos ambientales"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las adaptaciones son características que aumentan la aptitud biológica (fitness) de un organismo y son transmisibles a su descendencia.",
+        "pasos": [
+          "Las adaptaciones son resultado de selección natural acumulada",
+          "Son heredables genéticamente",
+          "Confieren ventaja en la supervivencia y reproducción"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-04",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Teoría de la evolución",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Un investigador estudia dos poblaciones de una misma especie: una en un ambiente desértico y otra en un bosque tropical. Observa que ambas tienen diferentes características físicas bien adaptadas a sus entornos. ¿Cuál es la explicación más probable?",
+      "alternativas": {
+        "A": "Son especies completamente diferentes que nunca compartieron ancestro común",
+        "B": "La selección natural ha favorecido características distintas en cada ambiente",
+        "C": "Los individuos del desierto desarrollaron nuevas características en respuesta al calor",
+        "D": "La adaptación ocurrió únicamente en la población tropical"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La selección natural direccional produce diferentes adaptaciones en poblaciones de la misma especie según presiones ambientales distintas.",
+        "pasos": [
+          "Cada población enfrenta presiones de selección diferentes",
+          "Los alelos beneficiosos en un ambiente pueden no serlo en otro",
+          "Se generan adaptaciones divergentes en poblaciones aisladas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-EVO-05",
+      "eje": "Evolución y biodiversidad",
+      "unidad": "Teoría de la evolución",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "En una población de bacterias, surge una mutación que proporciona resistencia a antibióticos en el 0.1% de los individuos. Cuando se aplica antibiótico, mueren el 99.9% de las bacterias. Analice cómo la selección natural podría llevar al predominio de bacterias resistentes en pocas generaciones.",
+      "alternativas": {
+        "A": "Las bacterias muertas se transforman genéticamente antes de morir",
+        "B": "La resistencia se desarrolla lentamente en las bacterias sobrevivientes",
+        "C": "Las bacterias resistentes que sobreviven se reproducen rápidamente, aumentando su frecuencia",
+        "D": "El antibiótico causa mutaciones adicionales que mejoran la resistencia"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "La selección natural puede producir cambios rápidos en la composición genética cuando hay presión selectiva intensa y cortos tiempos de generación.",
+        "pasos": [
+          "La mutación de resistencia existe antes de la exposición al antibiótico",
+          "El antibiótico elimina al 99.9% de las bacterias susceptibles",
+          "Las bacterias resistentes que sobreviven se reproducen sin competencia",
+          "En pocas generaciones, la resistencia se vuelve dominante en la población"
+        ]
+      }
+    }
+  ]
+}

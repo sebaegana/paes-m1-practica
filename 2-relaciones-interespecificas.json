@@ -1,0 +1,138 @@
+{
+  "eje": "Organismo y ambiente",
+  "unidad": "Relaciones interespecíficas",
+  "saludo": "Descubre cómo los organismos de diferentes especies interactúan entre sí. Las relaciones interespecíficas son fundamentales para entender el funcionamiento de los ecosistemas y la supervivencia mutua.",
+  "preguntas": [
+    {
+      "id": "BIO-ECO-06",
+      "eje": "Organismo y ambiente",
+      "unidad": "Relaciones interespecíficas",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál de las siguientes relaciones es un ejemplo de depredación?",
+      "alternativas": {
+        "A": "Un león cazando a una gacela",
+        "B": "Una remora adhiriéndose a un tiburón para transporte",
+        "C": "Dos leones compitiendo por el mismo territorio",
+        "D": "Una orquídea creciendo en las ramas de un árbol"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "La depredación es una relación donde un organismo (depredador) captura y se alimenta de otro (presa), causándole daño o muerte.",
+        "pasos": [
+          "La depredación siempre implica consumo de un organismo por otro",
+          "En la opción A: el león es el depredador y la gacela es la presa",
+          "Opción B es comensalismo (la remora se beneficia sin afectar al tiburón)",
+          "Opción C es competencia (ambos leones compiten por un recurso)",
+          "Opción D es epifitismo (tipo de comensalismo)"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-07",
+      "eje": "Organismo y ambiente",
+      "unidad": "Relaciones interespecíficas",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cuál es la característica principal de la simbiosis mutualista?",
+      "alternativas": {
+        "A": "Solo uno de los organismos se beneficia",
+        "B": "Ambos organismos se benefician de la relación",
+        "C": "Uno se beneficia mientras el otro se ve perjudicado",
+        "D": "Los organismos compiten por recursos limitados"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El mutualismo es una relación simbiótica donde ambas especies obtienen beneficios, siendo una asociación ventajosa para todos los involucrados.",
+        "pasos": [
+          "Mutualismo = ambos organismos se benefician (+ y +)",
+          "Parasitismo = uno se beneficia, otro se perjudica (+ y -)",
+          "Comensalismo = uno se beneficia, otro no se ve afectado (+ y 0)",
+          "Ejemplos de mutualismo: abejas y flores, peces y anémonas, bacterias y leguminosas",
+          "Es una simbiosis obligatoria en muchos casos"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-08",
+      "eje": "Organismo y ambiente",
+      "unidad": "Relaciones interespecíficas",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "Un párasito interno como la tenia vive en el intestino del ser humano, alimentándose de los nutrientes que ingiere. ¿Cómo podría describirse el impacto de esta relación en ambas especies?",
+      "alternativas": {
+        "A": "El humano se beneficia al obtener nutrientes del parásito",
+        "B": "El parásito se beneficia mientras que el humano resulta perjudicado",
+        "C": "Ambas especies se benefician mutuamente",
+        "D": "Ninguna de las dos especies se ve afectada por la relación"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El parasitismo es una relación donde un organismo (parásito) se beneficia a expensas de otro (hospedador), causándole daño.",
+        "pasos": [
+          "Parásito (tenia): obtiene nutrientes y alojamiento (beneficio +)",
+          "Hospedador (humano): pierde nutrientes, energía y puede enfermar (perjuicio -)",
+          "Esta es una relación asimétrica donde solo uno se favorece",
+          "El parasitismo es perjudicial para el hospedador pero beneficioso para el parásito",
+          "Es diferente del mutualismo donde ambos se benefician"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-09",
+      "eje": "Organismo y ambiente",
+      "unidad": "Relaciones interespecíficas",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "En la sabana africana, leones, leopardos y guepardos comparten el territorio cazando gacelas. ¿Qué tipo de relación interespecífica se establece entre estos depredadores?",
+      "alternativas": {
+        "A": "Mutualismo",
+        "B": "Parasitismo",
+        "C": "Comensalismo",
+        "D": "Competencia"
+      },
+      "correcta": "D",
+      "explicacion": {
+        "concepto": "La competencia es la relación donde dos o más especies utilizan los mismos recursos (alimento, espacio, luz), reduciendo la disponibilidad para cada una.",
+        "pasos": [
+          "Los tres depredadores persiguen el mismo tipo de presa (gacelas)",
+          "Compiten por un recurso limitado: alimento",
+          "Ambos experimentan un efecto negativo (- y -)",
+          "A diferencia de la depredación donde una especie se alimenta de la otra",
+          "Esto es competencia interespecífica entre depredadores por presas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-ECO-10",
+      "eje": "Organismo y ambiente",
+      "unidad": "Relaciones interespecíficas",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "En un ecosistema marino, el aumento de depredadores como tiburones podría llevarte a predecir que sucederá con las poblaciones de peces pequeños. ¿Cuál análisis mejor explica el efecto en cascada en las relaciones interespecíficas?",
+      "alternativas": {
+        "A": "Los peces pequeños se adaptarán rápidamente y el ecosistema permanecerá sin cambios",
+        "B": "La población de peces pequeños disminuirá, afectando indirectamente el alimento de otros depredadores y los organismos que consumen esos peces",
+        "C": "Los tiburones migrarán a otros océanos, manteniendo el balance ecológico",
+        "D": "El mutualismo entre tiburones y peces aumentará compensando las pérdidas"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las relaciones interespecíficas están interconectadas, creando efectos en cascada donde cambios en una relación afectan todo el sistema.",
+        "pasos": [
+          "Aumentan tiburones (depredadores) → depredación intensa de peces pequeños",
+          "Disminuye población de peces pequeños (presas)",
+          "Afecta a otros depredadores que también comen peces pequeños",
+          "Peces grandes que comen peces pequeños también se ven afectados",
+          "Se altera toda la red trófica y las relaciones de competencia y depredación",
+          "Es un efecto sistémico que demuestra la interdependencia ecológica"
+        ]
+      }
+    }
+  ]
+}

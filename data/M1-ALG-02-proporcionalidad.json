@@ -1,0 +1,127 @@
+{
+  "eje": "Álgebra y funciones",
+  "unidad": "Proporcionalidad",
+  "saludo": "En esta unidad estudiaremos proporcionalidad directa e inversa, herramientas esenciales para modelar relaciones entre variables en contextos de economía, física y geometría.",
+  "preguntas": [
+    {
+      "id": "M1-ALG-06",
+      "eje": "Álgebra y funciones",
+      "unidad": "Proporcionalidad",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Si 5 kilogramos de tomates cuestan $8.000, ¿cuánto cuestan 12 kilogramos?",
+      "alternativas": {
+        "A": "$9.600",
+        "B": "$12.000",
+        "C": "$16.800",
+        "D": "$19.200"
+      },
+      "correcta": "D",
+      "explicacion": {
+        "concepto": "Reconocimiento y aplicación de proporcionalidad directa: cuando dos variables aumentan proporcionalmente, el cociente entre ellas se mantiene constante.",
+        "pasos": [
+          "Paso 1: Encontrar el precio por kilogramo: $8.000 ÷ 5 = $1.600 por kg.",
+          "Paso 2: Calcular el costo de 12 kg: 12 × $1.600 = $19.200.",
+          "Paso final: Los 12 kilogramos cuestan $19.200."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-07",
+      "eje": "Álgebra y funciones",
+      "unidad": "Proporcionalidad",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "En la relación y = 3x, ¿cuál es el valor de y cuando x = 4?",
+      "alternativas": {
+        "A": "7",
+        "B": "12",
+        "C": "3",
+        "D": "16"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Evaluación de funciones de proporcionalidad directa sustituyendo el valor de la variable independiente en la ecuación.",
+        "pasos": [
+          "Paso 1: Usar la ecuación y = 3x.",
+          "Paso 2: Reemplazar x con 4: y = 3(4) = 12.",
+          "Paso final: Cuando x = 4, y = 12."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-08",
+      "eje": "Álgebra y funciones",
+      "unidad": "Proporcionalidad",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Un automóvil consume 6 litros de bencina para recorrer 120 kilómetros. ¿Cuánta bencina consume para recorrer 200 kilómetros?",
+      "alternativas": {
+        "A": "8 litros",
+        "B": "10 litros",
+        "C": "12 litros",
+        "D": "15 litros"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Aplicación de proporcionalidad directa en contextos de consumo y rendimiento: el consumo es directamente proporcional a la distancia recorrida.",
+        "pasos": [
+          "Paso 1: Encontrar el rendimiento: 120 km ÷ 6 litros = 20 km/litro.",
+          "Paso 2: Calcular el consumo para 200 km: 200 km ÷ 20 km/litro = 10 litros.",
+          "Paso final: El automóvil consume 10 litros para recorrer 200 kilómetros."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-09",
+      "eje": "Álgebra y funciones",
+      "unidad": "Proporcionalidad",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "Si x e y son inversamente proporcionales y cuando x = 4, y = 15, ¿cuál es el valor de y cuando x = 6?",
+      "alternativas": {
+        "A": "10",
+        "B": "20",
+        "C": "22,5",
+        "D": "30"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Proporcionalidad inversa: cuando dos variables son inversamente proporcionales, su producto es constante (xy = k).",
+        "pasos": [
+          "Paso 1: Encontrar la constante de proporcionalidad: k = x × y = 4 × 15 = 60.",
+          "Paso 2: Usar esta constante para encontrar y cuando x = 6: 6 × y = 60, entonces y = 60 ÷ 6 = 10.",
+          "Paso final: Cuando x = 6, y = 10."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-10",
+      "eje": "Álgebra y funciones",
+      "unidad": "Proporcionalidad",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Cotidiano",
+      "enunciado": "En una fábrica, 8 máquinas producen 240 piezas en 5 horas. Si se quieren producir 600 piezas en el mismo tiempo, ¿cuántas máquinas se necesitan?",
+      "alternativas": {
+        "A": "12 máquinas",
+        "B": "16 máquinas",
+        "C": "20 máquinas",
+        "D": "24 máquinas"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Análisis de proporcionalidad compuesta: determinar cómo varía una cantidad cuando cambian múltiples factores relacionados proporcionalmente.",
+        "pasos": [
+          "Paso 1: Determinar la producción por máquina en 5 horas: 240 ÷ 8 = 30 piezas por máquina.",
+          "Paso 2: Calcular cuántas máquinas se necesitan para 600 piezas: 600 ÷ 30 = 20 máquinas.",
+          "Paso final: Se necesitan 20 máquinas para producir 600 piezas en 5 horas."
+        ]
+      }
+    }
+  ]
+}

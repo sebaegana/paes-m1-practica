@@ -1,0 +1,133 @@
+{
+  "eje": "Cuerpo humano y salud",
+  "unidad": "Nutrición y digestión",
+  "saludo": "Descubre cómo tu cuerpo procesa los alimentos y obtiene la energía que necesita para funcionar.",
+  "preguntas": [
+    {
+      "id": "BIO-SAL-06",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Nutrición y digestión",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cuál es la función principal del ácido clorhídrico en el estómago?",
+      "alternativas": {
+        "A": "Neutralizar las bacterias del alimento",
+        "B": "Desnaturalizar las proteínas y activar enzimas digestivas",
+        "C": "Absorber vitaminas del alimento",
+        "D": "Producir energía para la contracción muscular"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El ácido clorhídrico es esencial para la digestión ácida en el estómago",
+        "pasos": [
+          "El ácido desnaturaliza las proteínas, rompiéndolas parcialmente",
+          "Activa la enzima pepsinógeno convirtiéndola en pepsina activa",
+          "La pepsina digiere aún más las proteínas en fragmentos más pequeños",
+          "El ambiente ácido también mata muchas bacterias patógenas"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-07",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Nutrición y digestión",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Qué órgano produce la bilis que es almacenada en la vesícula biliar?",
+      "alternativas": {
+        "A": "El páncreas",
+        "B": "El hígado",
+        "C": "El estómago",
+        "D": "El intestino grueso"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El hígado es el órgano más grande del cuerpo y produce continuamente bilis",
+        "pasos": [
+          "El hígado sintetiza bilis a partir del colesterol",
+          "La bilis se almacena en la vesícula biliar entre comidas",
+          "Durante la digestión, la bilis se libera para emulsionar las grasas",
+          "Esto permite que las lipasas digieran mejor los lípidos"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-08",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Nutrición y digestión",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Por qué es importante masticar bien los alimentos antes de tragarlos?",
+      "alternativas": {
+        "A": "Para que sepan mejor en la boca",
+        "B": "Para aumentar la superficie de contacto y acelerar la digestión enzimática",
+        "C": "Para evitar que el estómago se estire demasiado",
+        "D": "Porque el esófago es muy estrecho para alimentos grandes"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La masticación es el primer paso mecánico importante de la digestión",
+        "pasos": [
+          "Masticar fragmenta el alimento en partículas más pequeñas",
+          "Aumenta el área de superficie expuesta a las enzimas digestivas",
+          "La amilasa salival comienza a digerir carbohidratos",
+          "Alimentos mejor masticados se digieren más rápida y completamente"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-09",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Nutrición y digestión",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la diferencia entre digestión mecánica y química?",
+      "alternativas": {
+        "A": "La digestión mecánica ocurre en la boca y la química en el estómago",
+        "B": "La digestión mecánica fragmenta el alimento físicamente, mientras que la química descompone los nutrientes con enzimas",
+        "C": "Solo existe la digestión química; la mecánica no es importante",
+        "D": "Son sinónimos que describen el mismo proceso"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Ambos tipos de digestión trabajan juntos de manera complementaria",
+        "pasos": [
+          "Digestión mecánica: masticación, movimientos gástricos que fragmentan físicamente",
+          "Digestión química: enzimas como amilasa, pepsina, lipasa rompen enlaces químicos",
+          "La digestión mecánica prepara el alimento para la acción enzimática",
+          "Ocurren simultáneamente en diferentes partes del aparato digestivo"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-10",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Nutrición y digestión",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un paciente no produce suficiente lactasa. ¿Qué sucede fisiológicamente y qué síntomas experimentaría después de consumir leche?",
+      "alternativas": {
+        "A": "La lactosa se digiere normalmente, pero el calcio no se absorbe",
+        "B": "La lactosa no se digiere en el intestino delgado y permanece en el lumen, causando osmosis de agua, distensión abdominal y diarrea",
+        "C": "El páncreas produce más enzimas para compensar",
+        "D": "La leche se absorbe completamente pero causa alergias inmediatas"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La intolerancia a la lactosa resulta de la deficiencia de lactasa",
+        "pasos": [
+          "La lactosa sin digerir permanece en el lumen intestinal",
+          "Por osmosis, atrae agua hacia el intestino",
+          "Bacterias colónicas fermentan la lactosa, produciendo gases y ácidos",
+          "Esto causa distensión abdominal, flatulencia, calambres y diarrea",
+          "Los síntomas aparecen 30 minutos a 2 horas después de consumir lácteos"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "eje": "Cuerpo humano y salud",
+  "unidad": "Respiración y circulación",
+  "saludo": "Exploraremos cómo el oxígeno entra a tu cuerpo y cómo se distribuye a través de la sangre para mantener la vida.",
+  "preguntas": [
+    {
+      "id": "BIO-SAL-11",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respiración y circulación",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la estructura principal donde ocurre el intercambio gaseoso en los pulmones?",
+      "alternativas": {
+        "A": "Los bronquios",
+        "B": "La tráquea",
+        "C": "Los alvéolos",
+        "D": "Los bronquíolos"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Los alvéolos son sacos microscópicos donde ocurre la gasificación",
+        "pasos": [
+          "Cada pulmón contiene millones de alvéolos microscópicos",
+          "Están rodeados de capilares sanguíneos",
+          "El oxígeno del aire difunde a través de la membrana alveolar hacia la sangre",
+          "El dióxido de carbono difunde en dirección opuesta hacia el aire"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-12",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respiración y circulación",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cuál es la principal función de los glóbulos rojos en la sangre?",
+      "alternativas": {
+        "A": "Combatir infecciones",
+        "B": "Transportar oxígeno a los tejidos",
+        "C": "Coagular la sangre",
+        "D": "Producir anticuerpos"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Los glóbulos rojos contienen hemoglobina que se une al oxígeno",
+        "pasos": [
+          "La hemoglobina es una proteína que contiene hierro",
+          "Se une reversiblemente al oxígeno en los pulmones",
+          "Transporta el oxígeno a través del torrente sanguíneo",
+          "Libera el oxígeno en los tejidos donde es necesario para la respiración celular"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-13",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respiración y circulación",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la diferencia entre circulación pulmonar y circulación sistémica?",
+      "alternativas": {
+        "A": "La circulación pulmonar lleva sangre oxigenada al corazón y la sistémica la distribuye al cuerpo",
+        "B": "La circulación pulmonar va del corazón a los pulmones para oxigenarse y la sistémica va del corazón a todo el cuerpo",
+        "C": "Son la misma circulación con diferente nombre",
+        "D": "La circulación pulmonar es más rápida que la sistémica"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El sistema circulatorio está dividido en dos circuitos principales",
+        "pasos": [
+          "Circulación pulmonar: ventrículo derecho → pulmones (oxigenación) → aurícula izquierda",
+          "Circulación sistémica: ventrículo izquierdo → todo el cuerpo (distribución de O2) → aurícula derecha",
+          "La sangre desoxigenada retorna al corazón derecho desde la circulación sistémica",
+          "Luego se envía nuevamente a los pulmones para re-oxigenarse"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-14",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respiración y circulación",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Por qué aumenta la frecuencia cardíaca durante el ejercicio físico?",
+      "alternativas": {
+        "A": "Porque los músculos que se ejercitan necesitan más oxígeno y nutrientes",
+        "B": "Porque el corazón se cansa más fácilmente",
+        "C": "Porque la presión arterial disminuye durante el ejercicio",
+        "D": "Porque el ejercicio daña las válvulas del corazón"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "El sistema cardiovascular se adapta a las demandas metabólicas del cuerpo",
+        "pasos": [
+          "Durante el ejercicio, los músculos aumentan su tasa metabólica",
+          "Requieren mayor aporte de oxígeno y glucosa",
+          "El sistema nervioso simpático aumenta la frecuencia cardíaca",
+          "Mayor frecuencia = mayor volumen de sangre bombeado por minuto",
+          "Esto asegura suficiente oxígeno y nutrientes para los músculos activos"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-15",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Respiración y circulación",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un individuo con anemia severa presenta palidez, fatiga extrema y disnea (dificultad respiratoria). Explica la relación causal entre la anemia y estos síntomas.",
+      "alternativas": {
+        "A": "La anemia causa inflamación de los pulmones, lo que impide la respiración",
+        "B": "Hay insuficiente hemoglobina para transportar oxígeno, por lo que hay hipoxia tisular causando fatiga y disnea compensatoria",
+        "C": "La anemia aumenta la presión arterial, dañando los capilares",
+        "D": "La anemia afecta solo al hígado, no tiene relación con la fatiga"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La anemia reduce la capacidad de transporte de oxígeno de la sangre",
+        "pasos": [
+          "Hemoglobina reducida significa menos moléculas portadoras de oxígeno",
+          "Los tejidos reciben menos oxígeno (hipoxia celular)",
+          "Las células producen menos ATP por respiración aeróbica",
+          "Fatiga y debilidad resultan de la baja disponibilidad de energía",
+          "La disnea es compensatoria: el cuerpo intenta respirar más para obtener oxígeno",
+          "La palidez resulta de reducción de sangre en capilares superficiales"
+        ]
+      }
+    }
+  ]
+}

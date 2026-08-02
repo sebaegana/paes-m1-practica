@@ -1,0 +1,128 @@
+{
+  "eje": "Probabilidad y estadística",
+  "unidad": "Representación de datos",
+  "saludo": "En esta unidad aprenderás a organizar, visualizar e interpretar datos utilizando tablas de frecuencias y gráficos estadísticos. Estos conocimientos son fundamentales para el análisis de información en contextos reales.",
+  "preguntas": [
+    {
+      "id": "M1-PRO-01",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Representación de datos",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Un profesor registra las calificaciones de 20 estudiantes en un examen. ¿Cuál de las siguientes opciones define correctamente a una tabla de frecuencias?",
+      "alternativas": {
+        "A": "Una tabla que muestra solo las notas más altas del examen",
+        "B": "Una tabla que organiza los datos en categorías y cuenta cuántas veces aparece cada uno",
+        "C": "Una tabla que ordena los datos de menor a mayor sin agruparlos",
+        "D": "Una tabla que calcula el promedio de los datos presentados"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Tabla de frecuencias: organización de datos que agrupa categorías o valores y cuenta su frecuencia (número de veces que aparece cada valor)",
+        "pasos": [
+          "Una tabla de frecuencias clasifica los datos en categorías o intervalos",
+          "Para cada categoría, se cuenta el número de veces que aparece (frecuencia absoluta)",
+          "Permite visualizar la distribución de los datos de manera ordenada"
+        ]
+      }
+    },
+    {
+      "id": "M1-PRO-02",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Representación de datos",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "Se encuesta a 100 personas sobre su deporte favorito. Los resultados son: Fútbol (35), Tenis (25), Natación (20), Otros (20). ¿Cuál es la frecuencia relativa del tenis?",
+      "alternativas": {
+        "A": "0,20",
+        "B": "0,25",
+        "C": "25",
+        "D": "0,35"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Frecuencia relativa: razón entre la frecuencia absoluta de un dato y el total de datos (Frecuencia relativa = Frecuencia absoluta / Total)",
+        "pasos": [
+          "Identificar la frecuencia absoluta del tenis: 25 personas",
+          "Identificar el total de datos: 100 personas",
+          "Calcular: Frecuencia relativa = 25/100 = 0,25"
+        ]
+      }
+    },
+    {
+      "id": "M1-PRO-03",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Representación de datos",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Se registra la edad de 50 clientes en una tienda: 18-25 años (12), 26-35 años (18), 36-45 años (15), 46-55 años (5). ¿Cuál es la frecuencia acumulada hasta el intervalo 36-45 años?",
+      "alternativas": {
+        "A": "15",
+        "B": "30",
+        "C": "45",
+        "D": "50"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Frecuencia acumulada: suma de las frecuencias absolutas desde el inicio hasta una categoría específica",
+        "pasos": [
+          "Frecuencia acumulada hasta 18-25 años: 12",
+          "Frecuencia acumulada hasta 26-35 años: 12 + 18 = 30",
+          "Frecuencia acumulada hasta 36-45 años: 30 + 15 = 45"
+        ]
+      }
+    },
+    {
+      "id": "M1-PRO-04",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Representación de datos",
+      "habilidad": "Analizar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Un gráfico de barras muestra la cantidad de libros vendidos por género en una librería. El eje vertical llega hasta 100 unidades. Si una barra de Ficción mide 6 cm de altura y representa 60 libros, ¿cuántos libros representa una barra que mide 9 cm?",
+      "alternativas": {
+        "A": "80 libros",
+        "B": "90 libros",
+        "C": "100 libros",
+        "D": "120 libros"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Proporcionalidad en gráficos de barras: la altura es proporcional a los valores que representa",
+        "pasos": [
+          "Establecer la proporción: 6 cm → 60 libros",
+          "Encontrar el valor por cm: 60 libros ÷ 6 cm = 10 libros/cm",
+          "Calcular para 9 cm: 9 cm × 10 libros/cm = 90 libros"
+        ]
+      }
+    },
+    {
+      "id": "M1-PRO-05",
+      "eje": "Probabilidad y estadística",
+      "unidad": "Representación de datos",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Se realiza un estudio sobre ingresos en una población de 1000 personas. Los datos se distribuyen así: $0-500k (150), $500k-1M (280), $1M-1,5M (350), $1,5M-2M (180), +2M (40). Un investigador afirma que más del 60% gana entre $500k y $1,5M. ¿Es correcta esta afirmación?",
+      "alternativas": {
+        "A": "Sí, porque 280 + 350 = 630, que es mayor a 600",
+        "B": "No, porque 280 + 350 = 630, que es 63% y eso no es mayor a 60%",
+        "C": "Sí, porque 630 personas es más del 60% de 1000",
+        "D": "No, porque falta considerar a las personas que ganan más de 2M"
+      },
+      "correcta": "C",
+      "explicacion": {
+        "concepto": "Interpretación de datos con frecuencias acumuladas: verificar si un porcentaje cumple o no con una condición",
+        "pasos": [
+          "Calcular frecuencias en el intervalo $500k-1,5M: 280 + 350 = 630 personas",
+          "Calcular porcentaje: (630/1000) × 100 = 63%",
+          "Verificar condición: ¿63% > 60%? Sí, es correcto",
+          "La afirmación es correcta porque 63% es mayor a 60%"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "eje": "Cuerpo humano y salud",
+  "unidad": "Sistemas de órganos",
+  "saludo": "Bienvenido a la unidad de Sistemas de órganos. Aquí exploraremos cómo los órganos trabajan juntos para mantener nuestro cuerpo funcionando.",
+  "preguntas": [
+    {
+      "id": "BIO-SAL-01",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Sistemas de órganos",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la función principal del sistema muscular?",
+      "alternativas": {
+        "A": "Producir glóbulos rojos y blancos",
+        "B": "Permitir el movimiento del cuerpo y mantener la postura",
+        "C": "Filtrar desechos metabólicos",
+        "D": "Transportar oxígeno a través de la sangre"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El sistema muscular está compuesto por músculos esqueléticos, lisos y cardíaco que trabajan en conjunto con el sistema óseo",
+        "pasos": [
+          "El sistema muscular esquelético proporciona movimiento voluntario",
+          "Los músculos se contraen y relajan para producir movimiento",
+          "También mantienen la postura y generan calor corporal"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-02",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Sistemas de órganos",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Cuando tocas algo caliente y retiras rápidamente la mano, ¿qué sistema está principalmente involucrado en esta reacción?",
+      "alternativas": {
+        "A": "Sistema digestivo",
+        "B": "Sistema nervioso",
+        "C": "Sistema endocrino",
+        "D": "Sistema linfático"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El sistema nervioso es responsable de detectar estímulos y coordinar respuestas rápidas",
+        "pasos": [
+          "Los receptores sensoriales en la piel detectan el calor",
+          "Los nervios transmiten señales al médula espinal",
+          "Se produce una respuesta refleja que retira la mano inmediatamente"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-03",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Sistemas de órganos",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cómo se relacionan el sistema óseo y el sistema muscular para permitir el movimiento?",
+      "alternativas": {
+        "A": "Los huesos se contraen mientras los músculos permanecen rígidos",
+        "B": "Los músculos se adhieren a los huesos mediante tendones y los mueven al contraerse",
+        "C": "Los huesos generan energía que los músculos utilizan",
+        "D": "Los músculos y huesos funcionan independientemente en diferentes momentos"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "El sistema óseo y muscular forman el sistema locomotor, trabajando como un sistema articulado",
+        "pasos": [
+          "Los tendones conectan los músculos a los huesos",
+          "Cuando el músculo se contrae, tira del hueso",
+          "Las articulaciones permiten el movimiento en direcciones específicas",
+          "Los ligamentos estabilizan las articulaciones"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-04",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Sistemas de órganos",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Un jugador de fútbol suda abundantemente durante un partido. ¿Qué sistemas trabajan juntos para regular la temperatura corporal?",
+      "alternativas": {
+        "A": "Solo el sistema integumentario (piel)",
+        "B": "Sistema nervioso, endocrino e integumentario",
+        "C": "Sistema digestivo y muscular",
+        "D": "Sistema circulatorio exclusivamente"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "La termorregulación es un proceso complejo que involucra múltiples sistemas",
+        "pasos": [
+          "El sistema nervioso detecta el aumento de temperatura",
+          "El hipotálamo coordina la respuesta termorreguladora",
+          "El sistema integumentario aumenta la sudoración para enfriar",
+          "El sistema circulatorio redistribuye la sangre hacia la piel"
+        ]
+      }
+    },
+    {
+      "id": "BIO-SAL-05",
+      "eje": "Cuerpo humano y salud",
+      "unidad": "Sistemas de órganos",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Un individuo sufre una lesión que daña las neuronas motoras. ¿Qué consecuencias funcionales esperarías observar y por qué?",
+      "alternativas": {
+        "A": "Pérdida de sensibilidad pero movimiento normal, porque las neuronas sensoriales permanecen intactas",
+        "B": "Pérdida parcial o total de movimiento voluntario, porque no se pueden transmitir señales desde el sistema nervioso a los músculos",
+        "C": "Aumento de la fuerza muscular debido a que los músculos compensan la lesión",
+        "D": "Solo dolor local sin afectar la función motora"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Las neuronas motoras transmiten señales desde el sistema nervioso central hacia los músculos esqueléticos",
+        "pasos": [
+          "Las neuronas motoras hacen sinapsis con las fibras musculares en la placa neuromuscular",
+          "Liberan neurotransmisores que causan contracción muscular",
+          "Sin neuronas motoras funcionales, no hay comunicación con los músculos",
+          "Esto resulta en parálisis o debilidad en los músculos afectados"
+        ]
+      }
+    }
+  ]
+}

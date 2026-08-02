@@ -1,0 +1,127 @@
+{
+  "eje": "Herencia y variabilidad genética",
+  "unidad": "Mutaciones y variabilidad",
+  "saludo": "Comprenderemos cómo las mutaciones generan variabilidad genética en las poblaciones, impulsando la evolución y la diversidad biológica, así como sus implicaciones en la salud humana.",
+  "preguntas": [
+    {
+      "id": "BIO-GEN-16",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Mutaciones y variabilidad",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Qué es una mutación genética?",
+      "alternativas": {
+        "A": "Un cambio en la secuencia de nucleótidos del ADN que puede alterar el fenotipo",
+        "B": "La combinación de alelos que un organismo hereda de sus padres",
+        "C": "El proceso de síntesis de proteínas en el ribosoma",
+        "D": "La separación de cromosomas durante la meiosis"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Definición y características de las mutaciones",
+        "pasos": [
+          "Una mutación es un cambio en la información genética del ADN",
+          "Puede ser causada por errores en la replicación o por agentes mutágenos",
+          "Si afecta genes funcionales, puede producir cambios visibles en el organismo"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-17",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Mutaciones y variabilidad",
+      "habilidad": "Reconocer y recordar",
+      "dificultad": "Básico",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la principal fuente de variabilidad genética en las poblaciones?",
+      "alternativas": {
+        "A": "Las mutaciones genéticas y la recombinación génica durante la reproducción sexual",
+        "B": "El intercambio de genes entre individuos de diferentes especies",
+        "C": "La replicación perfecta del ADN en cada generación",
+        "D": "La selección natural actuando sobre individuos genéticamente idénticos"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Orígenes de la variabilidad genética",
+        "pasos": [
+          "Las mutaciones crean nuevas variantes alélicas",
+          "La recombinación genética durante la meiosis mezcla alelos en nuevas combinaciones",
+          "Ambos procesos aumentan la diversidad genética en las poblaciones"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-18",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Mutaciones y variabilidad",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Científico",
+      "enunciado": "¿Cuál es la diferencia entre mutaciones somáticas y mutaciones germinales?",
+      "alternativas": {
+        "A": "Las somáticas afectan células del cuerpo y no se heredan; las germinales se transmiten a la descendencia",
+        "B": "Las somáticas ocurren en el núcleo; las germinales ocurren en las mitocondrias",
+        "C": "Las somáticas son causadas por virus; las germinales por radiación",
+        "D": "Las somáticas son siempre dañinas; las germinales pueden ser beneficiosas"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Clasificación de mutaciones según sus consecuencias hereditarias",
+        "pasos": [
+          "Las mutaciones somáticas ocurren en células somáticas (del cuerpo)",
+          "No se transmiten a los descendientes porque no afectan los gametos",
+          "Las mutaciones germinales ocurren en células germinales o gametos y SÍ se heredan"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-19",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Mutaciones y variabilidad",
+      "habilidad": "Comprender",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "¿Cómo pueden las mutaciones contribuir a la evolución de una especie?",
+      "alternativas": {
+        "A": "Las mutaciones siempre mejoran las características de los organismos inmediatamente",
+        "B": "Las mutaciones crean variabilidad; la selección natural actúa sobre esta variabilidad favoreciendo alelos ventajosos",
+        "C": "Las mutaciones son cambios dirigidos que adaptan a los organismos a su ambiente",
+        "D": "Las mutaciones son procesosevoluntarios que los organismos utilizan para adaptarse"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Relación entre mutaciones, variabilidad y evolución",
+        "pasos": [
+          "Las mutaciones son cambios aleatorios en el ADN",
+          "Generan variabilidad genética en las poblaciones",
+          "La selección natural favorece alelos que confieren ventajas adaptativas en un ambiente específico"
+        ]
+      }
+    },
+    {
+      "id": "BIO-GEN-20",
+      "eje": "Herencia y variabilidad genética",
+      "unidad": "Mutaciones y variabilidad",
+      "habilidad": "Aplicar",
+      "dificultad": "Avanzado",
+      "contexto": "Científico",
+      "enunciado": "Una mutación puntual (cambio de un solo nucleótido) en el gen de la hemoglobina cambia un ácido glutámico por una valina. ¿Por qué este cambio en un solo aminoácido causa la enfermedad de la anemia drepanocítica?",
+      "alternativas": {
+        "A": "Porque el ácido glutámico es más importante que la valina para la función de la hemoglobina",
+        "B": "Porque el cambio de un aminoácido causa cambios en la estructura y función de la proteína, haciendo que los glóbulos rojos adquieran forma de hoz",
+        "C": "Porque la valina es tóxica para los glóbulos rojos",
+        "D": "Porque este cambio causa una mutación adicional en el cromosoma Y"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Impacto de mutaciones puntuales en la función proteica",
+        "pasos": [
+          "Una mutación puntual cambia el codón, produciendo un aminoácido diferente",
+          "En la anemia drepanocítica, la sustitución Glu→Val altera las propiedades de la hemoglobina",
+          "La hemoglobina anormal polimerizarse bajo bajos niveles de oxígeno, deformando los glóbulos rojos"
+        ]
+      }
+    }
+  ]
+}
