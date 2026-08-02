@@ -150,7 +150,7 @@ CRÍTICO: El JSON debe ser válido y parseable. Responde SOLO el JSON, sin expli
         sys.exit(1)
 
     # Limpiar el JSON: si está dentro de ```json ... ```, extraerlo
-    if response_text.startswith("```"):
+    if "```" in response_text:
         try:
             start = response_text.find("{")
             end = response_text.rfind("}") + 1
@@ -159,13 +159,30 @@ CRÍTICO: El JSON debe ser válido y parseable. Responde SOLO el JSON, sin expli
             pass
 
     # Intentar parsear el JSON
-    try:
-        preguntas_json = json.loads(response_text)
-        return preguntas_json
-    except json.JSONDecodeError as e:
-        print(f"Error al parsear JSON de Claude: {e}", file=sys.stderr)
-        print(f"Primeros 500 caracteres:\n{response_text[:500]}", file=sys.stderr)
-        sys.exit(1)
+    for intento in range(2):
+        try:
+            preguntas_json = json.loads(response_text)
+            return preguntas_json
+        except json.JSONDecodeError as e:
+            if intento == 0:
+                # Primer intento falló, intentar limpiar
+                print(f"Primer intento falló: {e}", file=sys.stderr)
+                print(f"Intentando limpiar JSON...", file=sys.stderr)
+
+                # Buscar el JSON más probable dentro del texto
+                import re
+                json_match = re.search(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', response_text)
+                if json_match:
+                    response_text = json_match.group(0)
+                    print(f"JSON limpiado encontrado, reintentando...", file=sys.stderr)
+                else:
+                    print(f"No se pudo encontrar JSON válido", file=sys.stderr)
+                    print(f"Primeros 500 caracteres:\n{response_text[:500]}", file=sys.stderr)
+                    sys.exit(1)
+            else:
+                print(f"Error final al parsear JSON de Claude: {e}", file=sys.stderr)
+                print(f"Primeros 500 caracteres:\n{response_text[:500]}", file=sys.stderr)
+                sys.exit(1)
 
 
 def validar_json(data):
