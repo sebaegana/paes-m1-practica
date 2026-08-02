@@ -101,6 +101,24 @@ def build_html(preguntas_data, registro):
     habilidades = ", ".join(cobertura.get("habilidades", []))
     proxima = esc(cobertura.get("proxima_semana", ""))
 
+    # Generar pestañas de rondas
+    tabs_html = ""
+    tabs_content = ""
+    for i, record in enumerate(sorted(registro, key=lambda r: r.get("ronda", 0))):
+        ronda_num = record.get("ronda", i+1)
+        eje = esc(record.get("eje", ""))
+        fecha_ronda = esc(record.get("fecha", ""))
+        tab_id = f"tab-ronda-{ronda_num}"
+        active = "active" if ronda_num == preguntas_data.get("ronda_numero", len(registro)) else ""
+
+        tabs_html += f'      <button class="tab-btn {active}" onclick="cambiarTab({ronda_num})" data-ronda="{ronda_num}">Round {ronda_num}: {eje}</button>\n'
+
+        # Solo mostrar preguntas de la ronda actual (la que se pasó como argumento)
+        if ronda_num == preguntas_data.get("ronda_numero", len(registro)):
+            tabs_content += f'    <div class="tab-content active" id="{tab_id}">\n      <p class="saludo">{saludo}</p>\n{preguntas_html}\n    </div>\n'
+        else:
+            tabs_content += f'    <div class="tab-content" id="{tab_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
+
     registro_ordenado = sorted(registro, key=lambda r: r.get("ronda", 0), reverse=True)
     historial_html = "\n".join(render_historial_row(r) for r in registro_ordenado)
 
@@ -149,6 +167,15 @@ def build_html(preguntas_data, registro):
   .solucion .pasos {{ margin: 0; padding-left: 20px; }}
   .solucion .pasos li {{ margin-bottom: 6px; }}
   .oculto {{ display: none; }}
+  .tabs {{ display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid #e2e2e2; overflow-x: auto; }}
+  .tab-btn {{ padding: 12px 18px; border: none; background: transparent; cursor: pointer;
+              font-size: 0.95em; color: #666; border-bottom: 3px solid transparent;
+              transition: all 0.2s; white-space: nowrap; }}
+  .tab-btn:hover {{ color: #1d1d1f; }}
+  .tab-btn.active {{ color: #1d1d1f; border-bottom-color: #6b6bd6; font-weight: 600; }}
+  .tabs-container {{ position: relative; }}
+  .tab-content {{ display: none; }}
+  .tab-content.active {{ display: block; }}
   .cobertura {{ font-size: 0.85em; color: #666; border-top: 1px solid #e2e2e2; padding-top: 14px;
                 margin-top: 20px; }}
   table.historial {{ width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px;
@@ -165,10 +192,12 @@ def build_html(preguntas_data, registro):
   <h1>PAES M1 &mdash; Panel de práctica</h1>
   <p class="actualizado">Última generación: {fecha} &middot; Eje de esta semana: {eje_semana}</p>
 
-  <h2>Esta semana</h2>
-  <p class="saludo">{saludo}</p>
+  <h2>Rondas de práctica</h2>
+  <div class="tabs">
+{tabs_html}  </div>
 
-  {preguntas_html}
+  <div class="tabs-container">
+{tabs_content}  </div>
 
   <div class="cobertura">
     <strong>Cobertura de este set:</strong> {eje_semana}<br>
@@ -188,6 +217,15 @@ def build_html(preguntas_data, registro):
   </table>
 
 <script>
+function cambiarTab(rondaNum) {{
+  const allTabs = document.querySelectorAll('.tab-content');
+  const allBtns = document.querySelectorAll('.tab-btn');
+  allTabs.forEach(t => t.classList.remove('active'));
+  allBtns.forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-ronda-' + rondaNum).classList.add('active');
+  document.querySelector('[data-ronda="' + rondaNum + '"]').classList.add('active');
+}}
+
 function seleccionar(qid, btn) {{
   const cont = btn.closest('.alternativas');
   cont.querySelectorAll('.alt-btn').forEach(b => b.classList.remove('seleccionada'));
@@ -277,6 +315,9 @@ def main():
 
     with open(sys.argv[2], "r", encoding="utf-8") as f:
         registro = json.load(f)
+
+    # Agregar número de ronda al JSON actual basado en el registro
+    preguntas_data["ronda_numero"] = len(registro)
 
     out = build_html(preguntas_data, registro)
 

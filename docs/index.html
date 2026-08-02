@@ -43,6 +43,15 @@
   .solucion .pasos { margin: 0; padding-left: 20px; }
   .solucion .pasos li { margin-bottom: 6px; }
   .oculto { display: none; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid #e2e2e2; overflow-x: auto; }
+  .tab-btn { padding: 12px 18px; border: none; background: transparent; cursor: pointer;
+              font-size: 0.95em; color: #666; border-bottom: 3px solid transparent;
+              transition: all 0.2s; white-space: nowrap; }
+  .tab-btn:hover { color: #1d1d1f; }
+  .tab-btn.active { color: #1d1d1f; border-bottom-color: #6b6bd6; font-weight: 600; }
+  .tabs-container { position: relative; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
   .cobertura { font-size: 0.85em; color: #666; border-top: 1px solid #e2e2e2; padding-top: 14px;
                 margin-top: 20px; }
   table.historial { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px;
@@ -59,10 +68,17 @@
   <h1>PAES M1 &mdash; Panel de práctica</h1>
   <p class="actualizado">Última generación: 2026-08-08 &middot; Eje de esta semana: Algebra y funciones</p>
 
-  <h2>Esta semana</h2>
-  <p class="saludo">Esta semana: Álgebra y funciones. Expresiones algebraicas, ecuaciones, sistemas lineales y funciones.</p>
+  <h2>Rondas de práctica</h2>
+  <div class="tabs">
+      <button class="tab-btn " onclick="cambiarTab(1)" data-ronda="1">Round 1: Numeros</button>
+      <button class="tab-btn active" onclick="cambiarTab(2)" data-ronda="2">Round 2: Algebra y funciones</button>
+  </div>
 
-  
+  <div class="tabs-container">
+    <div class="tab-content" id="tab-ronda-1"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 1 (Numeros) - 2026-08-01</p></div>
+    <div class="tab-content active" id="tab-ronda-2">
+      <p class="saludo">Esta semana: Álgebra y funciones. Expresiones algebraicas, ecuaciones, sistemas lineales y funciones.</p>
+
   <section class="pregunta" id="preg-M1-ALG-2026-08-08-01">
     <div class="meta">Algebra y funciones &middot; Expresiones algebraicas &middot; Resolver problemas &middot; Dificultad: Básico</div>
     <h3>Pregunta 1</h3>
@@ -218,6 +234,8 @@
     </div>
   </section>
 
+    </div>
+  </div>
 
   <div class="cobertura">
     <strong>Cobertura de este set:</strong> Algebra y funciones<br>
@@ -264,6 +282,15 @@
   </table>
 
 <script>
+function cambiarTab(rondaNum) {
+  const allTabs = document.querySelectorAll('.tab-content');
+  const allBtns = document.querySelectorAll('.tab-btn');
+  allTabs.forEach(t => t.classList.remove('active'));
+  allBtns.forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-ronda-' + rondaNum).classList.add('active');
+  document.querySelector('[data-ronda="' + rondaNum + '"]').classList.add('active');
+}
+
 function seleccionar(qid, btn) {
   const cont = btn.closest('.alternativas');
   cont.querySelectorAll('.alt-btn').forEach(b => b.classList.remove('seleccionada'));
