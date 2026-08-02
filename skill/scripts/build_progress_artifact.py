@@ -22,6 +22,7 @@ Uso:
 import json
 import sys
 import html
+from pathlib import Path
 
 
 def esc(s):
@@ -101,7 +102,7 @@ def build_html(preguntas_data, registro):
     habilidades = ", ".join(cobertura.get("habilidades", []))
     proxima = esc(cobertura.get("proxima_semana", ""))
 
-    # Generar pestañas de rondas
+    # Generar pestañas de rondas - intentar leer todos los JSONs
     tabs_html = ""
     tabs_content = ""
     for i, record in enumerate(sorted(registro, key=lambda r: r.get("ronda", 0))):
@@ -113,11 +114,24 @@ def build_html(preguntas_data, registro):
 
         tabs_html += f'      <button class="tab-btn {active}" onclick="cambiarTab({ronda_num})" data-ronda="{ronda_num}">Round {ronda_num}: {eje}</button>\n'
 
-        # Solo mostrar preguntas de la ronda actual (la que se pasó como argumento)
+        # Si es la ronda actual, mostrar sus preguntas
         if ronda_num == preguntas_data.get("ronda_numero", len(registro)):
             tabs_content += f'    <div class="tab-content active" id="{tab_id}">\n      <p class="saludo">{saludo}</p>\n{preguntas_html}\n    </div>\n'
         else:
-            tabs_content += f'    <div class="tab-content" id="{tab_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
+            # Intentar cargar el JSON de la ronda anterior desde data/rondas/
+            try:
+                ronda_json_path = Path(sys.argv[1]).parent.parent / "rondas" / f"{record.get('fecha', '')}.json"
+                if ronda_json_path.exists():
+                    with open(ronda_json_path, "r", encoding="utf-8") as f:
+                        ronda_data = json.load(f)
+                        ronda_preguntas_html = "\n".join(
+                            render_question(i + 1, q) for i, q in enumerate(ronda_data.get("preguntas", []))
+                        )
+                        tabs_content += f'    <div class="tab-content" id="{tab_id}">\n      <p class="saludo">{esc(ronda_data.get("saludo", ""))}</p>\n{ronda_preguntas_html}\n    </div>\n'
+                else:
+                    tabs_content += f'    <div class="tab-content" id="{tab_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
+            except:
+                tabs_content += f'    <div class="tab-content" id="{tab_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
 
     registro_ordenado = sorted(registro, key=lambda r: r.get("ronda", 0), reverse=True)
     historial_html = "\n".join(render_historial_row(r) for r in registro_ordenado)
