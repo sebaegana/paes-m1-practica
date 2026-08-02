@@ -130,7 +130,7 @@ Devuelve un JSON válido con esta estructura:
 CRÍTICO: El JSON debe ser válido y parseable. Responde SOLO el JSON, sin explicaciones extra."""
 
     message = client.messages.create(
-        model="claude-opus-4-1-20250805",
+        model="claude-sonnet-4-20250514",
         max_tokens=4000,
         messages=[
             {"role": "user", "content": prompt}
