@@ -1,0 +1,127 @@
+{
+  "eje": "Álgebra y funciones",
+  "unidad": "Función cuadrática",
+  "saludo": "La unidad de función cuadrática aborda parábolas, vértices, ceros y aplicaciones. Dominar estos conceptos es clave para modelar fenómenos como trayectorias de proyectiles y problemas de optimización.",
+  "preguntas": [
+    {
+      "id": "M1-ALG-26",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función cuadrática",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuál es el vértice de la parábola y = (x - 2)² + 3?",
+      "alternativas": {
+        "A": "(2, 3)",
+        "B": "(-2, 3)",
+        "C": "(2, -3)",
+        "D": "(3, 2)"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Identificación del vértice de una parábola a partir de la forma vértice y = (x - h)² + k.",
+        "pasos": [
+          "Paso 1: Reconocer la forma vértice: y = (x - h)² + k.",
+          "Paso 2: Comparar con y = (x - 2)² + 3: h = 2, k = 3.",
+          "Paso final: El vértice es el punto (h, k) = (2, 3)."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-27",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función cuadrática",
+      "habilidad": "Comprender",
+      "dificultad": "Básico",
+      "contexto": "Cotidiano",
+      "enunciado": "Se lanza una pelota hacia arriba. Su altura en metros después de t segundos está dada por h(t) = -5t² + 20t. ¿Cuál es la altura inicial (cuando t = 0)?",
+      "alternativas": {
+        "A": "0 metros",
+        "B": "5 metros",
+        "C": "10 metros",
+        "D": "20 metros"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Evaluación de funciones cuadráticas para encontrar valores específicos, particularmente el intercepto en y (altura inicial).",
+        "pasos": [
+          "Paso 1: Evaluar h(0) = -5(0)² + 20(0) = 0.",
+          "Paso 2: Esto significa que la pelota se lanza desde el suelo.",
+          "Paso final: La altura inicial es 0 metros."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-28",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función cuadrática",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Matemático",
+      "enunciado": "¿Cuáles son los ceros (raíces) de la función f(x) = x² - 5x + 6?",
+      "alternativas": {
+        "A": "x = 1 y x = 6",
+        "B": "x = 2 y x = 3",
+        "C": "x = -2 y x = -3",
+        "D": "x = 1 y x = 5"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Encontrar los ceros de una función cuadrática mediante factorización: x² - 5x + 6 = (x - a)(x - b).",
+        "pasos": [
+          "Paso 1: Factorizar x² - 5x + 6. Buscar dos números que multiplicados den 6 y sumados den -5: son -2 y -3.",
+          "Paso 2: Escribir la factorización: (x - 2)(x - 3) = 0.",
+          "Paso 3: Resolver: x - 2 = 0 → x = 2, o x - 3 = 0 → x = 3."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-29",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función cuadrática",
+      "habilidad": "Aplicar",
+      "dificultad": "Intermedio",
+      "contexto": "Cotidiano",
+      "enunciado": "Un terreno rectangular tiene perímetro de 40 metros. Si x es la longitud de uno de los lados, el área está dada por A(x) = x(20 - x). ¿Cuál es el área máxima?",
+      "alternativas": {
+        "A": "75 m²",
+        "B": "100 m²",
+        "C": "150 m²",
+        "D": "200 m²"
+      },
+      "correcta": "B",
+      "explicacion": {
+        "concepto": "Optimización mediante funciones cuadráticas: encontrar el máximo de A(x) = x(20 - x) = 20x - x².",
+        "pasos": [
+          "Paso 1: Expandir: A(x) = 20x - x² = -x² + 20x.",
+          "Paso 2: El máximo se alcanza en el vértice, en x = -b/(2a) = -20/(2·(-1)) = 10.",
+          "Paso 3: Evaluar A(10) = 10(20 - 10) = 10·10 = 100 m²."
+        ]
+      }
+    },
+    {
+      "id": "M1-ALG-30",
+      "eje": "Álgebra y funciones",
+      "unidad": "Función cuadrática",
+      "habilidad": "Analizar",
+      "dificultad": "Avanzado",
+      "contexto": "Matemático",
+      "enunciado": "Si la parábola y = ax² + bx + c tiene vértice en (3, -4) y pasa por el punto (5, 0), ¿cuál es el valor de a?",
+      "alternativas": {
+        "A": "1",
+        "B": "2",
+        "C": "0,5",
+        "D": "-1"
+      },
+      "correcta": "A",
+      "explicacion": {
+        "concepto": "Determinación de parámetros de una función cuadrática usando información del vértice y un punto adicional.",
+        "pasos": [
+          "Paso 1: Usar la forma vértice: y = a(x - 3)² - 4.",
+          "Paso 2: Sustituir el punto (5, 0): 0 = a(5 - 3)² - 4 → 0 = 4a - 4.",
+          "Paso 3: Resolver: 4a = 4, entonces a = 1."
+        ]
+      }
+    }
+  ]
+}
