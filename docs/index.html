@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>PAES - Panel de práctica multi-materia</title>
+<title>PAES - Panel de práctica interactivo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root { color-scheme: light; }
@@ -23,14 +23,13 @@
   .sidebar-header { padding: 0 16px 8px; margin-bottom: 8px; }
   .sidebar-title { font-size: 0.75em; font-weight: 600; color: #999; text-transform: uppercase;
                     letter-spacing: 0.05em; margin: 0; }
-  .sidebar-item { padding: 12px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;
-                   transition: all 0.2s; border-left: 3px solid transparent; display: none; }
-  .sidebar-item.visible { display: block; }
+  .sidebar-eje-title { padding: 14px 16px 6px; font-size: 0.7em; font-weight: 700; color: #999; text-transform: uppercase;
+                        letter-spacing: 0.05em; margin-top: 8px; }
+  .sidebar-item { padding: 10px 16px; margin: 0 8px; border-radius: 6px; cursor: pointer;
+                   transition: all 0.2s; border-left: 3px solid transparent; }
   .sidebar-item:hover { background: #f2f2f7; }
   .sidebar-item.active { background: #eeeeff; border-left-color: #6b6bd6; }
-  .sidebar-ronda { font-weight: 600; font-size: 0.95em; margin-bottom: 4px; }
-  .sidebar-eje { font-size: 0.85em; color: #666; margin-bottom: 2px; }
-  .sidebar-fecha { font-size: 0.75em; color: #999; }
+  .sidebar-unidad { font-size: 0.88em; color: #333; font-weight: 500; }
   .main { flex: 1; overflow-y: auto; padding: 24px 32px; }
   .header { margin-bottom: 24px; }
   h1 { font-size: 1.4em; margin: 0 0 8px; }
@@ -70,8 +69,6 @@
   .oculto { display: none; }
   .ronda-content { display: none; }
   .ronda-content.active { display: block; }
-  .cobertura { font-size: 0.85em; color: #666; border-top: 1px solid #e2e2e2; padding-top: 14px;
-                margin-top: 20px; }
   table.historial { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px;
                       overflow: hidden; border: 1px solid #e2e2e2; }
   table.historial th, table.historial td { text-align: left; padding: 10px 12px; font-size: 0.9em; }
@@ -82,8 +79,7 @@
   .col-fecha-hecho { color: #888; font-size: 0.85em; }
   @media (max-width: 768px) {
     .container { flex-direction: column; }
-    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e2e2; max-height: auto; }
-    .materia-tabs { padding: 8px 0; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e2e2; }
     .main { padding: 16px; }
   }
 </style>
@@ -97,104 +93,713 @@
       </div>
       <div class="sidebar-items-container">
         <div class="sidebar-header">
-          <p class="sidebar-title" id="titulo-materia">Rondas Matemática</p>
+          <p class="sidebar-title" id="titulo-materia">Unidades Matemática</p>
         </div>
-      <div class="sidebar-item active" onclick="mostrarRonda('ronda-biologia-1')" data-ronda="ronda-biologia-1" data-materia="biologia">
-        <div class="sidebar-ronda">Round 1</div>
-        <div class="sidebar-eje">Celula</div>
-        <div class="sidebar-fecha">2026-08-22</div>
+      <div class="sidebar-eje-title" data-materia="matematica">Números</div>
+      <div class="sidebar-item active" onclick="mostrarRonda('ronda-matematica-números-enteros-y-racionales')" data-ronda="ronda-matematica-números-enteros-y-racionales" data-materia="matematica">
+        <div class="sidebar-unidad">Números enteros y racionales</div>
       </div>
-      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-1')" data-ronda="ronda-matematica-1" data-materia="matematica">
-        <div class="sidebar-ronda">Round 1</div>
-        <div class="sidebar-eje">Numeros</div>
-        <div class="sidebar-fecha">2026-08-01</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-porcentaje')" data-ronda="ronda-matematica-porcentaje" data-materia="matematica">
+        <div class="sidebar-unidad">Porcentaje</div>
       </div>
-      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-2')" data-ronda="ronda-matematica-2" data-materia="matematica">
-        <div class="sidebar-ronda">Round 2</div>
-        <div class="sidebar-eje">Algebra y funciones</div>
-        <div class="sidebar-fecha">2026-08-08</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-potencias-y-raíces')" data-ronda="ronda-matematica-potencias-y-raíces" data-materia="matematica">
+        <div class="sidebar-unidad">Potencias y raíces</div>
       </div>
-      <div class="sidebar-item active" onclick="mostrarRonda('ronda-matematica-3')" data-ronda="ronda-matematica-3" data-materia="matematica">
-        <div class="sidebar-ronda">Round 3</div>
-        <div class="sidebar-eje">Geometria</div>
-        <div class="sidebar-fecha">2026-08-15</div>
+      <div class="sidebar-eje-title" data-materia="matematica">Álgebra y funciones</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-expresiones-algebraicas')" data-ronda="ronda-matematica-expresiones-algebraicas" data-materia="matematica">
+        <div class="sidebar-unidad">Expresiones algebraicas</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-proporcionalidad')" data-ronda="ronda-matematica-proporcionalidad" data-materia="matematica">
+        <div class="sidebar-unidad">Proporcionalidad</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-ecuaciones-e-inecuaciones')" data-ronda="ronda-matematica-ecuaciones-e-inecuaciones" data-materia="matematica">
+        <div class="sidebar-unidad">Ecuaciones e inecuaciones</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-sistemas-de-ecuaciones')" data-ronda="ronda-matematica-sistemas-de-ecuaciones" data-materia="matematica">
+        <div class="sidebar-unidad">Sistemas de ecuaciones</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-función-lineal-y-afín')" data-ronda="ronda-matematica-función-lineal-y-afín" data-materia="matematica">
+        <div class="sidebar-unidad">Función lineal y afín</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-función-cuadrática')" data-ronda="ronda-matematica-función-cuadrática" data-materia="matematica">
+        <div class="sidebar-unidad">Función cuadrática</div>
+      </div>
+      <div class="sidebar-eje-title" data-materia="matematica">Geometría</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-figuras-geométricas')" data-ronda="ronda-matematica-figuras-geométricas" data-materia="matematica">
+        <div class="sidebar-unidad">Figuras geométricas</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-cuerpos-geométricos')" data-ronda="ronda-matematica-cuerpos-geométricos" data-materia="matematica">
+        <div class="sidebar-unidad">Cuerpos geométricos</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-transformaciones-isométricas')" data-ronda="ronda-matematica-transformaciones-isométricas" data-materia="matematica">
+        <div class="sidebar-unidad">Transformaciones isométricas</div>
+      </div>
+      <div class="sidebar-eje-title" data-materia="matematica">Probabilidad y estadística</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-representación-de-datos')" data-ronda="ronda-matematica-representación-de-datos" data-materia="matematica">
+        <div class="sidebar-unidad">Representación de datos</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-medidas-de-posición')" data-ronda="ronda-matematica-medidas-de-posición" data-materia="matematica">
+        <div class="sidebar-unidad">Medidas de posición</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-matematica-probabilidades')" data-ronda="ronda-matematica-probabilidades" data-materia="matematica">
+        <div class="sidebar-unidad">Probabilidades</div>
+      </div>
+      <div class="sidebar-eje-title" data-materia="biologia">Célula</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-estructura-y-función-celular')" data-ronda="ronda-biologia-estructura-y-función-celular" data-materia="biologia">
+        <div class="sidebar-unidad">Estructura y función celular</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-transporte-celular')" data-ronda="ronda-biologia-transporte-celular" data-materia="biologia">
+        <div class="sidebar-unidad">Transporte celular</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-metabolismo-celular')" data-ronda="ronda-biologia-metabolismo-celular" data-materia="biologia">
+        <div class="sidebar-unidad">Metabolismo celular</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-reproducción-celular')" data-ronda="ronda-biologia-reproducción-celular" data-materia="biologia">
+        <div class="sidebar-unidad">Reproducción celular</div>
+      </div>
+      <div class="sidebar-eje-title" data-materia="biologia">Herencia y variabilidad genética</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-fundamentos-de-genética')" data-ronda="ronda-biologia-fundamentos-de-genética" data-materia="biologia">
+        <div class="sidebar-unidad">Fundamentos de genética</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-leyes-de-mendel')" data-ronda="ronda-biologia-leyes-de-mendel" data-materia="biologia">
+        <div class="sidebar-unidad">Leyes de Mendel</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-cromosomas-y-herencia')" data-ronda="ronda-biologia-cromosomas-y-herencia" data-materia="biologia">
+        <div class="sidebar-unidad">Cromosomas y herencia</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-mutaciones-y-variabilidad')" data-ronda="ronda-biologia-mutaciones-y-variabilidad" data-materia="biologia">
+        <div class="sidebar-unidad">Mutaciones y variabilidad</div>
+      </div>
+      <div class="sidebar-eje-title" data-materia="biologia">Evolución y biodiversidad</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-teoría-de-la-evolución')" data-ronda="ronda-biologia-teoría-de-la-evolución" data-materia="biologia">
+        <div class="sidebar-unidad">Teoría de la evolución</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-evidencias-de-evolución')" data-ronda="ronda-biologia-evidencias-de-evolución" data-materia="biologia">
+        <div class="sidebar-unidad">Evidencias de evolución</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-historia-de-la-vida')" data-ronda="ronda-biologia-historia-de-la-vida" data-materia="biologia">
+        <div class="sidebar-unidad">Historia de la vida</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-clasificación-biológica')" data-ronda="ronda-biologia-clasificación-biológica" data-materia="biologia">
+        <div class="sidebar-unidad">Clasificación biológica</div>
+      </div>
+      <div class="sidebar-eje-title" data-materia="biologia">Organismo y ambiente</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-niveles-de-organización-ecológica')" data-ronda="ronda-biologia-niveles-de-organización-ecológica" data-materia="biologia">
+        <div class="sidebar-unidad">Niveles de organización ecológica</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-relaciones-interespecíficas')" data-ronda="ronda-biologia-relaciones-interespecíficas" data-materia="biologia">
+        <div class="sidebar-unidad">Relaciones interespecíficas</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-flujo-de-energía-y-ciclos')" data-ronda="ronda-biologia-flujo-de-energía-y-ciclos" data-materia="biologia">
+        <div class="sidebar-unidad">Flujo de energía y ciclos</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-dinámicas-de-población')" data-ronda="ronda-biologia-dinámicas-de-población" data-materia="biologia">
+        <div class="sidebar-unidad">Dinámicas de población</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-impacto-humano-y-conservación')" data-ronda="ronda-biologia-impacto-humano-y-conservación" data-materia="biologia">
+        <div class="sidebar-unidad">Impacto humano y conservación</div>
+      </div>
+      <div class="sidebar-eje-title" data-materia="biologia">Cuerpo humano y salud</div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-sistemas-de-órganos')" data-ronda="ronda-biologia-sistemas-de-órganos" data-materia="biologia">
+        <div class="sidebar-unidad">Sistemas de órganos</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-nutrición-y-digestión')" data-ronda="ronda-biologia-nutrición-y-digestión" data-materia="biologia">
+        <div class="sidebar-unidad">Nutrición y digestión</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-respiración-y-circulación')" data-ronda="ronda-biologia-respiración-y-circulación" data-materia="biologia">
+        <div class="sidebar-unidad">Respiración y circulación</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-respuesta-y-regulación')" data-ronda="ronda-biologia-respuesta-y-regulación" data-materia="biologia">
+        <div class="sidebar-unidad">Respuesta y regulación</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-reproducción-humana')" data-ronda="ronda-biologia-reproducción-humana" data-materia="biologia">
+        <div class="sidebar-unidad">Reproducción humana</div>
+      </div>
+      <div class="sidebar-item " onclick="mostrarRonda('ronda-biologia-salud-y-enfermedad')" data-ronda="ronda-biologia-salud-y-enfermedad" data-materia="biologia">
+        <div class="sidebar-unidad">Salud y enfermedad</div>
       </div>
       </div>
     </div>
     <div class="main">
       <div class="header">
-        <h1>PAES &mdash; Panel de práctica</h1>
-        <p class="actualizado">Última generación: 2026-08-15 · Eje (Matematica): Geometria</p>
+        <h1>PAES &mdash; Panel de práctica interactivo</h1>
+        <p class="actualizado">Catálogo de 38 unidades temáticas</p>
       </div>
-    <div class="ronda-content active" id="ronda-biologia-1"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 1 (Celula) - 2026-08-22</p></div>
-    <div class="ronda-content " id="ronda-matematica-1"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 1 (Numeros) - 2026-08-01</p></div>
-    <div class="ronda-content " id="ronda-matematica-2"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 2 (Algebra y funciones) - 2026-08-08</p></div>
-    <div class="ronda-content active" id="ronda-matematica-3"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round 3 (Geometria) - 2026-08-15</p></div>
+    <div class="ronda-content active" id="ronda-matematica-números-enteros-y-racionales"><p style="text-align:center;color:#999;padding:40px;">Unidad: Números enteros y racionales</p></div>
+    <div class="ronda-content " id="ronda-matematica-porcentaje"><p style="text-align:center;color:#999;padding:40px;">Unidad: Porcentaje</p></div>
+    <div class="ronda-content " id="ronda-matematica-potencias-y-raíces"><p style="text-align:center;color:#999;padding:40px;">Unidad: Potencias y raíces</p></div>
+    <div class="ronda-content " id="ronda-matematica-expresiones-algebraicas"><p style="text-align:center;color:#999;padding:40px;">Unidad: Expresiones algebraicas</p></div>
+    <div class="ronda-content " id="ronda-matematica-proporcionalidad"><p style="text-align:center;color:#999;padding:40px;">Unidad: Proporcionalidad</p></div>
+    <div class="ronda-content " id="ronda-matematica-ecuaciones-e-inecuaciones"><p style="text-align:center;color:#999;padding:40px;">Unidad: Ecuaciones e inecuaciones</p></div>
+    <div class="ronda-content " id="ronda-matematica-sistemas-de-ecuaciones"><p style="text-align:center;color:#999;padding:40px;">Unidad: Sistemas de ecuaciones</p></div>
+    <div class="ronda-content " id="ronda-matematica-función-lineal-y-afín"><p style="text-align:center;color:#999;padding:40px;">Unidad: Función lineal y afín</p></div>
+    <div class="ronda-content " id="ronda-matematica-función-cuadrática"><p style="text-align:center;color:#999;padding:40px;">Unidad: Función cuadrática</p></div>
+    <div class="ronda-content " id="ronda-matematica-figuras-geométricas"><p style="text-align:center;color:#999;padding:40px;">Unidad: Figuras geométricas</p></div>
+    <div class="ronda-content " id="ronda-matematica-cuerpos-geométricos"><p style="text-align:center;color:#999;padding:40px;">Unidad: Cuerpos geométricos</p></div>
+    <div class="ronda-content " id="ronda-matematica-transformaciones-isométricas"><p style="text-align:center;color:#999;padding:40px;">Unidad: Transformaciones isométricas</p></div>
+    <div class="ronda-content " id="ronda-matematica-representación-de-datos"><p style="text-align:center;color:#999;padding:40px;">Unidad: Representación de datos</p></div>
+    <div class="ronda-content " id="ronda-matematica-medidas-de-posición"><p style="text-align:center;color:#999;padding:40px;">Unidad: Medidas de posición</p></div>
+    <div class="ronda-content " id="ronda-matematica-probabilidades"><p style="text-align:center;color:#999;padding:40px;">Unidad: Probabilidades</p></div>
+    <div class="ronda-content " id="ronda-biologia-estructura-y-función-celular"><p style="text-align:center;color:#999;padding:40px;">Unidad: Estructura y función celular</p></div>
+    <div class="ronda-content " id="ronda-biologia-transporte-celular"><p style="text-align:center;color:#999;padding:40px;">Unidad: Transporte celular</p></div>
+    <div class="ronda-content " id="ronda-biologia-metabolismo-celular"><p style="text-align:center;color:#999;padding:40px;">Unidad: Metabolismo celular</p></div>
+    <div class="ronda-content " id="ronda-biologia-reproducción-celular"><p style="text-align:center;color:#999;padding:40px;">Unidad: Reproducción celular</p></div>
+    <div class="ronda-content " id="ronda-biologia-fundamentos-de-genética"><p style="text-align:center;color:#999;padding:40px;">Unidad: Fundamentos de genética</p></div>
+    <div class="ronda-content " id="ronda-biologia-leyes-de-mendel"><p style="text-align:center;color:#999;padding:40px;">Unidad: Leyes de Mendel</p></div>
+    <div class="ronda-content " id="ronda-biologia-cromosomas-y-herencia"><p style="text-align:center;color:#999;padding:40px;">Unidad: Cromosomas y herencia</p></div>
+    <div class="ronda-content " id="ronda-biologia-mutaciones-y-variabilidad"><p style="text-align:center;color:#999;padding:40px;">Unidad: Mutaciones y variabilidad</p></div>
+    <div class="ronda-content " id="ronda-biologia-teoría-de-la-evolución"><p style="text-align:center;color:#999;padding:40px;">Unidad: Teoría de la evolución</p></div>
+    <div class="ronda-content " id="ronda-biologia-evidencias-de-evolución"><p style="text-align:center;color:#999;padding:40px;">Unidad: Evidencias de evolución</p></div>
+    <div class="ronda-content " id="ronda-biologia-historia-de-la-vida"><p style="text-align:center;color:#999;padding:40px;">Unidad: Historia de la vida</p></div>
+    <div class="ronda-content " id="ronda-biologia-clasificación-biológica"><p style="text-align:center;color:#999;padding:40px;">Unidad: Clasificación biológica</p></div>
+    <div class="ronda-content " id="ronda-biologia-niveles-de-organización-ecológica"><p style="text-align:center;color:#999;padding:40px;">Unidad: Niveles de organización ecológica</p></div>
+    <div class="ronda-content " id="ronda-biologia-relaciones-interespecíficas"><p style="text-align:center;color:#999;padding:40px;">Unidad: Relaciones interespecíficas</p></div>
+    <div class="ronda-content " id="ronda-biologia-flujo-de-energía-y-ciclos"><p style="text-align:center;color:#999;padding:40px;">Unidad: Flujo de energía y ciclos</p></div>
+    <div class="ronda-content " id="ronda-biologia-dinámicas-de-población"><p style="text-align:center;color:#999;padding:40px;">Unidad: Dinámicas de población</p></div>
+    <div class="ronda-content " id="ronda-biologia-impacto-humano-y-conservación"><p style="text-align:center;color:#999;padding:40px;">Unidad: Impacto humano y conservación</p></div>
+    <div class="ronda-content " id="ronda-biologia-sistemas-de-órganos"><p style="text-align:center;color:#999;padding:40px;">Unidad: Sistemas de órganos</p></div>
+    <div class="ronda-content " id="ronda-biologia-nutrición-y-digestión"><p style="text-align:center;color:#999;padding:40px;">Unidad: Nutrición y digestión</p></div>
+    <div class="ronda-content " id="ronda-biologia-respiración-y-circulación"><p style="text-align:center;color:#999;padding:40px;">Unidad: Respiración y circulación</p></div>
+    <div class="ronda-content " id="ronda-biologia-respuesta-y-regulación"><p style="text-align:center;color:#999;padding:40px;">Unidad: Respuesta y regulación</p></div>
+    <div class="ronda-content " id="ronda-biologia-reproducción-humana"><p style="text-align:center;color:#999;padding:40px;">Unidad: Reproducción humana</p></div>
+    <div class="ronda-content " id="ronda-biologia-salud-y-enfermedad"><p style="text-align:center;color:#999;padding:40px;">Unidad: Salud y enfermedad</p></div>
 
-      <h2>Progreso</h2>
+      <h2>Progreso por unidad</h2>
       <table class="historial">
         <thead>
-          <tr><th>Materia</th><th>Ronda</th><th>Fecha</th><th>Eje</th><th>Estado</th><th></th></tr>
+          <tr><th>Materia</th><th>Eje</th><th>Unidad</th><th>Estado</th><th></th></tr>
         </thead>
         <tbody>
           
-      <tr data-ronda-id="matematica-2026-08-15-Geometria">
+      <tr data-ronda-id="matematica-números_enteros_y_racionales">
         <td>Matematica</td>
-        <td>3</td>
-        <td>2026-08-15</td>
-        <td>Geometria</td>
+        <td>Números</td>
+        <td>Números enteros y racionales</td>
         <td class="col-check">
           <label class="check-label">
-            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-2026-08-15-Geometria', this)">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-números_enteros_y_racionales', this)">
             <span class="check-texto">Hecho</span>
           </label>
         </td>
-        <td class="col-fecha-hecho" id="fecha-hecho-matematica-2026-08-15-Geometria"></td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-números_enteros_y_racionales"></td>
       </tr>
 
 
-      <tr data-ronda-id="matematica-2026-08-08-Algebra_y_funciones">
+      <tr data-ronda-id="matematica-porcentaje">
         <td>Matematica</td>
-        <td>2</td>
-        <td>2026-08-08</td>
-        <td>Algebra y funciones</td>
+        <td>Números</td>
+        <td>Porcentaje</td>
         <td class="col-check">
           <label class="check-label">
-            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-2026-08-08-Algebra_y_funciones', this)">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-porcentaje', this)">
             <span class="check-texto">Hecho</span>
           </label>
         </td>
-        <td class="col-fecha-hecho" id="fecha-hecho-matematica-2026-08-08-Algebra_y_funciones"></td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-porcentaje"></td>
       </tr>
 
 
-      <tr data-ronda-id="matematica-2026-08-01-Numeros">
+      <tr data-ronda-id="matematica-potencias_y_raíces">
         <td>Matematica</td>
-        <td>1</td>
-        <td>2026-08-01</td>
-        <td>Numeros</td>
+        <td>Números</td>
+        <td>Potencias y raíces</td>
         <td class="col-check">
           <label class="check-label">
-            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-2026-08-01-Numeros', this)">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-potencias_y_raíces', this)">
             <span class="check-texto">Hecho</span>
           </label>
         </td>
-        <td class="col-fecha-hecho" id="fecha-hecho-matematica-2026-08-01-Numeros"></td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-potencias_y_raíces"></td>
       </tr>
 
 
-      <tr data-ronda-id="biologia-2026-08-22-Celula">
+      <tr data-ronda-id="matematica-expresiones_algebraicas">
+        <td>Matematica</td>
+        <td>Álgebra y funciones</td>
+        <td>Expresiones algebraicas</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-expresiones_algebraicas', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-expresiones_algebraicas"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-proporcionalidad">
+        <td>Matematica</td>
+        <td>Álgebra y funciones</td>
+        <td>Proporcionalidad</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-proporcionalidad', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-proporcionalidad"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-ecuaciones_e_inecuaciones">
+        <td>Matematica</td>
+        <td>Álgebra y funciones</td>
+        <td>Ecuaciones e inecuaciones</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-ecuaciones_e_inecuaciones', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-ecuaciones_e_inecuaciones"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-sistemas_de_ecuaciones">
+        <td>Matematica</td>
+        <td>Álgebra y funciones</td>
+        <td>Sistemas de ecuaciones</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-sistemas_de_ecuaciones', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-sistemas_de_ecuaciones"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-función_lineal_y_afín">
+        <td>Matematica</td>
+        <td>Álgebra y funciones</td>
+        <td>Función lineal y afín</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-función_lineal_y_afín', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-función_lineal_y_afín"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-función_cuadrática">
+        <td>Matematica</td>
+        <td>Álgebra y funciones</td>
+        <td>Función cuadrática</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-función_cuadrática', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-función_cuadrática"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-figuras_geométricas">
+        <td>Matematica</td>
+        <td>Geometría</td>
+        <td>Figuras geométricas</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-figuras_geométricas', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-figuras_geométricas"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-cuerpos_geométricos">
+        <td>Matematica</td>
+        <td>Geometría</td>
+        <td>Cuerpos geométricos</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-cuerpos_geométricos', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-cuerpos_geométricos"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-transformaciones_isométricas">
+        <td>Matematica</td>
+        <td>Geometría</td>
+        <td>Transformaciones isométricas</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-transformaciones_isométricas', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-transformaciones_isométricas"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-representación_de_datos">
+        <td>Matematica</td>
+        <td>Probabilidad y estadística</td>
+        <td>Representación de datos</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-representación_de_datos', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-representación_de_datos"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-medidas_de_posición">
+        <td>Matematica</td>
+        <td>Probabilidad y estadística</td>
+        <td>Medidas de posición</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-medidas_de_posición', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-medidas_de_posición"></td>
+      </tr>
+
+
+      <tr data-ronda-id="matematica-probabilidades">
+        <td>Matematica</td>
+        <td>Probabilidad y estadística</td>
+        <td>Probabilidades</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('matematica-probabilidades', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-matematica-probabilidades"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-estructura_y_función_celular">
         <td>Biologia</td>
-        <td>1</td>
-        <td>2026-08-22</td>
-        <td>Celula</td>
+        <td>Célula</td>
+        <td>Estructura y función celular</td>
         <td class="col-check">
           <label class="check-label">
-            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-2026-08-22-Celula', this)">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-estructura_y_función_celular', this)">
             <span class="check-texto">Hecho</span>
           </label>
         </td>
-        <td class="col-fecha-hecho" id="fecha-hecho-biologia-2026-08-22-Celula"></td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-estructura_y_función_celular"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-transporte_celular">
+        <td>Biologia</td>
+        <td>Célula</td>
+        <td>Transporte celular</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-transporte_celular', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-transporte_celular"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-metabolismo_celular">
+        <td>Biologia</td>
+        <td>Célula</td>
+        <td>Metabolismo celular</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-metabolismo_celular', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-metabolismo_celular"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-reproducción_celular">
+        <td>Biologia</td>
+        <td>Célula</td>
+        <td>Reproducción celular</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-reproducción_celular', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-reproducción_celular"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-fundamentos_de_genética">
+        <td>Biologia</td>
+        <td>Herencia y variabilidad genética</td>
+        <td>Fundamentos de genética</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-fundamentos_de_genética', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-fundamentos_de_genética"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-leyes_de_mendel">
+        <td>Biologia</td>
+        <td>Herencia y variabilidad genética</td>
+        <td>Leyes de Mendel</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-leyes_de_mendel', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-leyes_de_mendel"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-cromosomas_y_herencia">
+        <td>Biologia</td>
+        <td>Herencia y variabilidad genética</td>
+        <td>Cromosomas y herencia</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-cromosomas_y_herencia', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-cromosomas_y_herencia"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-mutaciones_y_variabilidad">
+        <td>Biologia</td>
+        <td>Herencia y variabilidad genética</td>
+        <td>Mutaciones y variabilidad</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-mutaciones_y_variabilidad', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-mutaciones_y_variabilidad"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-teoría_de_la_evolución">
+        <td>Biologia</td>
+        <td>Evolución y biodiversidad</td>
+        <td>Teoría de la evolución</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-teoría_de_la_evolución', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-teoría_de_la_evolución"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-evidencias_de_evolución">
+        <td>Biologia</td>
+        <td>Evolución y biodiversidad</td>
+        <td>Evidencias de evolución</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-evidencias_de_evolución', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-evidencias_de_evolución"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-historia_de_la_vida">
+        <td>Biologia</td>
+        <td>Evolución y biodiversidad</td>
+        <td>Historia de la vida</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-historia_de_la_vida', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-historia_de_la_vida"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-clasificación_biológica">
+        <td>Biologia</td>
+        <td>Evolución y biodiversidad</td>
+        <td>Clasificación biológica</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-clasificación_biológica', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-clasificación_biológica"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-niveles_de_organización_ecológica">
+        <td>Biologia</td>
+        <td>Organismo y ambiente</td>
+        <td>Niveles de organización ecológica</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-niveles_de_organización_ecológica', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-niveles_de_organización_ecológica"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-relaciones_interespecíficas">
+        <td>Biologia</td>
+        <td>Organismo y ambiente</td>
+        <td>Relaciones interespecíficas</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-relaciones_interespecíficas', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-relaciones_interespecíficas"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-flujo_de_energía_y_ciclos">
+        <td>Biologia</td>
+        <td>Organismo y ambiente</td>
+        <td>Flujo de energía y ciclos</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-flujo_de_energía_y_ciclos', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-flujo_de_energía_y_ciclos"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-dinámicas_de_población">
+        <td>Biologia</td>
+        <td>Organismo y ambiente</td>
+        <td>Dinámicas de población</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-dinámicas_de_población', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-dinámicas_de_población"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-impacto_humano_y_conservación">
+        <td>Biologia</td>
+        <td>Organismo y ambiente</td>
+        <td>Impacto humano y conservación</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-impacto_humano_y_conservación', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-impacto_humano_y_conservación"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-sistemas_de_órganos">
+        <td>Biologia</td>
+        <td>Cuerpo humano y salud</td>
+        <td>Sistemas de órganos</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-sistemas_de_órganos', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-sistemas_de_órganos"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-nutrición_y_digestión">
+        <td>Biologia</td>
+        <td>Cuerpo humano y salud</td>
+        <td>Nutrición y digestión</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-nutrición_y_digestión', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-nutrición_y_digestión"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-respiración_y_circulación">
+        <td>Biologia</td>
+        <td>Cuerpo humano y salud</td>
+        <td>Respiración y circulación</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-respiración_y_circulación', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-respiración_y_circulación"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-respuesta_y_regulación">
+        <td>Biologia</td>
+        <td>Cuerpo humano y salud</td>
+        <td>Respuesta y regulación</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-respuesta_y_regulación', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-respuesta_y_regulación"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-reproducción_humana">
+        <td>Biologia</td>
+        <td>Cuerpo humano y salud</td>
+        <td>Reproducción humana</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-reproducción_humana', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-reproducción_humana"></td>
+      </tr>
+
+
+      <tr data-ronda-id="biologia-salud_y_enfermedad">
+        <td>Biologia</td>
+        <td>Cuerpo humano y salud</td>
+        <td>Salud y enfermedad</td>
+        <td class="col-check">
+          <label class="check-label">
+            <input type="checkbox" class="check-hecho" onchange="marcarHecho('biologia-salud_y_enfermedad', this)">
+            <span class="check-texto">Hecho</span>
+          </label>
+        </td>
+        <td class="col-fecha-hecho" id="fecha-hecho-biologia-salud_y_enfermedad"></td>
       </tr>
 
         </tbody>
@@ -204,24 +809,20 @@
 
 <script>
 function cambiarMateria(materia) {
-  // Actualizar tabs
   document.querySelectorAll('.materia-tab').forEach(t => t.classList.remove('active'));
   event.target.classList.add('active');
 
-  // Actualizar sidebar items visibles
-  document.querySelectorAll('.sidebar-item').forEach(item => {
+  document.querySelectorAll('.sidebar-item, .sidebar-eje-title').forEach(item => {
     if (item.dataset.materia === materia) {
-      item.classList.add('visible');
+      item.style.display = item.classList.contains('sidebar-eje-title') ? 'block' : 'block';
     } else {
-      item.classList.remove('visible');
+      item.style.display = 'none';
     }
   });
 
-  // Actualizar título del sidebar
-  const titulo = materia === 'matematica' ? 'Rondas Matemática' : 'Rondas Biología';
+  const titulo = materia === 'matematica' ? 'Unidades Matemática' : 'Unidades Biología';
   document.getElementById('titulo-materia').textContent = titulo;
 
-  // Mostrar primera ronda de la materia
   const firstItem = document.querySelector(`.sidebar-item[data-materia="{materia}"]`);
   if (firstItem) {
     firstItem.click();
@@ -279,7 +880,7 @@ function mostrarExplicacion(qid) {
   document.getElementById('sol-' + qid).classList.toggle('oculto');
 }
 
-const PREFIJO_STORAGE = 'paes_m1_progreso_';
+const PREFIJO_STORAGE = 'paes_progreso_';
 
 function pintarFilaHistorial(fila) {
   const rondaId = fila.dataset.rondaId;
@@ -308,17 +909,8 @@ function marcarHecho(rondaId, checkbox) {
   pintarFilaHistorial(fila);
 }
 
-// Inicializar: mostrar Matemática por defecto
-document.querySelectorAll('.sidebar-item').forEach(item => {
-  if (item.dataset.materia === 'matematica') {
-    item.classList.add('visible');
-  }
-});
-
-// Restaurar progreso guardado
+// Inicializar
 document.querySelectorAll('table.historial tbody tr').forEach(pintarFilaHistorial);
-
-// Mostrar primera ronda (Matemática)
 const firstRonda = document.querySelector('.sidebar-item[data-materia="matematica"]');
 if (firstRonda) {
   setTimeout(() => firstRonda.click(), 50);

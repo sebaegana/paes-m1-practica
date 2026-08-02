@@ -1,0 +1,230 @@
+[
+  {
+    "materia": "matematica",
+    "eje": "Números",
+    "unidad": "Números enteros y racionales",
+    "archivo_json": "numeros-enteros-racionales.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Números",
+    "unidad": "Porcentaje",
+    "archivo_json": "porcentaje.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Números",
+    "unidad": "Potencias y raíces",
+    "archivo_json": "potencias-raices.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Álgebra y funciones",
+    "unidad": "Expresiones algebraicas",
+    "archivo_json": "expresiones-algebraicas.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Álgebra y funciones",
+    "unidad": "Proporcionalidad",
+    "archivo_json": "proporcionalidad.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Álgebra y funciones",
+    "unidad": "Ecuaciones e inecuaciones",
+    "archivo_json": "ecuaciones-inecuaciones.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Álgebra y funciones",
+    "unidad": "Sistemas de ecuaciones",
+    "archivo_json": "sistemas-ecuaciones.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Álgebra y funciones",
+    "unidad": "Función lineal y afín",
+    "archivo_json": "funcion-lineal-afin.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Álgebra y funciones",
+    "unidad": "Función cuadrática",
+    "archivo_json": "funcion-cuadratica.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Geometría",
+    "unidad": "Figuras geométricas",
+    "archivo_json": "figuras-geometricas.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Geometría",
+    "unidad": "Cuerpos geométricos",
+    "archivo_json": "cuerpos-geometricos.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Geometría",
+    "unidad": "Transformaciones isométricas",
+    "archivo_json": "transformaciones-isometricas.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Probabilidad y estadística",
+    "unidad": "Representación de datos",
+    "archivo_json": "representacion-datos.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Probabilidad y estadística",
+    "unidad": "Medidas de posición",
+    "archivo_json": "medidas-posicion.json"
+  },
+  {
+    "materia": "matematica",
+    "eje": "Probabilidad y estadística",
+    "unidad": "Probabilidades",
+    "archivo_json": "probabilidades.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Célula",
+    "unidad": "Estructura y función celular",
+    "archivo_json": "estructura-funcion-celular.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Célula",
+    "unidad": "Transporte celular",
+    "archivo_json": "transporte-celular.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Célula",
+    "unidad": "Metabolismo celular",
+    "archivo_json": "metabolismo-celular.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Célula",
+    "unidad": "Reproducción celular",
+    "archivo_json": "reproduccion-celular.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Herencia y variabilidad genética",
+    "unidad": "Fundamentos de genética",
+    "archivo_json": "fundamentos-genetica.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Herencia y variabilidad genética",
+    "unidad": "Leyes de Mendel",
+    "archivo_json": "leyes-mendel.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Herencia y variabilidad genética",
+    "unidad": "Cromosomas y herencia",
+    "archivo_json": "cromosomas-herencia.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Herencia y variabilidad genética",
+    "unidad": "Mutaciones y variabilidad",
+    "archivo_json": "mutaciones-variabilidad.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Evolución y biodiversidad",
+    "unidad": "Teoría de la evolución",
+    "archivo_json": "teoria-evolucion.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Evolución y biodiversidad",
+    "unidad": "Evidencias de evolución",
+    "archivo_json": "evidencias-evolucion.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Evolución y biodiversidad",
+    "unidad": "Historia de la vida",
+    "archivo_json": "historia-vida.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Evolución y biodiversidad",
+    "unidad": "Clasificación biológica",
+    "archivo_json": "clasificacion-biologica.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Organismo y ambiente",
+    "unidad": "Niveles de organización ecológica",
+    "archivo_json": "niveles-organizacion-ecologica.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Organismo y ambiente",
+    "unidad": "Relaciones interespecíficas",
+    "archivo_json": "relaciones-interespecificas.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Organismo y ambiente",
+    "unidad": "Flujo de energía y ciclos",
+    "archivo_json": "flujo-energia-ciclos.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Organismo y ambiente",
+    "unidad": "Dinámicas de población",
+    "archivo_json": "dinamicas-poblacion.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Organismo y ambiente",
+    "unidad": "Impacto humano y conservación",
+    "archivo_json": "impacto-humano-conservacion.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Cuerpo humano y salud",
+    "unidad": "Sistemas de órganos",
+    "archivo_json": "sistemas-organos.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Cuerpo humano y salud",
+    "unidad": "Nutrición y digestión",
+    "archivo_json": "nutricion-digestion.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Cuerpo humano y salud",
+    "unidad": "Respiración y circulación",
+    "archivo_json": "respiracion-circulacion.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Cuerpo humano y salud",
+    "unidad": "Respuesta y regulación",
+    "archivo_json": "respuesta-regulacion.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Cuerpo humano y salud",
+    "unidad": "Reproducción humana",
+    "archivo_json": "reproduccion-humana.json"
+  },
+  {
+    "materia": "biologia",
+    "eje": "Cuerpo humano y salud",
+    "unidad": "Salud y enfermedad",
+    "archivo_json": "salud-enfermedad.json"
+  }
+]

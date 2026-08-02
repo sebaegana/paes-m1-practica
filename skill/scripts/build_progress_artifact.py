@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 """
-Genera el panel interactivo PAES multi-materia: quiz + historial de rondas con progreso
+Genera el panel interactivo PAES: quiz + historial de unidades con progreso
 persistente en localStorage (sin servidor).
 
 Uso:
-    python build_progress_artifact.py <registro.json> <salida.html>
+    python build_progress_artifact.py <catalogo.json> <salida.html>
 
-<registro.json>: lista de rondas generadas, esquema:
+<catalogo.json>: lista de unidades temáticas, esquema:
 [
-  {"fecha": "2026-08-01", "ronda": 1, "materia": "matematica", "eje": "Numeros", "archivo_json": "..."},
-  {"fecha": "2026-08-22", "ronda": 1, "materia": "biologia", "eje": "Celula", "archivo_json": "..."}
+  {"materia": "matematica", "eje": "Números", "unidad": "Porcentaje", "archivo_json": "..."},
+  {"materia": "biologia", "eje": "Célula", "unidad": "Estructura y función celular", "archivo_json": "..."}
 ]
 """
 import json
 import sys
 import html
 from pathlib import Path
+from collections import defaultdict
 
 
 def esc(s):
@@ -64,15 +65,16 @@ def render_question(idx, q):
 """
 
 
-def render_historial_row(record):
-    materia = esc(record.get('materia', 'matematica'))
-    ronda_id = f"{materia}-{record['fecha']}-{record['eje']}".replace(" ", "_")
+def render_historial_row(entry):
+    materia = entry.get('materia', 'matematica')
+    eje = esc(entry.get('eje', ''))
+    unidad = esc(entry.get('unidad', ''))
+    ronda_id = f"{materia}-{entry['unidad']}".replace(" ", "_").lower()
     return f"""
       <tr data-ronda-id="{esc(ronda_id)}">
-        <td>{esc(record.get('materia', 'matematica').capitalize())}</td>
-        <td>{esc(record['ronda'])}</td>
-        <td>{esc(record['fecha'])}</td>
-        <td>{esc(record['eje'])}</td>
+        <td>{esc(materia.capitalize())}</td>
+        <td>{eje}</td>
+        <td>{unidad}</td>
         <td class="col-check">
           <label class="check-label">
             <input type="checkbox" class="check-hecho" onchange="marcarHecho('{esc(ronda_id)}', this)">
@@ -84,11 +86,11 @@ def render_historial_row(record):
 """
 
 
-def load_questions_for_record(record):
-    """Carga las preguntas de un registro de ronda (si existen)."""
+def load_questions_for_entry(entry):
+    """Carga las preguntas de una entrada del catálogo."""
     try:
-        materia = record.get('materia', 'matematica')
-        archivo_json = record.get('archivo_json', f"{record.get('fecha', '')}.json")
+        materia = entry.get('materia', 'matematica')
+        archivo_json = entry.get('archivo_json', '')
         ronda_json_path = Path(__file__).parent.parent / "data" / "rondas" / materia / archivo_json
         if ronda_json_path.exists():
             with open(ronda_json_path, "r", encoding="utf-8") as f:
@@ -98,64 +100,60 @@ def load_questions_for_record(record):
     return None
 
 
-def build_html(registro):
-    # Encontrar la última ronda de cada materia para determinar activas
-    last_by_materia = {}
-    for record in registro:
-        materia = record.get('materia', 'matematica')
-        if materia not in last_by_materia or record.get('ronda', 0) > last_by_materia[materia].get('ronda', 0):
-            last_by_materia[materia] = record
+def build_html(catalogo):
+    # Agrupar por materia → eje
+    por_materia = defaultdict(lambda: defaultdict(list))
+    materias_orden = []
 
-    # Materias únicas
-    materias = sorted(set(r.get('materia', 'matematica') for r in registro))
+    for entry in catalogo:
+        materia = entry.get('materia', 'matematica')
+        eje = entry.get('eje', '')
+        if materia not in materias_orden:
+            materias_orden.append(materia)
+        por_materia[materia][eje].append(entry)
 
-    # Generar barra lateral por materia + contenido
+    primera_entrada = catalogo[0] if catalogo else None
+
+    # Generar sidebar + contenido
     sidebar_html = ""
     main_content = ""
+    eje_anterior = None
 
-    for i, record in enumerate(sorted(registro, key=lambda r: (r.get("materia", "matematica"), r.get("ronda", 0)))):
-        materia = record.get('materia', 'matematica')
-        ronda_num = record.get("ronda", i + 1)
-        eje = esc(record.get("eje", ""))
-        fecha_ronda = esc(record.get("fecha", ""))
-        content_id = f"ronda-{materia}-{ronda_num}"
-        is_active = record == last_by_materia.get(materia)
-        active_class = "active" if is_active else ""
+    for entry in catalogo:
+        materia = entry.get('materia', 'matematica')
+        eje = entry.get('eje', '')
+        unidad = entry.get('unidad', '')
 
-        # Item en sidebar (con data-materia para filtro JS)
-        sidebar_html += f'      <div class="sidebar-item {active_class}" onclick="mostrarRonda(\'{content_id}\')" data-ronda="{content_id}" data-materia="{materia}">\n        <div class="sidebar-ronda">Round {ronda_num}</div>\n        <div class="sidebar-eje">{eje}</div>\n        <div class="sidebar-fecha">{fecha_ronda}</div>\n      </div>\n'
+        # Agregar título de eje solo cuando cambia
+        if eje != eje_anterior:
+            sidebar_html += f'      <div class="sidebar-eje-title" data-materia="{materia}">{esc(eje)}</div>\n'
+            eje_anterior = eje
 
-        # Cargar preguntas para esta ronda
-        ronda_data = load_questions_for_record(record)
-        if ronda_data:
+        content_id = f"ronda-{materia}-{unidad}".replace(" ", "-").lower()
+        is_first = (entry == primera_entrada)
+        active_class = "active" if is_first else ""
+
+        # Sidebar item
+        sidebar_html += f'      <div class="sidebar-item {active_class}" onclick="mostrarRonda(\'{content_id}\')" data-ronda="{content_id}" data-materia="{materia}">\n        <div class="sidebar-unidad">{esc(unidad)}</div>\n      </div>\n'
+
+        # Contenido
+        data = load_questions_for_entry(entry)
+        if data:
             preguntas_html = "\n".join(
-                render_question(i + 1, q) for i, q in enumerate(ronda_data.get("preguntas", []))
+                render_question(i + 1, q) for i, q in enumerate(data.get("preguntas", []))
             )
-            saludo = esc(ronda_data.get("saludo", ""))
+            saludo = esc(data.get("saludo", ""))
             main_content += f'    <div class="ronda-content {active_class}" id="{content_id}">\n      <p class="saludo">{saludo}</p>\n{preguntas_html}\n    </div>\n'
         else:
-            main_content += f'    <div class="ronda-content {active_class}" id="{content_id}"><p style="text-align:center;color:#999;padding:40px;">Preguntas de Round {ronda_num} ({eje}) - {fecha_ronda}</p></div>\n'
+            main_content += f'    <div class="ronda-content {active_class}" id="{content_id}"><p style="text-align:center;color:#999;padding:40px;">Unidad: {unidad}</p></div>\n'
 
-    # Historial de todas las rondas
-    registro_ordenado = sorted(registro, key=lambda r: (r.get("materia", "matematica"), r.get("ronda", 0)), reverse=True)
-    historial_html = "\n".join(render_historial_row(r) for r in registro_ordenado)
-
-    # Encontrar última ronda activab para mostrar datos en el header
-    last_record = last_by_materia.get('matematica') if last_by_materia else None
-    if not last_record and registro:
-        last_record = sorted(registro, key=lambda r: r.get("ronda", 0))[-1]
-
-    header_info = ""
-    if last_record:
-        header_info = f"Última generación: {esc(last_record.get('fecha', ''))} · Eje ({esc(last_record.get('materia', 'matematica').capitalize())}): {esc(last_record.get('eje', ''))}"
-    else:
-        header_info = "Bienvenido a la plataforma de práctica PAES"
+    historial_html = "\n".join(render_historial_row(entry) for entry in catalogo)
 
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>PAES - Panel de práctica multi-materia</title>
+<title>PAES - Panel de práctica interactivo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {{ color-scheme: light; }}
@@ -176,14 +174,13 @@ def build_html(registro):
   .sidebar-header {{ padding: 0 16px 8px; margin-bottom: 8px; }}
   .sidebar-title {{ font-size: 0.75em; font-weight: 600; color: #999; text-transform: uppercase;
                     letter-spacing: 0.05em; margin: 0; }}
-  .sidebar-item {{ padding: 12px 16px; margin: 0 8px; border-radius: 8px; cursor: pointer;
-                   transition: all 0.2s; border-left: 3px solid transparent; display: none; }}
-  .sidebar-item.visible {{ display: block; }}
+  .sidebar-eje-title {{ padding: 14px 16px 6px; font-size: 0.7em; font-weight: 700; color: #999; text-transform: uppercase;
+                        letter-spacing: 0.05em; margin-top: 8px; }}
+  .sidebar-item {{ padding: 10px 16px; margin: 0 8px; border-radius: 6px; cursor: pointer;
+                   transition: all 0.2s; border-left: 3px solid transparent; }}
   .sidebar-item:hover {{ background: #f2f2f7; }}
   .sidebar-item.active {{ background: #eeeeff; border-left-color: #6b6bd6; }}
-  .sidebar-ronda {{ font-weight: 600; font-size: 0.95em; margin-bottom: 4px; }}
-  .sidebar-eje {{ font-size: 0.85em; color: #666; margin-bottom: 2px; }}
-  .sidebar-fecha {{ font-size: 0.75em; color: #999; }}
+  .sidebar-unidad {{ font-size: 0.88em; color: #333; font-weight: 500; }}
   .main {{ flex: 1; overflow-y: auto; padding: 24px 32px; }}
   .header {{ margin-bottom: 24px; }}
   h1 {{ font-size: 1.4em; margin: 0 0 8px; }}
@@ -223,8 +220,6 @@ def build_html(registro):
   .oculto {{ display: none; }}
   .ronda-content {{ display: none; }}
   .ronda-content.active {{ display: block; }}
-  .cobertura {{ font-size: 0.85em; color: #666; border-top: 1px solid #e2e2e2; padding-top: 14px;
-                margin-top: 20px; }}
   table.historial {{ width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px;
                       overflow: hidden; border: 1px solid #e2e2e2; }}
   table.historial th, table.historial td {{ text-align: left; padding: 10px 12px; font-size: 0.9em; }}
@@ -235,8 +230,7 @@ def build_html(registro):
   .col-fecha-hecho {{ color: #888; font-size: 0.85em; }}
   @media (max-width: 768px) {{
     .container {{ flex-direction: column; }}
-    .sidebar {{ width: 100%; border-right: none; border-bottom: 1px solid #e2e2e2; max-height: auto; }}
-    .materia-tabs {{ padding: 8px 0; }}
+    .sidebar {{ width: 100%; border-right: none; border-bottom: 1px solid #e2e2e2; }}
     .main {{ padding: 16px; }}
   }}
 </style>
@@ -250,20 +244,20 @@ def build_html(registro):
       </div>
       <div class="sidebar-items-container">
         <div class="sidebar-header">
-          <p class="sidebar-title" id="titulo-materia">Rondas Matemática</p>
+          <p class="sidebar-title" id="titulo-materia">Unidades Matemática</p>
         </div>
 {sidebar_html}      </div>
     </div>
     <div class="main">
       <div class="header">
-        <h1>PAES &mdash; Panel de práctica</h1>
-        <p class="actualizado">{header_info}</p>
+        <h1>PAES &mdash; Panel de práctica interactivo</h1>
+        <p class="actualizado">Catálogo de {len(catalogo)} unidades temáticas</p>
       </div>
 {main_content}
-      <h2>Progreso</h2>
+      <h2>Progreso por unidad</h2>
       <table class="historial">
         <thead>
-          <tr><th>Materia</th><th>Ronda</th><th>Fecha</th><th>Eje</th><th>Estado</th><th></th></tr>
+          <tr><th>Materia</th><th>Eje</th><th>Unidad</th><th>Estado</th><th></th></tr>
         </thead>
         <tbody>
           {historial_html}
@@ -274,24 +268,20 @@ def build_html(registro):
 
 <script>
 function cambiarMateria(materia) {{
-  // Actualizar tabs
   document.querySelectorAll('.materia-tab').forEach(t => t.classList.remove('active'));
   event.target.classList.add('active');
 
-  // Actualizar sidebar items visibles
-  document.querySelectorAll('.sidebar-item').forEach(item => {{
+  document.querySelectorAll('.sidebar-item, .sidebar-eje-title').forEach(item => {{
     if (item.dataset.materia === materia) {{
-      item.classList.add('visible');
+      item.style.display = item.classList.contains('sidebar-eje-title') ? 'block' : 'block';
     }} else {{
-      item.classList.remove('visible');
+      item.style.display = 'none';
     }}
   }});
 
-  // Actualizar título del sidebar
-  const titulo = materia === 'matematica' ? 'Rondas Matemática' : 'Rondas Biología';
+  const titulo = materia === 'matematica' ? 'Unidades Matemática' : 'Unidades Biología';
   document.getElementById('titulo-materia').textContent = titulo;
 
-  // Mostrar primera ronda de la materia
   const firstItem = document.querySelector(`.sidebar-item[data-materia="{{materia}}"]`);
   if (firstItem) {{
     firstItem.click();
@@ -349,7 +339,7 @@ function mostrarExplicacion(qid) {{
   document.getElementById('sol-' + qid).classList.toggle('oculto');
 }}
 
-const PREFIJO_STORAGE = 'paes_m1_progreso_';
+const PREFIJO_STORAGE = 'paes_progreso_';
 
 function pintarFilaHistorial(fila) {{
   const rondaId = fila.dataset.rondaId;
@@ -378,17 +368,8 @@ function marcarHecho(rondaId, checkbox) {{
   pintarFilaHistorial(fila);
 }}
 
-// Inicializar: mostrar Matemática por defecto
-document.querySelectorAll('.sidebar-item').forEach(item => {{
-  if (item.dataset.materia === 'matematica') {{
-    item.classList.add('visible');
-  }}
-}});
-
-// Restaurar progreso guardado
+// Inicializar
 document.querySelectorAll('table.historial tbody tr').forEach(pintarFilaHistorial);
-
-// Mostrar primera ronda (Matemática)
 const firstRonda = document.querySelector('.sidebar-item[data-materia="matematica"]');
 if (firstRonda) {{
   setTimeout(() => firstRonda.click(), 50);
@@ -403,13 +384,13 @@ if (firstRonda) {{
 
 def main():
     if len(sys.argv) != 3:
-        print("Uso: python build_progress_artifact.py <registro.json> <salida.html>", file=sys.stderr)
+        print("Uso: python build_progress_artifact.py <catalogo.json> <salida.html>", file=sys.stderr)
         sys.exit(1)
 
     with open(sys.argv[1], "r", encoding="utf-8") as f:
-        registro = json.load(f)
+        catalogo = json.load(f)
 
-    out = build_html(registro)
+    out = build_html(catalogo)
 
     with open(sys.argv[2], "w", encoding="utf-8") as f:
         f.write(out)
